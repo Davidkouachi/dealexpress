@@ -2,14 +2,6 @@
 
 @section('titre', 'Profil')
 
-@section('option_btn')
-<li class="dropdown notification-dropdown">
-    <a class=" nk-quick-nav-icon" href="{{route('index_accueil')}}">
-        <em class="icon ni ni-home"></em>
-    </a>
-</li>
-@endsection
-
 @section('content')
 <div class="nk-content nk-content-fluid">
     <div class="container-xl wide-xl">

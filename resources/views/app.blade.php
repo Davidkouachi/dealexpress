@@ -40,10 +40,30 @@
                             </div>
                             <div class="nk-header-tools">
                                 <ul class="nk-quick-nav">
-                                    @yield('option_btn')
+                                    @if(request()->routeIs('index_accueil', 'index_detail', 'index_profil') )
+                                    <li class="dropdown notification-dropdown">
+                                        <a class="nk-quick-nav-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Annonces" href="{{route('index_article')}}">
+                                            <em class="icon ni ni-box-view-fill"></em>
+                                        </a>
+                                    </li>
+                                    @endif
+                                    @if(request()->routeIs('index_article'))
+                                    <li class="dropdown notification-dropdown">
+                                        <a class=" nk-quick-nav-icon" data-bs-toggle="modal" data-bs-target="#modalSearch" href="#">
+                                            <em class="icon ni ni-search" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Recherche"></em>
+                                        </a>
+                                    </li>
+                                    @endif
+                                    @if(!request()->routeIs('index_accueil', 'index_detail', 'index_profil') || request()->routeIs('index_detail', 'index_profil') )
+                                    <li class="dropdown notification-dropdown">
+                                        <a class=" nk-quick-nav-icon" href="{{route('index_accueil')}}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Accueil">
+                                            <em class="icon ni ni-home"></em>
+                                        </a>
+                                    </li>
+                                    @endif
                                     <li class="dropdown user-dropdown">
                                         <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                                            <div class="user-toggle">
+                                            <div class="user-toggle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profil">
                                                 <div class="user-avatar sm">
                                                     <em class="icon ni ni-user-alt">
                                                     </em>

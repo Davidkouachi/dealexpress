@@ -2,14 +2,6 @@
 
 @section('titre', 'Accueil')
 
-@section('option_btn')
-<li class="dropdown notification-dropdown">
-    <a class="nk-quick-nav-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Articles" href="{{route('index_article')}}">
-        <em class="icon ni ni-box-view-fill"></em>
-    </a>
-</li>
-@endsection
-
 @section('content')
 <div class="nk-content nk-content-fluid">
     <div class="container-xl wide-xl">
@@ -38,18 +30,18 @@
                 <div class="nk-block-head">
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
-                            <h5 class="nk-block-title d-flex">
-                                Quelques articles
+                            <h5 class="nk-block-title">
+                                Quelques annonces
                             </h5>
                         </div>
                     </div>
                 </div>
-                <div class="slider-init row product-slider mb-2" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
+                <div class="slider-init row product-slider" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
                     <div class="col">
                         <div class="card product-card">
-                            <div class="product-thumb">
-                                <a href="{{route('index_detail')}}">
-                                    <img alt="" class="card-img-top" src="images/product/lg-a.jpg" />
+                            <div class="product-thumb h-50" style="display: flex;justify-content: center;align-items: center;">
+                                <a href="{{route('index_detail')}} " >
+                                    <img style="object-fit: cover;height: auto;width: auto;" class="card-img-top" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
@@ -58,255 +50,201 @@
                                         </span>
                                     </li>
                                 </ul>
-                                <ul class="product-actions">
-                                    <li>
-                                        <a href="#">
-                                            <em class="icon ni ni-cart">
-                                            </em>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <em class="icon ni ni-heart">
-                                            </em>
-                                        </a>
-                                    </li>
-                                </ul>
                             </div>
+                            <hr>
                             <div class="card-inner text-center">
                                 <ul class="product-tags">
                                     <li>
-                                        <a href="#">
-                                            Smart Watch
+                                        <a>
+                                            <em class="icon ni ni-map-pin-fill"></em>
+                                            <span>Abidjan</span>
                                         </a>
                                     </li>
                                 </ul>
-                                <h5 class="product-title">
+                                <h6 class="product-title text-dark fs-15px">
                                     <a href="{{route('index_detail')}}">
-                                        Classy 
+                                        Classy Modern Smart watch
                                     </a>
-                                </h5>
-                                <div class="product-price text-primary h5">
-                                    $324
+                                </h6>
+                                <div class="product-price h6 fs-17px">
+                                    10.000 fcfa
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card product-card">
-                            <div class="product-thumb">
-                                <a href="{{route('index_detail')}}">
-                                    <img alt="" class="card-img-top" src="images/product/lg-b.jpg" />
-                                </a>
-                                <ul class="product-actions">
-                                    <li>
-                                        <a href="#">
-                                            <em class="icon ni ni-cart">
-                                            </em>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <em class="icon ni ni-heart">
-                                            </em>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="card-inner text-center">
-                                <ul class="product-tags">
-                                    <li>
-                                        <a href="#">
-                                            Vintage Phone
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h5 class="product-title">
-                                    <a href="{{route('index_detail')}}">
-                                        White Vintage telephone
-                                    </a>
-                                </h5>
-                                <div class="product-price text-primary h5">
-                                    $119
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card product-card">
-                            <div class="product-thumb">
-                                <a href="{{route('index_detail')}}">
-                                    <img alt="" class="card-img-top" src="images/product/lg-c.jpg" />
+                            <div class="product-thumb h-50" style="display: flex;justify-content: center;align-items: center;">
+                                <a href="{{route('index_detail')}} " >
+                                    <img style="object-fit: cover;height: auto;width: auto;" class="card-img-top" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
-                                        <span class="badge bg-danger">
-                                            Hot
+                                        <span class="badge bg-success">
+                                            New
                                         </span>
                                     </li>
                                 </ul>
-                                <ul class="product-actions">
-                                    <li>
-                                        <a href="#">
-                                            <em class="icon ni ni-cart">
-                                            </em>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <em class="icon ni ni-heart">
-                                            </em>
-                                        </a>
-                                    </li>
-                                </ul>
                             </div>
+                            <hr>
                             <div class="card-inner text-center">
                                 <ul class="product-tags">
                                     <li>
-                                        <a href="#">
-                                            Headphone
+                                        <a>
+                                            <em class="icon ni ni-map-pin-fill"></em>
+                                            <span>Abidjan</span>
                                         </a>
                                     </li>
                                 </ul>
-                                <h5 class="product-title">
+                                <h6 class="product-title text-dark fs-15px">
                                     <a href="{{route('index_detail')}}">
-                                        Black Wireless Headphones
+                                        Classy Modern Smart watch
                                     </a>
-                                </h5>
-                                <div class="product-price text-primary h5">
-                                    $89
+                                </h6>
+                                <div class="product-price h6 fs-17px">
+                                    10.000 fcfa
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card product-card">
-                            <div class="product-thumb">
-                                <a href="{{route('index_detail')}}">
-                                    <img alt="" class="card-img-top" src="images/product/lg-d.jpg" />
+                            <div class="product-thumb h-50" style="display: flex;justify-content: center;align-items: center;">
+                                <a href="{{route('index_detail')}} " >
+                                    <img style="object-fit: cover;height: auto;width: auto;" class="card-img-top" src="image/1.png" />
                                 </a>
-                                <ul class="product-actions">
+                                <ul class="product-badges">
                                     <li>
-                                        <a href="#">
-                                            <em class="icon ni ni-cart">
-                                            </em>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <em class="icon ni ni-heart">
-                                            </em>
-                                        </a>
+                                        <span class="badge bg-success">
+                                            New
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
+                            <hr>
                             <div class="card-inner text-center">
                                 <ul class="product-tags">
                                     <li>
-                                        <a href="#">
-                                            Smart Watch
+                                        <a>
+                                            <em class="icon ni ni-map-pin-fill"></em>
+                                            <span>Abidjan</span>
                                         </a>
                                     </li>
                                 </ul>
-                                <h5 class="product-title">
+                                <h6 class="product-title text-dark fs-15px">
                                     <a href="{{route('index_detail')}}">
-                                        Modular Smart Watch
+                                        Classy Modern Smart watch
                                     </a>
-                                </h5>
-                                <div class="product-price text-primary h5">
-                                    $120
+                                </h6>
+                                <div class="product-price h6 fs-17px">
+                                    10.000 fcfa
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card product-card">
-                            <div class="product-thumb">
-                                <a href="{{route('index_detail')}}">
-                                    <img alt="" class="card-img-top" src="images/product/lg-e.jpg" />
+                            <div class="product-thumb h-50" style="display: flex;justify-content: center;align-items: center;">
+                                <a href="{{route('index_detail')}} " >
+                                    <img style="object-fit: cover;height: auto;width: auto;" class="card-img-top" src="image/1.png" />
                                 </a>
-                                <ul class="product-actions">
+                                <ul class="product-badges">
                                     <li>
-                                        <a href="#">
-                                            <em class="icon ni ni-cart">
-                                            </em>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <em class="icon ni ni-heart">
-                                            </em>
-                                        </a>
+                                        <span class="badge bg-success">
+                                            New
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
+                            <hr>
                             <div class="card-inner text-center">
                                 <ul class="product-tags">
                                     <li>
-                                        <a href="#">
-                                            Headphones
+                                        <a>
+                                            <em class="icon ni ni-map-pin-fill"></em>
+                                            <span>Abidjan</span>
                                         </a>
                                     </li>
                                 </ul>
-                                <h5 class="product-title">
+                                <h6 class="product-title text-dark fs-15px">
                                     <a href="{{route('index_detail')}}">
-                                        White Wireless Headphones
+                                        Classy Modern Smart watch
                                     </a>
-                                </h5>
-                                <div class="product-price text-primary h5">
-                                    $78
+                                </h6>
+                                <div class="product-price h6 fs-17px">
+                                    10.000 fcfa
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card product-card">
-                            <div class="product-thumb">
-                                <a href="{{route('index_detail')}}">
-                                    <img alt="" class="card-img-top" src="images/product/lg-f.jpg" />
+                            <div class="product-thumb h-50" style="display: flex;justify-content: center;align-items: center;">
+                                <a href="{{route('index_detail')}} " >
+                                    <img style="object-fit: cover;height: auto;width: auto;" class="card-img-top" src="image/1.png" />
                                 </a>
-                                <ul class="product-actions">
+                                <ul class="product-badges">
                                     <li>
-                                        <a href="#">
-                                            <em class="icon ni ni-cart">
-                                            </em>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <em class="icon ni ni-heart">
-                                            </em>
-                                        </a>
+                                        <span class="badge bg-success">
+                                            New
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
+                            <hr>
                             <div class="card-inner text-center">
                                 <ul class="product-tags">
                                     <li>
-                                        <a href="#">
-                                            Phone
+                                        <a>
+                                            <em class="icon ni ni-map-pin-fill"></em>
+                                            <span>Abidjan</span>
                                         </a>
                                     </li>
                                 </ul>
-                                <h5 class="product-title">
+                                <h6 class="product-title text-dark fs-15px">
                                     <a href="{{route('index_detail')}}">
-                                        Black Android Phone
+                                        Classy Modern Smart watch
                                     </a>
-                                </h5>
-                                <div class="product-price text-primary h5">
-                                    $329
+                                </h6>
+                                <div class="product-price h6 fs-17px">
+                                    10.000 fcfa
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="nk-block-head">
-                    <div class="nk-block-between g-3">
-                        <div class="nk-block-head-content">
-                            <a class="btn btn-outline-warning btn-wider btn-dim" href="{{route('index_article')}}">
-                                <span>Voir plus</span>
-                                <em class="icon ni ni-arrow-right"></em>
-                            </a>
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="product-thumb h-50" style="display: flex;justify-content: center;align-items: center;">
+                                <a href="{{route('index_detail')}} " >
+                                    <img style="object-fit: cover;height: auto;width: auto;" class="card-img-top" src="image/1.png" />
+                                </a>
+                                <ul class="product-badges">
+                                    <li>
+                                        <span class="badge bg-success">
+                                            New
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="card-inner text-center">
+                                <ul class="product-tags">
+                                    <li>
+                                        <a>
+                                            <em class="icon ni ni-map-pin-fill"></em>
+                                            <span>Abidjan</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h6 class="product-title text-dark fs-15px">
+                                    <a href="{{route('index_detail')}}">
+                                        Classy Modern Smart watch
+                                    </a>
+                                </h6>
+                                <div class="product-price h6 fs-17px">
+                                    10.000 fcfa
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
