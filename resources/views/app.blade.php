@@ -98,7 +98,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="user-profile-setting.html">
+                                                        <a class="toggle" data-target="addProduct">
                                                             <em class="icon ni ni-package-fill">
                                                             </em>
                                                             <span>
@@ -159,7 +159,118 @@
                         </div>
                     </div>
                 </div>
+
                 @yield('content')
+
+                <div class="nk-add-product toggle-slide toggle-slide-right" data-content="addProduct" data-simplebar="" data-toggle-body="true" data-toggle-overlay="true" data-toggle-screen="any">
+                    <div class="nk-block-head">
+                        <div class="nk-block-head-content">
+                            <h5 class="nk-block-title">
+                                New Product
+                            </h5>
+                            <div class="nk-block-des">
+                                <p>
+                                    Add information and add new product.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nk-block">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label" for="product-title">
+                                        Product Title
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="product-title" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="regular-price">
+                                        Regular Price
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="regular-price" type="number" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="sale-price">
+                                        Sale Price
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="sale-price" type="number" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="stock">
+                                        Stock
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="stock" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="SKU">
+                                        SKU
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="SKU" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label" for="category">
+                                        Category
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="category" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label" for="tags">
+                                        Tags
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="tags" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">    
+                                    <label class="form-label" for="customMultipleFilesLabel">Multiple File Upload</label>    
+                                    <div class="form-control-wrap">        
+                                        <div class="form-file">            
+                                            <input type="file" multiple class="form-file-input" id="customMultipleFiles">            
+                                            <label class="form-file-label" for="customMultipleFiles">Choose files</label>        
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary">
+                                    <em class="icon ni ni-plus">
+                                    </em>
+                                    <span>
+                                        Add New
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="nk-footer">
                     <div class="container-xl wide-xl">
                         <div class="nk-footer-wrap">

@@ -16,23 +16,42 @@
                         </div>
                     </div>
                 </div>
-                <div class="row g-gs">
-                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4">
-                        <div class="card product-card">
-                            <div class="product-thumb h-50" style="display: flex;justify-content: center;align-items: center;">
+            </div>
+            <div class="nk-block">
+                <ul class="filter-button-group mb-4 pb-1">
+                    <li>
+                        <button class="filter-button active" data-filter="*" type="button">
+                            Tout
+                        </button>
+                    </li>
+                    <li>
+                        <button class="filter-button" data-filter=".categorie-1" type="button">
+                            categorie-1
+                        </button>
+                    </li>
+                    <li>
+                        <button class="filter-button" data-filter=".categorie-2" type="button">
+                            categorie-2
+                        </button>
+                    </li>
+                </ul>
+                <div class="row g-gs filter-container" data-animation="true">
+                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 filter-item categorie-1" data-category="categorie-1">
+                        <div class="card ">
+                            <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
                                 <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: auto;width: auto;" class="card-img-top" src="image/1.png" />
+                                    <img style="object-fit: cover;height: auto;width: auto;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
-                                        <span class="badge bg-success">
-                                            New
+                                        <span class="badge bg-light" >
+                                            <em class="icon ni ni-alarm"></em>
+                                            <span>il y a 5 jours</span>
                                         </span>
                                     </li>
                                 </ul>
                             </div>
-                            <hr>
-                            <div class="card-inner text-center">
+                            <div class="card-inner text-center pt-2 pb-2">
                                 <ul class="product-tags">
                                     <li>
                                         <a>
@@ -46,7 +65,42 @@
                                         Classy Modern Smart watch
                                     </a>
                                 </h6>
-                                <div class="product-price h6 fs-17px">
+                                <div class="product-price h6 fs-17px ">
+                                    10.000 fcfa
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 filter-item categorie-2" data-category="categorie-2">
+                        <div class="card ">
+                            <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
+                                <a href="{{route('index_detail')}} " >
+                                    <img style="object-fit: cover;height: auto;width: auto;" class="" src="image/1.png" />
+                                </a>
+                                <ul class="product-badges">
+                                    <li>
+                                        <span class="badge bg-light" >
+                                            <em class="icon ni ni-alarm"></em>
+                                            <span>il y a 5 jours</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-inner text-center pt-2 pb-2">
+                                <ul class="product-tags">
+                                    <li>
+                                        <a>
+                                            <em class="icon ni ni-map-pin-fill"></em>
+                                            <span>Abidjan</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h6 class="product-title text-dark fs-15px">
+                                    <a href="{{route('index_detail')}}">
+                                        Classy Modern Smart watch
+                                    </a>
+                                </h6>
+                                <div class="product-price h6 fs-17px ">
                                     10.000 fcfa
                                 </div>
                             </div>

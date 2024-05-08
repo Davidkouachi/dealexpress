@@ -14,13 +14,13 @@
                         </h3>
                     </div>
                     <div class="nk-block-head-content">
-                        <a class="btn btn-danger btn-dim d-none d-sm-inline-flex" href="{{route('index_accueil')}}">
+                        <a class="btn btn-danger btn-dim d-none d-sm-inline-flex" href="javascript:void(0);" onclick="history.back()">
                             <em class="icon ni ni-arrow-left"></em>
                             <span>
                                 Retour
                             </span>
                         </a>
-                        <a class="btn btn-danger btn-dim d-inline-flex d-sm-none" href="{{route('index_accueil')}}">
+                        <a class="btn btn-danger btn-dim d-inline-flex d-sm-none" href="javascript:void(0);" onclick="history.back()">
                             <em class="icon ni ni-arrow-left">
                             </em>
                         </a>
@@ -81,7 +81,7 @@
                                     Classy Modern Smart watch
                                 </h5>
                             </div>
-                            <div class="col-lg-12">
+                            <div class="col-lg-12 mt-2">
                                 <div class="product-details entry me-xxl-3">
                                     <h3>
                                         Product details of Comfy cushions
@@ -140,21 +140,21 @@
                 </div>
                 <div class="slider-init row product-slider" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
                     <div class="col">
-                        <div class="card product-card">
-                            <div class="product-thumb h-50" style="display: flex;justify-content: center;align-items: center;">
+                        <div class="card ">
+                            <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
                                 <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: auto;width: auto;" class="card-img-top" src="image/1.png" />
+                                    <img style="object-fit: cover;height: auto;width: auto;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
-                                        <span class="badge bg-success">
-                                            New
+                                        <span class="badge bg-light" >
+                                            <em class="icon ni ni-alarm"></em>
+                                            <span>il y a 5 jours</span>
                                         </span>
                                     </li>
                                 </ul>
                             </div>
-                            <hr>
-                            <div class="card-inner text-center">
+                            <div class="card-inner text-center pt-2 pb-2">
                                 <ul class="product-tags">
                                     <li>
                                         <a>
@@ -168,182 +168,7 @@
                                         Classy Modern Smart watch
                                     </a>
                                 </h6>
-                                <div class="product-price h6 fs-17px">
-                                    10.000 fcfa
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card product-card">
-                            <div class="product-thumb h-50" style="display: flex;justify-content: center;align-items: center;">
-                                <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: auto;width: auto;" class="card-img-top" src="image/1.png" />
-                                </a>
-                                <ul class="product-badges">
-                                    <li>
-                                        <span class="badge bg-success">
-                                            New
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <hr>
-                            <div class="card-inner text-center">
-                                <ul class="product-tags">
-                                    <li>
-                                        <a>
-                                            <em class="icon ni ni-map-pin-fill"></em>
-                                            <span>Abidjan</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h6 class="product-title text-dark fs-15px">
-                                    <a href="{{route('index_detail')}}">
-                                        Classy Modern Smart watch
-                                    </a>
-                                </h6>
-                                <div class="product-price h6 fs-17px">
-                                    10.000 fcfa
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card product-card">
-                            <div class="product-thumb h-50" style="display: flex;justify-content: center;align-items: center;">
-                                <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: auto;width: auto;" class="card-img-top" src="image/1.png" />
-                                </a>
-                                <ul class="product-badges">
-                                    <li>
-                                        <span class="badge bg-success">
-                                            New
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <hr>
-                            <div class="card-inner text-center">
-                                <ul class="product-tags">
-                                    <li>
-                                        <a>
-                                            <em class="icon ni ni-map-pin-fill"></em>
-                                            <span>Abidjan</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h6 class="product-title text-dark fs-15px">
-                                    <a href="{{route('index_detail')}}">
-                                        Classy Modern Smart watch
-                                    </a>
-                                </h6>
-                                <div class="product-price h6 fs-17px">
-                                    10.000 fcfa
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card product-card">
-                            <div class="product-thumb h-50" style="display: flex;justify-content: center;align-items: center;">
-                                <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: auto;width: auto;" class="card-img-top" src="image/1.png" />
-                                </a>
-                                <ul class="product-badges">
-                                    <li>
-                                        <span class="badge bg-success">
-                                            New
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <hr>
-                            <div class="card-inner text-center">
-                                <ul class="product-tags">
-                                    <li>
-                                        <a>
-                                            <em class="icon ni ni-map-pin-fill"></em>
-                                            <span>Abidjan</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h6 class="product-title text-dark fs-15px">
-                                    <a href="{{route('index_detail')}}">
-                                        Classy Modern Smart watch
-                                    </a>
-                                </h6>
-                                <div class="product-price h6 fs-17px">
-                                    10.000 fcfa
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card product-card">
-                            <div class="product-thumb h-50" style="display: flex;justify-content: center;align-items: center;">
-                                <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: auto;width: auto;" class="card-img-top" src="image/1.png" />
-                                </a>
-                                <ul class="product-badges">
-                                    <li>
-                                        <span class="badge bg-success">
-                                            New
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <hr>
-                            <div class="card-inner text-center">
-                                <ul class="product-tags">
-                                    <li>
-                                        <a>
-                                            <em class="icon ni ni-map-pin-fill"></em>
-                                            <span>Abidjan</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h6 class="product-title text-dark fs-15px">
-                                    <a href="{{route('index_detail')}}">
-                                        Classy Modern Smart watch
-                                    </a>
-                                </h6>
-                                <div class="product-price h6 fs-17px">
-                                    10.000 fcfa
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card product-card">
-                            <div class="product-thumb h-50" style="display: flex;justify-content: center;align-items: center;">
-                                <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: auto;width: auto;" class="card-img-top" src="image/1.png" />
-                                </a>
-                                <ul class="product-badges">
-                                    <li>
-                                        <span class="badge bg-success">
-                                            New
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <hr>
-                            <div class="card-inner text-center">
-                                <ul class="product-tags">
-                                    <li>
-                                        <a>
-                                            <em class="icon ni ni-map-pin-fill"></em>
-                                            <span>Abidjan</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h6 class="product-title text-dark fs-15px">
-                                    <a href="{{route('index_detail')}}">
-                                        Classy Modern Smart watch
-                                    </a>
-                                </h6>
-                                <div class="product-price h6 fs-17px">
+                                <div class="product-price h6 fs-17px ">
                                     10.000 fcfa
                                 </div>
                             </div>
