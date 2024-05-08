@@ -16,6 +16,100 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-12" >
+                            <div class="card card-preview">
+                                <div class="card-inner">
+                                    <form action="#" class="form-validate row g-gs">
+                                        <div class="col-lg-3 col-md-6" >
+                                            <div class="form-group">
+                                            <label class="form-label" for="fv-topics1">
+                                                Ville
+                                            </label>
+                                            <div class="form-control-wrap ">
+                                                <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topics1" name="fv-topics1" required="" data-msg="Error message">
+                                                    <option label="empty" value="">
+                                                    </option>
+                                                    <option value="fv-gq">
+                                                        General Question
+                                                    </option>
+                                                    <option value="fv-tq">
+                                                        Tachnical Question
+                                                    </option>
+                                                    <option value="fv-ab">
+                                                        Account & Billing
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6" >
+                                            <div class="form-group">
+                                            <label class="form-label" for="fv-topics2">
+                                                Catégorie
+                                            </label>
+                                            <div class="form-control-wrap ">
+                                                <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topics2" name="fv-topics2" required="" data-msg="Error message">
+                                                    <option label="empty" value="">
+                                                    </option>
+                                                    <option value="fv-gq">
+                                                        General Question
+                                                    </option>
+                                                    <option value="fv-tq">
+                                                        Tachnical Question
+                                                    </option>
+                                                    <option value="fv-ab">
+                                                        Account & Billing
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6" >
+                                            <div class="form-group">
+                                            <label class="form-label" for="fv-topic3">
+                                                Sous-catégorie
+                                            </label>
+                                            <div class="form-control-wrap ">
+                                                <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topic3" name="fv-topic3" required="" data-msg="Error message">
+                                                    <option label="empty" value="">
+                                                    </option>
+                                                    <option value="fv-gq">
+                                                        General Question
+                                                    </option>
+                                                    <option value="fv-tq">
+                                                        Tachnical Question
+                                                    </option>
+                                                    <option value="fv-ab">
+                                                        Account & Billing
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6" >
+                                            <div class="form-group">
+                                                <label class="form-label" for="fv-topic3">
+                                                    Prix
+                                                </label>
+                                                <div class="form-control-wrap">    
+                                                    <div class="input-group">       
+                                                        <input id="min-price" placeholder="min" type="tel" class="form-control">
+                                                        <input id="max-price" placeholder="max" type="tel" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 text-center" >
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-lg btn-dim btn-outline-success ">
+                                                    <em class="ni ni-search" ></em>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -17,7 +17,7 @@
                         <a class="btn btn-danger btn-dim d-none d-sm-inline-flex" href="{{route('index_accueil')}}">
                             <em class="icon ni ni-arrow-left"></em>
                             <span>
-                                Back
+                                Retour
                             </span>
                         </a>
                         <a class="btn btn-danger btn-dim d-inline-flex d-sm-none" href="{{route('index_accueil')}}">
@@ -31,50 +31,46 @@
                 <div class="card">
                     <div class="card-inner">
                         <div class="row pb-5">
-                            <div class="col-lg-4">
-                                <div class="product-gallery me-xl-1 me-xxl-5 mb-5">
-                                    <div class="slider-init" data-slick='{"arrows": false, "fade": true, "asNavFor":"#sliderNav", "slidesToShow": 1, "slidesToScroll": 1}' id="sliderFor">
-                                        <div class="slider-item rounded">
-                                            <img alt="" class="rounded w-100" src="images/product/lg-a.jpg" />
-                                        </div>
-                                        <div class="slider-item rounded">
-                                            <img alt="" class="rounded w-100" src="images/product/lg-g.jpg" />
-                                        </div>
-                                        <div class="slider-item rounded">
-                                            <img alt="" class="rounded w-100" src="images/product/lg-d.jpg" />
-                                        </div>
-                                        <div class="slider-item rounded">
-                                            <img alt="" class="rounded w-100" src="images/product/lg-h.jpg" />
-                                        </div>
-                                        <div class="slider-item rounded">
-                                            <img alt="" class="rounded w-100" src="images/product/lg-e.jpg" />
+                            <div class="col-lg-12 ">
+                                <div class="slider-init row product-slider mb-3" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
+                                    <div class="col">
+                                        <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
+                                            <img height="auto" width="auto" src="image/2.jpeg"> 
                                         </div>
                                     </div>
-                                    <div class="slider-init slider-nav" data-slick='{"arrows": false, "slidesToShow": 5, "slidesToScroll": 1, "asNavFor":"#sliderFor", "centerMode":true, "focusOnSelect": true,                                 "responsive":[ {"breakpoint": 1539,"settings":{"slidesToShow": 4}}, {"breakpoint": 768,"settings":{"slidesToShow": 3}}, {"breakpoint": 420,"settings":{"slidesToShow": 2}} ]                            }' id="sliderNav">
-                                        <div class="slider-item">
-                                            <div class="thumb">
-                                                <img alt="" class="rounded" src="images/product/lg-a.jpg" />
-                                            </div>
+                                    <div class="col">
+                                        <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
+                                            <img height="auto" width="auto" src="image/3.jpeg">
                                         </div>
-                                        <div class="slider-item">
-                                            <div class="thumb">
-                                                <img alt="" class="rounded" src="images/product/lg-g.jpg" />
-                                            </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
+                                            <img height="auto" width="auto" src="image/1.png"> 
                                         </div>
-                                        <div class="slider-item">
-                                            <div class="thumb">
-                                                <img alt="" class="rounded" src="images/product/lg-d.jpg" />
-                                            </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
+                                            <img height="auto" width="auto" src="image/2.png"> 
                                         </div>
-                                        <div class="slider-item">
-                                            <div class="thumb">
-                                                <img alt="" class="rounded" src="images/product/lg-h.jpg" />
-                                            </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
+                                            <img height="auto" width="auto" src="image/2.jpeg"> 
                                         </div>
-                                        <div class="slider-item">
-                                            <div class="thumb">
-                                                <img alt="" class="rounded" src="images/product/lg-e.jpg" />
-                                            </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
+                                            <img height="auto" width="auto" src="image/3.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
+                                            <img height="auto" width="auto" src="image/1.png"> 
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
+                                            <img height="auto" width="auto" src="image/2.png"> 
                                         </div>
                                     </div>
                                 </div>
@@ -85,7 +81,7 @@
                                     Classy Modern Smart watch
                                 </h5>
                             </div>
-                            <div class="col-lg-8">
+                            <div class="col-lg-12">
                                 <div class="product-details entry me-xxl-3">
                                     <h3>
                                         Product details of Comfy cushions

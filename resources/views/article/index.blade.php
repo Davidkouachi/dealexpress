@@ -131,12 +131,10 @@
                         <label class="form-label" for="fv-topic3">
                             Prix
                         </label>
-                        <div class="form-control-wrap row">
-                            <div class="col-lg-6" >
-                                <input placeholder="min" type="tel" class="form-control" id="full-name-1">
-                            </div>
-                            <div class="col-lg-6" >
-                                <input placeholder="max" type="tel" class="form-control" id="full-name-2">
+                        <div class="form-control-wrap">
+                            <div class="input-group">
+                                <input id="min-price" placeholder="min" type="text" class="form-control">
+                                <input id="max-price" placeholder="max" type="text" class="form-control">
                             </div>
                         </div>
                     </div>
