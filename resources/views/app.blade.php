@@ -10,8 +10,8 @@
     <title>
         @yield('titre')
     </title>
-    <link href="assets/css/dashlite55a0.css" rel="stylesheet">
-    <link href="assets/css/theme55a0.css" id="skin-default" rel="stylesheet">
+    <link href="{{asset('assets/css/dashlite55a0.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/theme55a0.css')}}" id="skin-default" rel="stylesheet">
     </link>
     </link>
     </link>
@@ -24,46 +24,43 @@
 <body class="nk-body ui-rounder has-sidebar ui-light ">
     <div class="nk-app-root">
         <div class="nk-main ">
+            @yield('menu')
             <div class="nk-wrap ">
                 <div class="nk-header is-light nk-header-fixed is-light">
                     <div class="container-xl wide-xl">
                         <div class="nk-header-wrap">
+                            @yield('btn_menu')
                             <div class="nk-header-brand ">
                                 <a class="logo-link" href="{{route('index_accueil')}}">
                                     <img height="50" width="50" src="{{asset('image/1.png')}}" /></img>
                                 </a>
-                            </div>
-                            <div class="nk-header-menu is-light">
-                                <div class="nk-header-menu-inner">
-                                    
-                                </div>
-                            </div>
+                            </div>                           
                             <div class="nk-header-tools">
                                 <ul class="nk-quick-nav">
-                                    @if(request()->routeIs('index_accueil', 'index_detail', 'index_profil') )
+                                    @if(request()->routeIs('index_accueil', 'index_detail', 'index_profil','index_liste_detail','index_liste_article') )
                                     <li class="dropdown notification-dropdown">
-                                        <a class="nk-quick-nav-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Annonces" href="{{route('index_article')}}">
+                                        <a class="nk-quick-nav-icon" href="{{route('index_article')}}">
                                             <em class="icon ni ni-box-view-fill"></em>
                                         </a>
                                     </li>
                                     @endif
                                     @if(request()->routeIs('index_article'))
                                     <li class="dropdown notification-dropdown">
-                                        <a class=" nk-quick-nav-icon" data-bs-toggle="modal" data-bs-target="#modalSearch" href="#">
-                                            <em class="icon ni ni-search" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Recherche"></em>
+                                        <a class=" nk-quick-nav-icon" data-bs-toggle="modal" data-bs-target="#modalSearch" >
+                                            <em class="icon ni ni-search"></em>
                                         </a>
                                     </li>
                                     @endif
                                     @if(!request()->routeIs('index_accueil', 'index_detail', 'index_profil') || request()->routeIs('index_detail', 'index_profil') )
                                     <li class="dropdown notification-dropdown">
-                                        <a class=" nk-quick-nav-icon" href="{{route('index_accueil')}}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Accueil">
+                                        <a class=" nk-quick-nav-icon" href="{{route('index_accueil')}}">
                                             <em class="icon ni ni-home"></em>
                                         </a>
                                     </li>
                                     @endif
                                     <li class="dropdown user-dropdown">
                                         <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                                            <div class="user-toggle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profil">
+                                            <div class="user-toggle">
                                                 <div class="user-avatar sm">
                                                     <em class="icon ni ni-user-alt">
                                                     </em>
@@ -98,7 +95,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="toggle" data-target="addProduct">
+                                                        <a data-bs-toggle="modal" data-bs-target="#modalAnnonce">
                                                             <em class="icon ni ni-package-fill">
                                                             </em>
                                                             <span>
@@ -107,11 +104,20 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="user-profile-setting.html">
+                                                        <a href="{{route('index_liste_article')}}">
                                                             <em class="icon ni ni-inbox-in">
                                                             </em>
                                                             <span>
                                                                 Mes annonces
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{route('index_tableau')}}">
+                                                            <em class="icon ni ni-trend-up">
+                                                            </em>
+                                                            <span>
+                                                                Tableau de bord
                                                             </span>
                                                         </a>
                                                     </li>
@@ -162,115 +168,6 @@
 
                 @yield('content')
 
-                <div class="nk-add-product toggle-slide toggle-slide-right" data-content="addProduct" data-simplebar="" data-toggle-body="true" data-toggle-overlay="true" data-toggle-screen="any">
-                    <div class="nk-block-head">
-                        <div class="nk-block-head-content">
-                            <h5 class="nk-block-title">
-                                New Product
-                            </h5>
-                            <div class="nk-block-des">
-                                <p>
-                                    Add information and add new product.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nk-block">
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label" for="product-title">
-                                        Product Title
-                                    </label>
-                                    <div class="form-control-wrap">
-                                        <input class="form-control" id="product-title" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label" for="regular-price">
-                                        Regular Price
-                                    </label>
-                                    <div class="form-control-wrap">
-                                        <input class="form-control" id="regular-price" type="number" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label" for="sale-price">
-                                        Sale Price
-                                    </label>
-                                    <div class="form-control-wrap">
-                                        <input class="form-control" id="sale-price" type="number" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label" for="stock">
-                                        Stock
-                                    </label>
-                                    <div class="form-control-wrap">
-                                        <input class="form-control" id="stock" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label" for="SKU">
-                                        SKU
-                                    </label>
-                                    <div class="form-control-wrap">
-                                        <input class="form-control" id="SKU" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label" for="category">
-                                        Category
-                                    </label>
-                                    <div class="form-control-wrap">
-                                        <input class="form-control" id="category" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label" for="tags">
-                                        Tags
-                                    </label>
-                                    <div class="form-control-wrap">
-                                        <input class="form-control" id="tags" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">    
-                                    <label class="form-label" for="customMultipleFilesLabel">Multiple File Upload</label>    
-                                    <div class="form-control-wrap">        
-                                        <div class="form-file">            
-                                            <input type="file" multiple class="form-file-input" id="customMultipleFiles">            
-                                            <label class="form-file-label" for="customMultipleFiles">Choose files</label>        
-                                        </div>    
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary">
-                                    <em class="icon ni ni-plus">
-                                    </em>
-                                    <span>
-                                        Add New
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="nk-footer">
                     <div class="container-xl wide-xl">
                         <div class="nk-footer-wrap">
@@ -286,17 +183,13 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modalSincrire">
+    <div class="modal fade" id="modalSincrire" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">
                         S'inscrire
                     </h5>
-                    <a aria-label="Close" class="close" data-bs-dismiss="modal" href="#">
-                        <em class="icon ni ni-cross">
-                        </em>
-                    </a>
                 </div>
                 <div class="modal-body">
                     <form action="#" class="form-validate">
@@ -333,32 +226,31 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-lg btn-primary" type="submit">
-                                Save Informations
+                            <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
+                                Annulée
+                            </button>
+                            <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
+                                Terminé
                             </button>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer bg-light">
                     <span class="sub-text">
-                        Modal Footer Text
+                        Inscription
                     </span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="modalConnexion">
+    <div class="modal fade" id="modalConnexion" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">
                         S'inscrire
                     </h5>
-                    <a aria-label="Close" class="close" data-bs-dismiss="modal" href="#">
-                        <em class="icon ni ni-cross">
-                        </em>
-                    </a>
                 </div>
                 <div class="modal-body">
                     <form action="#" class="form-validate">
@@ -383,15 +275,163 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-lg btn-primary" type="submit">
-                                Save Informations
+                            <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
+                                Annulée
+                            </button>
+                            <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
+                                Connexion
                             </button>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer bg-light">
                     <span class="sub-text">
-                        Modal Footer Text
+                        Connexion
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAnnonce" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Nouvelle Annonce
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <form action="#" class="form-validate">
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="full-name-1">
+                                        Full Name
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input required data-msg="Error message" class="form-control" id="full-name-1" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="email-address-1">
+                                        Email address
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="email-address-1" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="phone-no-1">
+                                        Phone No
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="phone-no-1" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="pay-amount-1">
+                                        Amount
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="pay-amount-1" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label">
+                                        Communication
+                                    </label>
+                                    <ul class="custom-control-group g-3 align-center">
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="com-email-1" type="checkbox">
+                                                <label class="custom-control-label" for="com-email-1">
+                                                    Email
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="com-sms-1" type="checkbox">
+                                                <label class="custom-control-label" for="com-sms-1">
+                                                    SMS
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="com-phone-1" type="checkbox">
+                                                <label class="custom-control-label" for="com-phone-1">
+                                                    Phone
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label">
+                                        Payment Methods
+                                    </label>
+                                    <ul class="custom-control-group g-3 align-center">
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="pay-card-1" type="checkbox">
+                                                <label class="custom-control-label" for="pay-card-1">
+                                                    Card
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="pay-bitcoin-1" type="checkbox">
+                                                <label class="custom-control-label" for="pay-bitcoin-1">
+                                                    Bitcoin
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="pay-cash-1" type="checkbox">
+                                                <label class="custom-control-label" for="pay-cash-1">
+                                                    Cash
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
+                                        Annulée
+                                    </button>
+                                    <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
+                                        Poster
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-light">
+                    <span class="sub-text">
+                        Annonce
                     </span>
                 </div>
             </div>
@@ -433,13 +473,13 @@
         });
     </script>
 
-    <script src="assets/js/bundle55a0.js">
+    <script src="{{asset('assets/js/bundle55a0.js')}}">
     </script>
-    <script src="assets/js/scripts55a0.js">
+    <script src="{{asset('assets/js/scripts55a0.js')}}">
     </script>
-    <script src="assets/js/demo-settings55a0.js">
+    <script src="{{asset('assets/js/demo-settings55a0.js')}}">
     </script>
-    <script src="assets/js/charts/gd-campaign55a0.js">
+    <script src="{{asset('assets/js/charts/gd-campaign55a0.js')}}">
     </script>
 </body>
 

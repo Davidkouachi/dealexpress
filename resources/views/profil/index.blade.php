@@ -234,8 +234,8 @@
                                             <ul class="align-center gx-3">
                                                 <li class="order-md-last">
                                                     <div class="custom-control custom-switch me-n2">
-                                                        <input checked="" class="custom-control-input" id="activity-log" type="checkbox">
-                                                        <label class="custom-control-label" for="activity-log">
+                                                        <input checked="" class="custom-control-input" id="activity-log2" type="checkbox">
+                                                        <label class="custom-control-label" for="activity-log2">
                                                         </label>
                                                         </input>
                                                     </div>

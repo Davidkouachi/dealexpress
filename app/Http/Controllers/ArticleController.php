@@ -16,4 +16,14 @@ class ArticleController extends Controller
       return view('article.detail');
    }
 
+   public function index_liste_article()
+   {
+      return view('liste.article');
+   }
+
+   public function index_liste_detail()
+   {
+      return view('liste.detail');
+   }
+
 }

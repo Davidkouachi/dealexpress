@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('titre', 'Détail')
+@section('titre', 'Detail annonce')
 
 @section('content')
 <div class="nk-content nk-content-fluid">
@@ -10,7 +10,7 @@
                 <div class="nk-block-between g-3">
                     <div class="nk-block-head-content">
                         <h3 class="nk-block-title ">
-                            Détail de l'article
+                            Détail de l'annonce
                         </h3>
                     </div>
                     <div class="nk-block-head-content">
@@ -77,9 +77,13 @@
                                 <h5 class="product-price text-primary">
                                     $78.00
                                 </h5>
-                                <h5 class="product-title">
-                                    Classy Modern Smart watch
-                                </h5>
+                                <div class="d-flex">
+                                    <h5 class="product-title me-3" >Classy Modern Smart watch</h5>
+                                    <p>
+                                        <span>15 vue(s)</span>
+                                        <em class="icon ni ni-eye" ></em>
+                                    </p>
+                                </div>
                             </div>
                             <div class="col-lg-12 mt-2">
                                 <div class="product-details entry me-xxl-3">
@@ -118,104 +122,31 @@
                                     <p>
                                         I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
                                     </p>
-                                    <a class="btn btn-outline-success btn-dim" data-bs-toggle="modal" data-bs-target="#modalContact">
-                                        <span>Contact</span>
-                                        <em class="icon ni ni-call-alt-fill"></em>
+                                    <a class="btn btn-outline-info btn-dim mt-2" >
+                                        <span>Modifier l'annonce</span>
+                                        <em class="icon ni ni-edit"></em>
+                                    </a>
+                                    <a class="btn btn-outline-danger btn-dim mt-2" >
+                                        <span>Supprimer l'annonce</span>
+                                        <em class="icon ni ni-trash"></em>
+                                    </a>
+                                    <a class="btn btn-outline-warning btn-dim mt-2" >
+                                        <span>Renouveler l'annonce</span>
+                                        <em class="icon ni ni-reload"></em>
+                                    </a>
+                                    <a class="btn btn-outline-success btn-dim mt-2" >
+                                        <span>Article vendu</span>
+                                        <em class="icon ni ni-check-circle-cut"></em>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-dim mt-2" data-bs-toggle="modal" data-bs-target="#modalPartager">
+                                        <span>Partager l'annonce</span>
+                                        <em class="icon ni ni-share"></em>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="nk-block nk-block-lg">
-                <div class="nk-block-head">
-                    <div class="nk-block-between g-3">
-                        <div class="nk-block-head-content">
-                            <h5 class="nk-block-title">
-                                Quelques annonces
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-init row product-slider" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
-                    <div class="col">
-                        <div class="card ">
-                            <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
-                                <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: auto;width: auto;" class="" src="image/1.png" />
-                                </a>
-                                <ul class="product-badges">
-                                    <li>
-                                        <span class="badge bg-light" >
-                                            <em class="icon ni ni-alarm"></em>
-                                            <span>il y a 5 jours</span>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="card-inner text-center pt-2 pb-2">
-                                <ul class="product-tags">
-                                    <li>
-                                        <a>
-                                            <em class="icon ni ni-map-pin-fill"></em>
-                                            <span>Abidjan</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h6 class="product-title text-dark fs-15px">
-                                    <a href="{{route('index_detail')}}">
-                                        Classy Modern Smart watch
-                                    </a>
-                                </h6>
-                                <div class="product-price h6 fs-17px ">
-                                    10.000 fcfa
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade zoom" tabindex="-1" id="modalContact">
-    <div class="modal-dialog modal-sm" role="document" style="width: 100%;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Contacts</h5>
-                <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close"><em class="icon ni ni-cross"></em></a>
-            </div>
-            <div class="modal-body ">
-                <div class="card-inner text-center" >
-                    <ul class="row g-gs text-center">
-                        <li class="col-lg-12">
-                            <a class="btn btn-outline-warning btn-dim" href="tel:+2250102514392" target="_blank">
-                                <em class="icon ni ni-call"></em>
-                                <span> (+225) 0102514392 </span>
-                            </a>
-                        </li>
-                        <li class="col-lg-12">
-                            <a class="btn btn-outline-success btn-dim" href="https://wa.me/+2250102514392" target="_blank">
-                                <em class="icon ni ni-whatsapp"></em>
-                                <span> (+225) 0102514392 </span>
-                            </a>
-                        </li>
-                        <li class="col-lg-12">
-                            <a class="btn btn-outline-primary btn-dim" href="sms:+2250102514392" target="_blank">
-                                <em class="icon ni ni-chat"></em>
-                                <span> (+225) 0102514392 </span>
-                            </a>
-                        </li>
-                        <li class="col-lg-12">
-                            <a class="btn btn-outline-light btn-dim" data-bs-toggle="modal" data-bs-target="#modalPartager">
-                                <em class="icon ni ni-share"></em>
-                                <span>Partager</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div> 
             </div>
         </div>
     </div>

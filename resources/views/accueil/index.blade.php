@@ -26,7 +26,7 @@
                                                 Ville
                                             </label>
                                             <div class="form-control-wrap ">
-                                                <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topics1" name="fv-topics1" required="" data-msg="Error message">
+                                                <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topics1" name="fv-topics1" >
                                                     <option label="empty" value="">
                                                     </option>
                                                     <option value="fv-gq">
@@ -48,7 +48,7 @@
                                                 Catégorie
                                             </label>
                                             <div class="form-control-wrap ">
-                                                <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topics2" name="fv-topics2" required="" data-msg="Error message">
+                                                <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topics2" name="fv-topics2" >
                                                     <option label="empty" value="">
                                                     </option>
                                                     <option value="fv-gq">
@@ -70,7 +70,7 @@
                                                 Sous-catégorie
                                             </label>
                                             <div class="form-control-wrap ">
-                                                <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topic3" name="fv-topic3" required="" data-msg="Error message">
+                                                <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topic3" name="fv-topic3" >
                                                     <option label="empty" value="">
                                                     </option>
                                                     <option value="fv-gq">
@@ -167,7 +167,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="nk-block-head">
+                <div class="nk-block-head mt-2">
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
                             <a class="btn btn-outline-warning btn-wider btn-dim" href="{{route('index_article')}}">
