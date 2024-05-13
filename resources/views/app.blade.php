@@ -171,10 +171,20 @@
                 <div class="nk-footer">
                     <div class="container-xl wide-xl">
                         <div class="nk-footer-wrap">
-                            <div class="nk-footer-copyright">
-                                © <script>
-                                document.write(new Date().getFullYear())
-                                </script>. DealExpress
+                            <div class="nk-footer-copyright d-flex w-100">
+                                <span class="me-2" >
+                                    ©<script>
+                                    document.write(new Date().getFullYear())
+                                    </script>.DealExpress
+                                </span>
+                                <marquee  behavior="" direction="">
+                                    <span class="text-danger" >
+                                        Attention :
+                                    </span>
+                                    <span class="" >
+                                        vwewev vewivwenvwe veuinvewnve
+                                    </span>
+                                </marquee>
                             </div>
                         </div>
                     </div>

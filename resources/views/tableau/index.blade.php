@@ -188,7 +188,7 @@
                 	<div class="col-lg-12">
 					    <div class="card">
 		                    <div class="card-inner">
-		                        <div class="row pb-5">
+		                        <div class="row ">
 		                            <div class="col-lg-12 ">
 		                            	<h5 class="product-title">
 		                                    Annonces les plus vues (Top 10)
@@ -479,6 +479,689 @@
 		                        </div>
 		                    </div>
 		                </div>
+					</div>
+					<div class="col-lg-12">
+					    <div class="card">
+		                    <div class="card-inner">
+		                        <div class="row">
+		                            <div class="col-lg-12 ">
+		                            	<h5 class="product-title">
+		                                    Articles les plus vendus (Top 10)
+		                                </h5>
+		                                <div class="slider-init row product-slider mb-3" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 4}},{"breakpoint": 1340,"settings":{"slidesToShow": 3}}, {"breakpoint": 999,"settings":{"slidesToShow": 2}},{"breakpoint": 650,"settings":{"slidesToShow": 1}} ]}'>
+		                                    <div class="col">
+		                                        <div class="card card-bordered h-100">
+	                                                <div class="card-inner">
+	                                                    <h5 class="card-title">
+	                                                        Reserve Bank of Australia
+	                                                    </h5>
+	                                                    <ul class="list-plain">
+	                                                        <li>
+	                                                            <em class="icon ni ni-map-pin">
+	                                                            </em>
+	                                                            <span>
+	                                                                60311 Frankfurt am Main, Australia
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-emails">
+	                                                            </em>
+	                                                            <span>
+	                                                                info@admin.com
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-call">
+	                                                            </em>
+	                                                            <span>
+	                                                                +43 720 884 749
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-clock">
+	                                                            </em>
+	                                                            <span>
+	                                                                Opening Hours - 8.00am to 4.00pm
+	                                                            </span>
+	                                                        </li>
+	                                                    </ul>
+	                                                </div>
+	                                            </div>
+		                                    </div>
+		                                    <div class="col">
+		                                        <div class="card card-bordered h-100">
+	                                                <div class="card-inner">
+	                                                    <h5 class="card-title">
+	                                                        Reserve Bank of Australia
+	                                                    </h5>
+	                                                    <ul class="list-plain">
+	                                                        <li>
+	                                                            <em class="icon ni ni-map-pin">
+	                                                            </em>
+	                                                            <span>
+	                                                                60311 Frankfurt am Main, Australia
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-emails">
+	                                                            </em>
+	                                                            <span>
+	                                                                info@admin.com
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-call">
+	                                                            </em>
+	                                                            <span>
+	                                                                +43 720 884 749
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-clock">
+	                                                            </em>
+	                                                            <span>
+	                                                                Opening Hours - 8.00am to 4.00pm
+	                                                            </span>
+	                                                        </li>
+	                                                    </ul>
+	                                                </div>
+	                                            </div>
+		                                    </div>
+		                                    <div class="col">
+		                                        <div class="card card-bordered h-100">
+	                                                <div class="card-inner">
+	                                                    <h5 class="card-title">
+	                                                        Reserve Bank of Australia
+	                                                    </h5>
+	                                                    <ul class="list-plain">
+	                                                        <li>
+	                                                            <em class="icon ni ni-map-pin">
+	                                                            </em>
+	                                                            <span>
+	                                                                60311 Frankfurt am Main, Australia
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-emails">
+	                                                            </em>
+	                                                            <span>
+	                                                                info@admin.com
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-call">
+	                                                            </em>
+	                                                            <span>
+	                                                                +43 720 884 749
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-clock">
+	                                                            </em>
+	                                                            <span>
+	                                                                Opening Hours - 8.00am to 4.00pm
+	                                                            </span>
+	                                                        </li>
+	                                                    </ul>
+	                                                </div>
+	                                            </div>
+		                                    </div>
+		                                    <div class="col">
+		                                        <div class="card card-bordered h-100">
+	                                                <div class="card-inner">
+	                                                    <h5 class="card-title">
+	                                                        Reserve Bank of Australia
+	                                                    </h5>
+	                                                    <ul class="list-plain">
+	                                                        <li>
+	                                                            <em class="icon ni ni-map-pin">
+	                                                            </em>
+	                                                            <span>
+	                                                                60311 Frankfurt am Main, Australia
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-emails">
+	                                                            </em>
+	                                                            <span>
+	                                                                info@admin.com
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-call">
+	                                                            </em>
+	                                                            <span>
+	                                                                +43 720 884 749
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-clock">
+	                                                            </em>
+	                                                            <span>
+	                                                                Opening Hours - 8.00am to 4.00pm
+	                                                            </span>
+	                                                        </li>
+	                                                    </ul>
+	                                                </div>
+	                                            </div>
+		                                    </div>
+		                                    <div class="col">
+		                                        <div class="card card-bordered h-100">
+	                                                <div class="card-inner">
+	                                                    <h5 class="card-title">
+	                                                        Reserve Bank of Australia
+	                                                    </h5>
+	                                                    <ul class="list-plain">
+	                                                        <li>
+	                                                            <em class="icon ni ni-map-pin">
+	                                                            </em>
+	                                                            <span>
+	                                                                60311 Frankfurt am Main, Australia
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-emails">
+	                                                            </em>
+	                                                            <span>
+	                                                                info@admin.com
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-call">
+	                                                            </em>
+	                                                            <span>
+	                                                                +43 720 884 749
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-clock">
+	                                                            </em>
+	                                                            <span>
+	                                                                Opening Hours - 8.00am to 4.00pm
+	                                                            </span>
+	                                                        </li>
+	                                                    </ul>
+	                                                </div>
+	                                            </div>
+		                                    </div>
+		                                    <div class="col">
+		                                        <div class="card card-bordered h-100">
+	                                                <div class="card-inner">
+	                                                    <h5 class="card-title">
+	                                                        Reserve Bank of Australia
+	                                                    </h5>
+	                                                    <ul class="list-plain">
+	                                                        <li>
+	                                                            <em class="icon ni ni-map-pin">
+	                                                            </em>
+	                                                            <span>
+	                                                                60311 Frankfurt am Main, Australia
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-emails">
+	                                                            </em>
+	                                                            <span>
+	                                                                info@admin.com
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-call">
+	                                                            </em>
+	                                                            <span>
+	                                                                +43 720 884 749
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-clock">
+	                                                            </em>
+	                                                            <span>
+	                                                                Opening Hours - 8.00am to 4.00pm
+	                                                            </span>
+	                                                        </li>
+	                                                    </ul>
+	                                                </div>
+	                                            </div>
+		                                    </div>
+		                                    <div class="col">
+		                                        <div class="card card-bordered h-100">
+	                                                <div class="card-inner">
+	                                                    <h5 class="card-title">
+	                                                        Reserve Bank of Australia
+	                                                    </h5>
+	                                                    <ul class="list-plain">
+	                                                        <li>
+	                                                            <em class="icon ni ni-map-pin">
+	                                                            </em>
+	                                                            <span>
+	                                                                60311 Frankfurt am Main, Australia
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-emails">
+	                                                            </em>
+	                                                            <span>
+	                                                                info@admin.com
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-call">
+	                                                            </em>
+	                                                            <span>
+	                                                                +43 720 884 749
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-clock">
+	                                                            </em>
+	                                                            <span>
+	                                                                Opening Hours - 8.00am to 4.00pm
+	                                                            </span>
+	                                                        </li>
+	                                                    </ul>
+	                                                </div>
+	                                            </div>
+		                                    </div>
+		                                    <div class="col">
+		                                        <div class="card card-bordered h-100">
+	                                                <div class="card-inner">
+	                                                    <h5 class="card-title">
+	                                                        Reserve Bank of Australia
+	                                                    </h5>
+	                                                    <ul class="list-plain">
+	                                                        <li>
+	                                                            <em class="icon ni ni-map-pin">
+	                                                            </em>
+	                                                            <span>
+	                                                                60311 Frankfurt am Main, Australia
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-emails">
+	                                                            </em>
+	                                                            <span>
+	                                                                info@admin.com
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-call">
+	                                                            </em>
+	                                                            <span>
+	                                                                +43 720 884 749
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-clock">
+	                                                            </em>
+	                                                            <span>
+	                                                                Opening Hours - 8.00am to 4.00pm
+	                                                            </span>
+	                                                        </li>
+	                                                    </ul>
+	                                                </div>
+	                                            </div>
+		                                    </div>
+		                                    <div class="col">
+		                                        <div class="card card-bordered h-100">
+	                                                <div class="card-inner">
+	                                                    <h5 class="card-title">
+	                                                        Reserve Bank of Australia
+	                                                    </h5>
+	                                                    <ul class="list-plain">
+	                                                        <li>
+	                                                            <em class="icon ni ni-map-pin">
+	                                                            </em>
+	                                                            <span>
+	                                                                60311 Frankfurt am Main, Australia
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-emails">
+	                                                            </em>
+	                                                            <span>
+	                                                                info@admin.com
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-call">
+	                                                            </em>
+	                                                            <span>
+	                                                                +43 720 884 749
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-clock">
+	                                                            </em>
+	                                                            <span>
+	                                                                Opening Hours - 8.00am to 4.00pm
+	                                                            </span>
+	                                                        </li>
+	                                                    </ul>
+	                                                </div>
+	                                            </div>
+		                                    </div>
+		                                    <div class="col">
+		                                        <div class="card card-bordered h-100">
+	                                                <div class="card-inner">
+	                                                    <h5 class="card-title">
+	                                                        Reserve Bank of Australia
+	                                                    </h5>
+	                                                    <ul class="list-plain">
+	                                                        <li>
+	                                                            <em class="icon ni ni-map-pin">
+	                                                            </em>
+	                                                            <span>
+	                                                                60311 Frankfurt am Main, Australia
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-emails">
+	                                                            </em>
+	                                                            <span>
+	                                                                info@admin.com
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-call">
+	                                                            </em>
+	                                                            <span>
+	                                                                +43 720 884 749
+	                                                            </span>
+	                                                        </li>
+	                                                        <li>
+	                                                            <em class="icon ni ni-clock">
+	                                                            </em>
+	                                                            <span>
+	                                                                Opening Hours - 8.00am to 4.00pm
+	                                                            </span>
+	                                                        </li>
+	                                                    </ul>
+	                                                </div>
+	                                            </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+					</div>
+                </div>
+            </div>
+            <div class="nk-block">
+                <div class="row g-gs">
+                	<div class="col-lg-6">
+					    <div class="card card-full">
+					        <div class="card-inner">
+					            <div class="card-title-group">
+					                <div class="card-title">
+					                    <h6 class="title">
+					                        Catégories
+					                    </h6>
+					                </div>
+					            </div>
+					        </div>
+					        <div class="card-inner pt-2"style="height: 360px;" data-simplebar="">
+					            <ul class="my-n2 ">
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        United States
+					                    </div>
+					                    <div class="sub-text">
+					                        14,356
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Ireland
+					                    </div>
+					                    <div class="sub-text">
+					                        11,203
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        United Kingdom
+					                    </div>
+					                    <div class="sub-text">
+					                        10,653
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Canada
+					                    </div>
+					                    <div class="sub-text">
+					                        7,215
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Australia
+					                    </div>
+					                    <div class="sub-text">
+					                        6,653
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Japan
+					                    </div>
+					                    <div class="sub-text">
+					                        3,945
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        China
+					                    </div>
+					                    <div class="sub-text">
+					                        2,945
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        United States
+					                    </div>
+					                    <div class="sub-text">
+					                        14,356
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Ireland
+					                    </div>
+					                    <div class="sub-text">
+					                        11,203
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        United Kingdom
+					                    </div>
+					                    <div class="sub-text">
+					                        10,653
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Canada
+					                    </div>
+					                    <div class="sub-text">
+					                        7,215
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Australia
+					                    </div>
+					                    <div class="sub-text">
+					                        6,653
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Japan
+					                    </div>
+					                    <div class="sub-text">
+					                        3,945
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        China
+					                    </div>
+					                    <div class="sub-text">
+					                        2,945
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1">
+					                    <div class="lead-text">
+					                        France
+					                    </div>
+					                    <div class="sub-text">
+					                        954
+					                    </div>
+					                </li>
+					            </ul>
+					        </div>
+					    </div>
+					</div>
+					<div class="col-lg-6">
+					    <div class="card card-full">
+					        <div class="card-inner">
+					            <div class="card-title-group">
+					                <div class="card-title">
+					                    <h6 class="title">
+					                        Villes
+					                    </h6>
+					                </div>
+					            </div>
+					        </div>
+					        <div class="card-inner pt-2" style="height: 360px;" data-simplebar="">
+					            <ul class="my-n2">
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        United States
+					                    </div>
+					                    <div class="sub-text">
+					                        14,356
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Ireland
+					                    </div>
+					                    <div class="sub-text">
+					                        11,203
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        United Kingdom
+					                    </div>
+					                    <div class="sub-text">
+					                        10,653
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Canada
+					                    </div>
+					                    <div class="sub-text">
+					                        7,215
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Australia
+					                    </div>
+					                    <div class="sub-text">
+					                        6,653
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Japan
+					                    </div>
+					                    <div class="sub-text">
+					                        3,945
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        China
+					                    </div>
+					                    <div class="sub-text">
+					                        2,945
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        United States
+					                    </div>
+					                    <div class="sub-text">
+					                        14,356
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Ireland
+					                    </div>
+					                    <div class="sub-text">
+					                        11,203
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        United Kingdom
+					                    </div>
+					                    <div class="sub-text">
+					                        10,653
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Canada
+					                    </div>
+					                    <div class="sub-text">
+					                        7,215
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Australia
+					                    </div>
+					                    <div class="sub-text">
+					                        6,653
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        Japan
+					                    </div>
+					                    <div class="sub-text">
+					                        3,945
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
+					                    <div class="lead-text">
+					                        China
+					                    </div>
+					                    <div class="sub-text">
+					                        2,945
+					                    </div>
+					                </li>
+					                <li class="align-center justify-between py-1 gx-1">
+					                    <div class="lead-text">
+					                        France
+					                    </div>
+					                    <div class="sub-text">
+					                        954
+					                    </div>
+					                </li>
+					            </ul>
+					        </div>
+					    </div>
 					</div>
                 </div>
             </div>
