@@ -122,19 +122,19 @@
                                     <p>
                                         I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
                                     </p>
-                                    <a class="btn btn-outline-info btn-dim mt-2" >
+                                    <a class="btn btn-outline-info btn-dim mt-2" data-bs-toggle="modal" data-bs-target="#modalAnnoncemodif" >
                                         <span>Modifier l'annonce</span>
                                         <em class="icon ni ni-edit"></em>
                                     </a>
-                                    <a class="btn btn-outline-danger btn-dim mt-2" >
+                                    <a id="suppr_ann" class="btn btn-outline-danger btn-dim mt-2" >
                                         <span>Supprimer l'annonce</span>
                                         <em class="icon ni ni-trash"></em>
                                     </a>
-                                    <a class="btn btn-outline-warning btn-dim mt-2" >
+                                    <a class="btn btn-outline-warning btn-dim mt-2" data-bs-toggle="modal" data-bs-target="#modalAnnoncerefresh">
                                         <span>Renouveler l'annonce</span>
                                         <em class="icon ni ni-reload"></em>
                                     </a>
-                                    <a class="btn btn-outline-success btn-dim mt-2" >
+                                    <a id="vendu_ann" class="btn btn-outline-success btn-dim mt-2" >
                                         <span>Article vendu</span>
                                         <em class="icon ni ni-check-circle-cut"></em>
                                     </a>
@@ -186,6 +186,322 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="modalAnnoncerefresh" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Renouveler l'annonce
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <form action="#" class="form-validate">
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="full-name-1">
+                                        Full Name
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input required data-msg="Error message" class="form-control" id="full-name-1" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="email-address-1">
+                                        Email address
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="email-address-1" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="phone-no-1">
+                                        Phone No
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="phone-no-1" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="pay-amount-1">
+                                        Amount
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="pay-amount-1" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label">
+                                        Communication
+                                    </label>
+                                    <ul class="custom-control-group g-3 align-center">
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="com-email-1" type="checkbox">
+                                                <label class="custom-control-label" for="com-email-1">
+                                                    Email
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="com-sms-1" type="checkbox">
+                                                <label class="custom-control-label" for="com-sms-1">
+                                                    SMS
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="com-phone-1" type="checkbox">
+                                                <label class="custom-control-label" for="com-phone-1">
+                                                    Phone
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label">
+                                        Payment Methods
+                                    </label>
+                                    <ul class="custom-control-group g-3 align-center">
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="pay-card-1" type="checkbox">
+                                                <label class="custom-control-label" for="pay-card-1">
+                                                    Card
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="pay-bitcoin-1" type="checkbox">
+                                                <label class="custom-control-label" for="pay-bitcoin-1">
+                                                    Bitcoin
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="pay-cash-1" type="checkbox">
+                                                <label class="custom-control-label" for="pay-cash-1">
+                                                    Cash
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
+                                        Annulée
+                                    </button>
+                                    <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
+                                        Poster
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-light">
+                    <span class="sub-text">
+                        Annonce
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal fade" id="modalAnnoncemodif" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Modifier l'annonce
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <form action="#" class="form-validate">
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="full-name-1">
+                                        Full Name
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input required data-msg="Error message" class="form-control" id="full-name-1" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="email-address-1">
+                                        Email address
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="email-address-1" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="phone-no-1">
+                                        Phone No
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="phone-no-1" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="pay-amount-1">
+                                        Amount
+                                    </label>
+                                    <div class="form-control-wrap">
+                                        <input class="form-control" id="pay-amount-1" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label">
+                                        Communication
+                                    </label>
+                                    <ul class="custom-control-group g-3 align-center">
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="com-email-1" type="checkbox">
+                                                <label class="custom-control-label" for="com-email-1">
+                                                    Email
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="com-sms-1" type="checkbox">
+                                                <label class="custom-control-label" for="com-sms-1">
+                                                    SMS
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="com-phone-1" type="checkbox">
+                                                <label class="custom-control-label" for="com-phone-1">
+                                                    Phone
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label">
+                                        Payment Methods
+                                    </label>
+                                    <ul class="custom-control-group g-3 align-center">
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="pay-card-1" type="checkbox">
+                                                <label class="custom-control-label" for="pay-card-1">
+                                                    Card
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="pay-bitcoin-1" type="checkbox">
+                                                <label class="custom-control-label" for="pay-bitcoin-1">
+                                                    Bitcoin
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="custom-control custom-control-sm custom-checkbox">
+                                                <input class="custom-control-input" id="pay-cash-1" type="checkbox">
+                                                <label class="custom-control-label" for="pay-cash-1">
+                                                    Cash
+                                                </label>
+                                                </input>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
+                                        Annulée
+                                    </button>
+                                    <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
+                                        Poster
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-light">
+                    <span class="sub-text">
+                        Annonce
+                    </span>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+<script>
+    document.getElementById('suppr_ann').addEventListener('click', function(event) {
+        event.preventDefault();
+
+        Swal.fire({
+                title: "Confirmation?",
+                text: "Vous êtes sur de vouloir supprimé cette annonce ?",
+                icon: "warning",
+                showCancelButton: !0,
+                confirmButtonText: "Oui",
+                cancelButtonText: "Non"
+        }).then(function(e) {
+            e.value && Swal.fire("Succés!", "Annonce supprimée.", "success")
+        })
+    });
+</script>
+
+<script>
+    document.getElementById('vendu_ann').addEventListener('click', function(event) {
+        event.preventDefault();
+
+        Swal.fire("Succés!", "Article vendu", "success")
+    });
+</script>
 
 @endsection
 

@@ -118,24 +118,19 @@
                                     <p>
                                         I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
                                     </p>
-                                    <div class="card card-full bg-warning mb-3">
-                                        <div class="card-inner">
-                                            <div class="d-flex align-items-center justify-content-between mb-1">
-                                                <h6 class="fs-6 text-white text-opacity-100 mb-0">
-                                                    ATTENTION !!!
-                                                </h6>
-                                            </div>
-                                            <div class="text-white">
-                                                <small class="fs-4">
-                                                    words
-                                                </small>
-                                            </div>
-                                        </div>
+                                    <div class="alert alert-icon alert-warning" role="alert">    
+                                        <em class="icon ni ni-alert-fill"></em>     
+                                        <strong>ATTENTION !!! </strong>. 
+                                        Your will be redirect for make your payment. 
                                     </div>
 
-                                    <a class="btn btn-outline-success btn-dim" data-bs-toggle="modal" data-bs-target="#modalContact">
-                                        <span>Contact</span>
-                                        <em class="icon ni ni-call-alt-fill"></em>
+                                    <a class="btn btn-outline-success btn-dim mt-2">
+                                        <span>Ajouter au panier</span>
+                                        <em class="icon ni ni-cart"></em>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-dim mt-2" data-bs-toggle="modal" data-bs-target="#modalPartager">
+                                        <span>Partager l'annonce</span>
+                                        <em class="icon ni ni-share"></em>
                                     </a>
                                 </div>
                             </div>

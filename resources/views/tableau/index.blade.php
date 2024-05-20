@@ -21,7 +21,7 @@
             <div class="nk-sidebar-menu" data-simplebar="">
                 <ul class="nk-menu">
                 	<li class="nk-menu-item">
-					    <a class="nk-menu-link" href="#">
+					    <a class="nk-menu-link">
 					        <span class="nk-menu-icon">
 					            <em class="icon ni ni-trend-up">
 					            </em>
@@ -43,40 +43,69 @@
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a class="nk-menu-link" href="#">
+                                <a class="nk-menu-link" href="#" data-bs-toggle="modal" data-bs-target="#modalCategorie">
                                     <span class="nk-menu-text">
                                         Catégorie
                                     </span>
-                                </a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a class="nk-menu-link" href="#">
-                                    <span class="nk-menu-text">
-                                        Sous catégorie
+                                    <span class="nk-menu-badge">
+                                        0
                                     </span>
                                 </a>
                             </li>
                             <li class="nk-menu-item">
-                                <a class="nk-menu-link" href="#">
+                                <a class="nk-menu-link" href="#" data-bs-toggle="modal" data-bs-target="#modalSouscategorie">
+                                    <span class="nk-menu-text">
+                                        Sous-catégorie
+                                    </span>
+                                    <span class="nk-menu-badge">
+                                        0
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nk-menu-item">
+                                <a class="nk-menu-link" href="#" data-bs-toggle="modal" data-bs-target="#modalVille">
                                     <span class="nk-menu-text">
                                         Ville
                                     </span>
+                                    <span class="nk-menu-badge">
+                                        0
+                                    </span>
                                 </a>
                             </li>
                             <li class="nk-menu-item">
-                                <a class="nk-menu-link" href="#">
+                                <a class="nk-menu-link" href="#" data-bs-toggle="modal" data-bs-target="#modalCommune">
                                     <span class="nk-menu-text">
                                         Commune
                                     </span>
+                                    <span class="nk-menu-badge">
+                                        0
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nk-menu-item has-sub">
+                        <a class="nk-menu-link nk-menu-toggle" href="#">
+                            <span class="nk-menu-icon">
+                                <em class="icon ni ni-list">
+                                </em>
+                            </span>
+                            <span class="nk-menu-text">
+                                Listes
+                            </span>
+                        </a>
+                        <ul class="nk-menu-sub">
+                            <li class="nk-menu-item">
+                                <a class="nk-menu-link" href="#">
+                                    <span class="nk-menu-text">
+                                        Catégories et Sous-catégories
+                                    </span>
                                 </a>
                             </li>
                             <li class="nk-menu-item">
                                 <a class="nk-menu-link" href="#">
                                     <span class="nk-menu-text">
-                                        Dragula
-                                    </span>
-                                    <span class="nk-menu-badge">
-                                        New
+                                        Villes et Communes
                                     </span>
                                 </a>
                             </li>
@@ -1168,4 +1197,197 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="modalCategorie" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                	<em class="icon ni ni-plus-circle"></em>
+                    <span>Nouvel enregistrement</span>
+                </h5>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form-validate">
+                    <div class="form-group">
+                        <label class="form-label" for="full-name">
+                            Catégorie
+                        </label>
+                        <div class="form-control-wrap">
+                            <input data-msg="Error message" class="form-control" id="full-name" required="" type="text" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
+                            Annulé
+                        </button>
+                        <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
+                            Terminé
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-light">
+                <span class="sub-text">
+                    Catégorie
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalSouscategorie" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                	<em class="icon ni ni-plus-circle"></em>
+                    <span>Nouvel enregistrement</span>
+                </h5>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form-validate">
+                	<div class="form-group">
+                        <label class="form-label" for="fv-topics1">
+                            Catégorie
+                        </label>
+                        <div class="form-control-wrap ">
+                            <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topics1" name="fv-topics1" required="" data-msg="Error message">
+                                <option label="empty" value="">
+                                </option>
+                                <option value="fv-gq">
+                                    General Question
+                                </option>
+                                <option value="fv-tq">
+                                    Tachnical Question
+                                </option>
+                                <option value="fv-ab">
+                                    Account & Billing
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="full-name">
+                            Sous-Catégorie
+                        </label>
+                        <div class="form-control-wrap">
+                            <input data-msg="Error message" class="form-control" id="full-name" required="" type="text" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
+                            Annulé
+                        </button>
+                        <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
+                            Terminé
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-light">
+                <span class="sub-text">
+                    Sous-Catégorie
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalVille" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                	<em class="icon ni ni-plus-circle"></em>
+                    <span>Nouvel enregistrement</span>
+                </h5>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form-validate">
+                    <div class="form-group">
+                        <label class="form-label" for="full-name">
+                            Ville
+                        </label>
+                        <div class="form-control-wrap">
+                            <input data-msg="Error message" class="form-control" id="full-name" required="" type="text" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
+                            Annulé
+                        </button>
+                        <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
+                            Terminé
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-light">
+                <span class="sub-text">
+                    Ville
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalCommune" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                	<em class="icon ni ni-plus-circle"></em>
+                    <span>Nouvel enregistrement</span>
+                </h5>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form-validate">
+                	<div class="form-group">
+                        <label class="form-label" for="fv-topics1">
+                            Ville
+                        </label>
+                        <div class="form-control-wrap ">
+                            <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topics1" name="fv-topics1" required="" data-msg="Error message">
+                                <option label="empty" value="">
+                                </option>
+                                <option value="fv-gq">
+                                    General Question
+                                </option>
+                                <option value="fv-tq">
+                                    Tachnical Question
+                                </option>
+                                <option value="fv-ab">
+                                    Account & Billing
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="full-name">
+                            Commune
+                        </label>
+                        <div class="form-control-wrap">
+                            <input data-msg="Error message" class="form-control" id="full-name" required="" type="text" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
+                            Annulé
+                        </button>
+                        <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
+                            Terminé
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-light">
+                <span class="sub-text">
+                    Commune
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
 @endsection

@@ -98,13 +98,15 @@
                                     <li>
                                         <a>
                                             <em class="icon ni ni-map-pin-fill"></em>
-                                            <span>Abidjan</span>
+                                            <span>Abidjan, </span>
                                         </a>
-                                    </li>
-                                    <li>
                                         <a>
                                             <em class="icon ni ni-eye"></em>
-                                            <span>0 vue(s)</span>
+                                            <span>0 vue(s), </span>
+                                        </a>
+                                        <a>
+                                            <em class="icon ni ni-bag"></em>
+                                            <span>Cap Sud</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -113,7 +115,11 @@
                                         Classy Modern Smart watch
                                     </a>
                                 </h6>
-                                <div class="product-price h6 fs-17px ">
+                                <div class="product-price h6 fs-15px ">
+                                    <small class="text-muted del fs-13px">
+                                        59.000 fcfa
+                                    </small>
+                                    <br>
                                     19.000 fcfa
                                 </div>
                             </div>

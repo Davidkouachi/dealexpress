@@ -59,13 +59,23 @@
                                             <span>Abidjan</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a>
+                                            <em class="icon ni ni-bag"></em>
+                                            <span>Cap Nord</span>
+                                        </a>
+                                    </li>
                                 </ul>
                                 <h6 class="product-title text-dark fs-15px">
                                     <a href="{{route('index_detail')}}">
                                         Classy Modern Smart watch
                                     </a>
                                 </h6>
-                                <div class="product-price h6 fs-17px ">
+                                <div class="product-price h6 fs-15px ">
+                                    <small class="text-muted del fs-13px">
+                                        35.000 fcfa
+                                    </small>
+                                    <br>
                                     10.000 fcfa
                                 </div>
                             </div>
@@ -81,7 +91,7 @@
                                     <li>
                                         <span class="badge bg-light" >
                                             <em class="icon ni ni-alarm"></em>
-                                            <span>il y a 5 jours</span>
+                                            <span>il y a 1 jours</span>
                                         </span>
                                     </li>
                                 </ul>
@@ -94,14 +104,24 @@
                                             <span>Abidjan</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a>
+                                            <em class="icon ni ni-bag"></em>
+                                            <span>Cap Sud</span>
+                                        </a>
+                                    </li>
                                 </ul>
                                 <h6 class="product-title text-dark fs-15px">
                                     <a href="{{route('index_detail')}}">
                                         Classy Modern Smart watch
                                     </a>
                                 </h6>
-                                <div class="product-price h6 fs-17px ">
-                                    10.000 fcfa
+                                <div class="product-price h6 fs-15px ">
+                                    <small class="text-muted del fs-13px">
+                                        55.000 fcfa
+                                    </small>
+                                    <br>
+                                    5.000 fcfa
                                 </div>
                             </div>
                         </div>

@@ -40,7 +40,16 @@
                                     @if(request()->routeIs('index_accueil', 'index_detail', 'index_profil','index_liste_detail','index_liste_article') )
                                     <li class="dropdown notification-dropdown">
                                         <a class="nk-quick-nav-icon" href="{{route('index_article')}}">
-                                            <em class="icon ni ni-box-view-fill"></em>
+                                            <em class="icon ni ni-package-fill"></em>
+                                            <span class="fs-15px"></span>
+                                        </a>
+                                    </li>
+                                    @endif
+                                    @if(!request()->routeIs('index_accueil', 'index_detail', 'index_profil') || request()->routeIs('index_detail', 'index_profil') )
+                                    <li class="dropdown notification-dropdown">
+                                        <a class=" nk-quick-nav-icon" href="{{route('index_accueil')}}">
+                                            <em class="icon ni ni-home"></em>
+                                            <span class="fs-15px"></span>
                                         </a>
                                     </li>
                                     @endif
@@ -51,13 +60,159 @@
                                         </a>
                                     </li>
                                     @endif
-                                    @if(!request()->routeIs('index_accueil', 'index_detail', 'index_profil') || request()->routeIs('index_detail', 'index_profil') )
-                                    <li class="dropdown notification-dropdown">
-                                        <a class=" nk-quick-nav-icon" href="{{route('index_accueil')}}">
-                                            <em class="icon ni ni-home"></em>
+                                    <li class="dropdown chats-dropdown">
+                                        <a class="dropdown-toggle nk-quick-nav-icon" data-bs-toggle="dropdown" href="#">
+                                            <div class="icon-status icon-status-na">
+                                                <em class="icon ni ni-cart">
+                                                </em>
+                                            </div>
                                         </a>
+                                        <div class="dropdown-menu dropdown-menu-xl dropdown-menu-end">
+                                            <div class="dropdown-head">
+                                                <span class="sub-title nk-dropdown-title fw-bold">
+                                                    Panier
+                                                </span>
+                                            </div>
+                                            <div class="dropdown-body">
+                                                <ul class="chat-list">
+                                                    <li class="chat-item">
+                                                        <div class="chat-link d-flex justify-content-start">
+                                                            <div class="chat-media user-avatar">
+                                                                <img src="images/product/a.png"/>
+                                                            </div>
+                                                            <div class="chat-info">
+                                                                <div class="chat-from">
+                                                                    <div class="name">
+                                                                        George Philips
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chat-context">
+                                                                    <div class="text">
+                                                                        Prix: 1.000.000 fcfa,  Quantité: 2
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="chat-context">
+                                                                <a class="btn btn-icon btn-xs btn-outline-danger btn-dim">
+                                                                    <em class="icon ni ni-cross">
+                                                                    </em>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="chat-item">
+                                                        <div class="chat-link d-flex justify-content-start">
+                                                            <div class="chat-media user-avatar">
+                                                                <img src="images/product/b.png"/>
+                                                            </div>
+                                                            <div class="chat-info">
+                                                                <div class="chat-from">
+                                                                    <div class="name">
+                                                                        George Philips
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chat-context">
+                                                                    <div class="text">
+                                                                        Prix: 1.000.000 fcfa,  Quantité: 2
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="chat-context">
+                                                                <a class="btn btn-icon btn-xs btn-outline-danger btn-dim" href="#">
+                                                                    <em class="icon ni ni-cross">
+                                                                    </em>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="chat-item">
+                                                        <div class="chat-link d-flex justify-content-start">
+                                                            <div class="chat-media user-avatar">
+                                                                <img src="images/product/c.png"/>
+                                                            </div>
+                                                            <div class="chat-info">
+                                                                <div class="chat-from">
+                                                                    <div class="name">
+                                                                        George Philips
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chat-context">
+                                                                    <div class="text">
+                                                                        Prix: 1.000.000 fcfa,  Quantité: 2
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="chat-context">
+                                                                <a class="btn btn-icon btn-xs btn-outline-danger btn-dim" href="#">
+                                                                    <em class="icon ni ni-cross">
+                                                                    </em>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="chat-item">
+                                                        <div class="chat-link d-flex justify-content-start">
+                                                            <div class="chat-media user-avatar">
+                                                                <img src="images/product/d.png"/>
+                                                            </div>
+                                                            <div class="chat-info">
+                                                                <div class="chat-from">
+                                                                    <div class="name">
+                                                                        George Philips
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chat-context">
+                                                                    <div class="text">
+                                                                        Prix: 1.000.000 fcfa,  Quantité: 2
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="chat-context">
+                                                                <a class="btn btn-icon btn-xs btn-outline-danger btn-dim" href="#">
+                                                                    <em class="icon ni ni-cross">
+                                                                    </em>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="chat-item">
+                                                        <div class="chat-link d-flex justify-content-start">
+                                                            <div class="chat-media user-avatar">
+                                                                <img src="images/product/e.png"/>
+                                                            </div>
+                                                            <div class="chat-info">
+                                                                <div class="chat-from">
+                                                                    <div class="name">
+                                                                        George Philips
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chat-context">
+                                                                    <div class="text">
+                                                                        Prix: 1.000.000 fcfa,  Quantité: 2
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="chat-context">
+                                                                <a class="btn btn-icon btn-xs btn-outline-danger btn-dim" href="#">
+                                                                    <em class="icon ni ni-cross">
+                                                                    </em>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="dropdown-foot">
+                                                <span class="sub-title nk-dropdown-title">
+                                                    Total : 1.000.000 fcfa
+                                                </span>
+                                                <a class="btn btn-outline-success btn-dim btn-md">
+                                                    <span>Commander</span>
+                                                    <em class="icon ni ni-arrow-right-circle"></em>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </li>
-                                    @endif
                                     <li class="dropdown user-dropdown">
                                         <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#">
                                             <div class="user-toggle">
@@ -188,6 +343,43 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a class="pmo-st pmo-dark active" data-bs-toggle="modal" data-bs-target="#modalCommentaire" >
+        <div class="pmo-st-img">
+            <em class="icon ni ni-chat fs-20px" ></em>
+        </div>
+    </a>
+
+    <div class="modal fade" tabindex="-1" id="modalCommentaire">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nouvelle suggestion</h5>
+                    <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close"><em class="icon ni ni-cross"></em></a>
+                </div>
+                <div class="modal-body">
+                    <form id="form" method="POST" action="#">
+                        @csrf
+                        <div class="form-group">
+                            <label class="form-label" for="default-textarea">Suggestion</label>
+                            <div class="form-control-wrap">
+                                <textarea required name="text" class="form-control no-resize" id="default-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-md btn-success">
+                                <em class="icon ni ni-check" ></em>
+                                <span>Sauvegarder</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-light">
+                    <span class="sub-text">Suggestion</span>
                 </div>
             </div>
         </div>
