@@ -104,7 +104,7 @@
                                         <div class="col-lg-3 col-md-6" >
                                             <div class="form-group">
                                                 <label class="form-label" for="fv-topic3">
-                                                    Prix
+                                                    Prix ( Fcfa )
                                                 </label>
                                                 <div class="form-control-wrap">    
                                                     <div class="input-group">       
@@ -189,7 +189,7 @@
                 <div class="nk-block-head mt-2">
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
-                            <a class="btn btn-outline-warning btn-wider btn-dim" href="{{route('index_article')}}">
+                            <a class="btn btn-outline-warning btn-wider btn-dim" href="{{route('index_annonce')}}">
                                 <span>Voir plus</span>
                                 <em class="icon ni ni-arrow-right"></em>
                             </a>
@@ -212,12 +212,12 @@
                     <div class="col">
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
-                                <a href="{{route('index_detail')}} " >
+                                <a>
                                     <img style="object-fit: cover;height: auto;width: auto;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
-                                        <span class="badge bg-primary" >
+                                        <span class="badge bg-light" >
                                             <em class="icon ni ni-map-pin-fill"></em>
                                             <span>Abidjan</span>
                                         </span>

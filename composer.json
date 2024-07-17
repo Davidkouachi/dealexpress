@@ -8,6 +8,7 @@
         "php": "^8.2",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
+        "mews/captcha": "^3.3",
         "pusher/pusher-php-server": "^7.2"
     },
     "require-dev": {

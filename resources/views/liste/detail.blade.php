@@ -163,19 +163,19 @@
                 <div class="card-inner text-center" >
                     <ul class="row g-gs text-center">
                         <li class="col-lg-12">
-                            <a class="btn btn-outline-success btn-dim" href="https://wa.me/?text=Votre%20message%20ici%20https://exemple.com" target="_blank" >
+                            <a class="btn btn-outline-success btn-dim btn-block" href="https://wa.me/?text=Votre%20message%20ici%20https://exemple.com" target="_blank" >
                                 <em class="icon ni ni-whatsapp"></em>
                                 <span>WahtsApp</span>
                             </a>
                         </li>
                         <li class="col-lg-12">
-                            <a class="btn btn-outline-primary btn-dim" href="https://www.facebook.com/sharer/sharer.php?u=https://exemple.com" target="_blank">
+                            <a class="btn btn-outline-primary btn-dim btn-block" href="https://www.facebook.com/sharer/sharer.php?u=https://exemple.com" target="_blank">
                                 <em class="icon ni ni-facebook-circle"></em>
                                 <span>Facebook</span>
                             </a>
                         </li>
                         <li class="col-lg-12">
-                            <a class="btn btn-outline-warning btn-dim" href="sms:?body=Votre%20message%20ic%20https://exemple.com" target="_blank">
+                            <a class="btn btn-outline-warning btn-dim btn-block" href="sms:?body=Votre%20message%20ic%20https://exemple.com" target="_blank">
                                 <em class="icon ni ni-chat"></em>
                                 <span> Sms </span>
                             </a>

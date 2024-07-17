@@ -4,21 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller
+class AnnonceController extends Controller
 {
    public function index()
    {
-      return view('article.index');
+      return view('annonce.index');
    }
 
    public function index_detail()
    {
-      return view('article.detail');
+      return view('annonce.detail');
    }
 
-   public function index_liste_article()
+   public function index_liste_annonce()
    {
-      return view('liste.article');
+      return view('liste.annonce');
    }
 
    public function index_liste_detail()

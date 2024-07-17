@@ -98,14 +98,40 @@
                             <li class="nk-menu-item">
                                 <a class="nk-menu-link" href="#">
                                     <span class="nk-menu-text">
-                                        Catégories et Sous-catégories
+                                        Catégories
+                                    </span>
+                                    <span class="nk-menu-badge">
+                                        0
                                     </span>
                                 </a>
                             </li>
                             <li class="nk-menu-item">
                                 <a class="nk-menu-link" href="#">
                                     <span class="nk-menu-text">
-                                        Villes et Communes
+                                        Sous-catégories
+                                    </span>
+                                    <span class="nk-menu-badge">
+                                        0
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nk-menu-item">
+                                <a class="nk-menu-link" href="#">
+                                    <span class="nk-menu-text">
+                                        Villes
+                                    </span>
+                                    <span class="nk-menu-badge">
+                                        0
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nk-menu-item">
+                                <a class="nk-menu-link" href="#">
+                                    <span class="nk-menu-text">
+                                        Communes
+                                    </span>
+                                    <span class="nk-menu-badge">
+                                        0
                                     </span>
                                 </a>
                             </li>

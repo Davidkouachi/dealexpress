@@ -10,7 +10,7 @@
                 <div class="nk-block-between g-3">
                     <div class="nk-block-head-content">
                         <h3 class="nk-block-title ">
-                            Détail de l'article
+                            Détail de l'annonce
                         </h3>
                     </div>
                     <div class="nk-block-head-content">
@@ -120,15 +120,16 @@
                                     </p>
                                     <div class="alert alert-icon alert-warning" role="alert">    
                                         <em class="icon ni ni-alert-fill"></em>     
-                                        <strong>ATTENTION !!! </strong>. 
+                                        <strong>ATTENTION !!! </strong>
+                                        <br> 
                                         Your will be redirect for make your payment. 
                                     </div>
 
-                                    <a class="btn btn-outline-success btn-dim mt-2">
-                                        <span>Ajouter au panier</span>
-                                        <em class="icon ni ni-cart"></em>
+                                    <a class="btn btn-outline-primary btn-dim mt-2" data-bs-toggle="modal" data-bs-target="#modalContact">
+                                        <span>Voir contact</span>
+                                        <em class="icon ni ni-user"></em>
                                     </a>
-                                    <a class="btn btn-outline-light btn-dim mt-2" data-bs-toggle="modal" data-bs-target="#modalPartager">
+                                    <a class="btn btn-outline-warning btn-dim mt-2" data-bs-toggle="modal" data-bs-target="#modalPartager">
                                         <span>Partager l'annonce</span>
                                         <em class="icon ni ni-share"></em>
                                     </a>
@@ -194,34 +195,41 @@
     <div class="modal-dialog modal-sm" role="document" style="width: 100%;">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Contacts</h5>
+                <h5 class="modal-title">Contact</h5>
                 <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close"><em class="icon ni ni-cross"></em></a>
             </div>
             <div class="modal-body ">
                 <div class="card-inner text-center" >
                     <ul class="row g-gs text-center">
+                        <li class="col-lg-12" >
+                            <div class="user-card user-card-s2">
+                                <div class="user-avatar lg bg-primary mt-0 pt-0">
+                                    <span>
+                                        <em class="icon ni ni-user" ></em>
+                                    </span>
+                                </div>
+                                <div class="user-info">
+                                    <h6>Nom e Prénom</h6>
+                                    <span class="sub-text">Profession</span>
+                                </div>
+                            </div>
+                        </li>
                         <li class="col-lg-12">
-                            <a class="btn btn-outline-warning btn-dim" href="tel:+2250102514392" target="_blank">
+                            <a class="btn btn-outline-warning btn-dim btn-block" href="tel:+2250102514392" target="_blank">
                                 <em class="icon ni ni-call"></em>
                                 <span> (+225) 0102514392 </span>
                             </a>
                         </li>
                         <li class="col-lg-12">
-                            <a class="btn btn-outline-success btn-dim" href="https://wa.me/+2250102514392" target="_blank">
+                            <a class="btn btn-outline-success btn-dim btn-block" href="https://wa.me/+2250102514392" target="_blank">
                                 <em class="icon ni ni-whatsapp"></em>
                                 <span> (+225) 0102514392 </span>
                             </a>
                         </li>
                         <li class="col-lg-12">
-                            <a class="btn btn-outline-primary btn-dim" href="sms:+2250102514392" target="_blank">
+                            <a class="btn btn-outline-primary btn-dim btn-block" href="sms:+2250102514392" target="_blank">
                                 <em class="icon ni ni-chat"></em>
                                 <span> (+225) 0102514392 </span>
-                            </a>
-                        </li>
-                        <li class="col-lg-12">
-                            <a class="btn btn-outline-light btn-dim" data-bs-toggle="modal" data-bs-target="#modalPartager">
-                                <em class="icon ni ni-share"></em>
-                                <span>Partager</span>
                             </a>
                         </li>
                     </ul>
@@ -242,19 +250,19 @@
                 <div class="card-inner text-center" >
                     <ul class="row g-gs text-center">
                         <li class="col-lg-12">
-                            <a class="btn btn-outline-success btn-dim" href="https://wa.me/?text=Votre%20message%20ici%20https://exemple.com" target="_blank" >
+                            <a class="btn btn-outline-success btn-dim btn-block" href="https://wa.me/?text=Votre%20message%20ici%20https://exemple.com" target="_blank" >
                                 <em class="icon ni ni-whatsapp"></em>
                                 <span>WahtsApp</span>
                             </a>
                         </li>
                         <li class="col-lg-12">
-                            <a class="btn btn-outline-primary btn-dim" href="https://www.facebook.com/sharer/sharer.php?u=https://exemple.com" target="_blank">
+                            <a class="btn btn-outline-primary btn-dim btn-block" href="https://www.facebook.com/sharer/sharer.php?u=https://exemple.com" target="_blank">
                                 <em class="icon ni ni-facebook-circle"></em>
                                 <span>Facebook</span>
                             </a>
                         </li>
                         <li class="col-lg-12">
-                            <a class="btn btn-outline-warning btn-dim" href="sms:?body=Votre%20message%20ic%20https://exemple.com" target="_blank">
+                            <a class="btn btn-outline-warning btn-dim btn-block" href="sms:?body=Votre%20message%20ic%20https://exemple.com" target="_blank">
                                 <em class="icon ni ni-chat"></em>
                                 <span> Sms </span>
                             </a>

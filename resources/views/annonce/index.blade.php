@@ -146,7 +146,7 @@
                             Ville
                         </label>
                         <div class="form-control-wrap ">
-                            <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topics1" name="fv-topics1" required="" data-msg="Error message">
+                            <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topics1" name="fv-topics1" required="" data-msg="Error message re">
                                 <option label="empty" value="">
                                 </option>
                                 <option value="fv-gq">
@@ -203,18 +203,19 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="fv-topic3">
-                            Prix
+                            Prix ( Fcfa )
                         </label>
                         <div class="form-control-wrap">
                             <div class="input-group">
-                                <input id="min-price" placeholder="min" type="text" class="form-control">
-                                <input id="max-price" placeholder="max" type="text" class="form-control">
+                                <input id="min-price" placeholder="min" type="tel" class="form-control">
+                                <input id="max-price" placeholder="max" type="tel" class="form-control">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-lg btn-dim btn-outline-success btn-block">
-                            <em class="ni ni-search" ></em>
+                            <span>Recherche</span>
+                            <em class="icon ni ni-search"></em>
                         </button>
                     </div>
                 </form>
