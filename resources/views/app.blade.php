@@ -37,7 +37,7 @@
                             </div>                           
                             <div class="nk-header-tools">
                                 <ul class="nk-quick-nav">
-                                    @if(request()->routeIs('index_accueil', 'index_detail', 'index_profil','index_liste_detail','index_liste_annonce') )
+                                    @if(request()->routeIs('index_accueil', 'index_detail', 'index_profil','index_liste_detail','index_liste_annonce','index_tableau') )
                                     <li class="dropdown notification-dropdown">
                                         <a class="nk-quick-nav-icon" href="{{route('index_annonce')}}">
                                             <em class="icon ni ni-box-view-fill"></em>
@@ -55,13 +55,13 @@
                                     @endif
                                     @if(request()->routeIs('index_liste_annonce') )
                                     <li class="dropdown notification-dropdown">
-                                        <a class="nk-quick-nav-icon" data-bs-toggle="modal" data-bs-target="#modalNannonce">
+                                        <a class="nk-quick-nav-icon" href="{{route('index_new_annonce')}}">
                                             <em class="icon ni ni-plus-circle"></em>
                                             <span class="fs-15px"></span>
                                         </a>
                                     </li>
                                     @endif
-                                    @if(!request()->routeIs('index_accueil', 'index_detail', 'index_profil','index_tableau') || request()->routeIs('index_detail', 'index_profil') )
+                                    @if(!request()->routeIs('index_accueil', 'index_detail', 'index_profil','index_tableau') || request()->routeIs('index_detail', 'index_profil','index_tableau') )
                                     <li class="dropdown notification-dropdown">
                                         <a class=" nk-quick-nav-icon" href="{{route('index_accueil')}}">
                                             <em class="icon ni ni-home"></em>
@@ -98,7 +98,17 @@
                                                             </span>
                                                         </a>
                                                     </li>
-                                                    @if(!request()->routeIs('index_tableau') )
+                                                    @if(Auth::user()->role === 'admin' )
+                                                    <li>
+                                                        <a href="{{route('index_tableau')}}">
+                                                            <em class="icon ni ni-hard-drive">
+                                                            </em>
+                                                            <span>
+                                                                Configuration
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    @else
                                                     <li>
                                                         <a href="{{route('index_liste_annonce')}}">
                                                             <em class="icon ni ni-inbox-in">
@@ -639,7 +649,6 @@
                     NioApp.Toast("<h5>Information</h5><p>Le mot de passe doit comporter au moins 8 caractères, une lettre majuscule, une lettre minuscule et un chiffre.</p>", "error", {position: "top-right"});
                     return false;
                 }
-
             }
 
             $('.modal').modal('hide');
@@ -757,6 +766,27 @@
             if (isNaN(key)) {
                 event.preventDefault();
             }
+        });
+    </script>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche la soumission par défaut du formulaire
+
+            $('.modal').modal('hide');
+            $(`#modalL`).modal('hide');
+            $(`#modalL`).modal('show');
+
+            // Si toutes les validations passent, soumettre le formulaire
+            this.submit();
+        });
+    </script>
+
+    <script>
+        document.getElementById("form_click").addEventListener("click", function() {
+            $('.modal').modal('hide');
+            $(`#modalL`).modal('hide');
+            $(`#modalL`).modal('show');
         });
     </script>
 

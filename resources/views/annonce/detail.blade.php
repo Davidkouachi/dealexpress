@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('titre', 'Détail')
+@section('titre', 'Détail annonces')
 
 @section('content')
 <div class="nk-content nk-content-fluid">

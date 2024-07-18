@@ -47,18 +47,12 @@
                                     <span class="nk-menu-text">
                                         Catégorie
                                     </span>
-                                    <span class="nk-menu-badge">
-                                        0
-                                    </span>
                                 </a>
                             </li>
                             <li class="nk-menu-item">
                                 <a class="nk-menu-link" href="#" data-bs-toggle="modal" data-bs-target="#modalSouscategorie">
                                     <span class="nk-menu-text">
                                         Sous-catégorie
-                                    </span>
-                                    <span class="nk-menu-badge">
-                                        0
                                     </span>
                                 </a>
                             </li>
@@ -67,18 +61,12 @@
                                     <span class="nk-menu-text">
                                         Ville
                                     </span>
-                                    <span class="nk-menu-badge">
-                                        0
-                                    </span>
                                 </a>
                             </li>
                             <li class="nk-menu-item">
                                 <a class="nk-menu-link" href="#" data-bs-toggle="modal" data-bs-target="#modalCommune">
                                     <span class="nk-menu-text">
                                         Commune
-                                    </span>
-                                    <span class="nk-menu-badge">
-                                        0
                                     </span>
                                 </a>
                             </li>
@@ -957,126 +945,16 @@
 					        </div>
 					        <div class="card-inner pt-2"style="height: 360px;" data-simplebar="">
 					            <ul class="my-n2 ">
+                                    @foreach ($categories as $key => $categorie)
 					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
 					                    <div class="lead-text">
-					                        United States
+					                        {{ $categorie->nom}}
 					                    </div>
 					                    <div class="sub-text">
 					                        14,356
 					                    </div>
 					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Ireland
-					                    </div>
-					                    <div class="sub-text">
-					                        11,203
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        United Kingdom
-					                    </div>
-					                    <div class="sub-text">
-					                        10,653
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Canada
-					                    </div>
-					                    <div class="sub-text">
-					                        7,215
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Australia
-					                    </div>
-					                    <div class="sub-text">
-					                        6,653
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Japan
-					                    </div>
-					                    <div class="sub-text">
-					                        3,945
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        China
-					                    </div>
-					                    <div class="sub-text">
-					                        2,945
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        United States
-					                    </div>
-					                    <div class="sub-text">
-					                        14,356
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Ireland
-					                    </div>
-					                    <div class="sub-text">
-					                        11,203
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        United Kingdom
-					                    </div>
-					                    <div class="sub-text">
-					                        10,653
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Canada
-					                    </div>
-					                    <div class="sub-text">
-					                        7,215
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Australia
-					                    </div>
-					                    <div class="sub-text">
-					                        6,653
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Japan
-					                    </div>
-					                    <div class="sub-text">
-					                        3,945
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        China
-					                    </div>
-					                    <div class="sub-text">
-					                        2,945
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1">
-					                    <div class="lead-text">
-					                        France
-					                    </div>
-					                    <div class="sub-text">
-					                        954
-					                    </div>
-					                </li>
+                                    @endforeach
 					            </ul>
 					        </div>
 					    </div>
@@ -1094,126 +972,16 @@
 					        </div>
 					        <div class="card-inner pt-2" style="height: 360px;" data-simplebar="">
 					            <ul class="my-n2">
+                                    @foreach ($villes as $key => $ville)
 					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
 					                    <div class="lead-text">
-					                        United States
+					                        {{ $ville->nom}}
 					                    </div>
 					                    <div class="sub-text">
 					                        14,356
 					                    </div>
 					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Ireland
-					                    </div>
-					                    <div class="sub-text">
-					                        11,203
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        United Kingdom
-					                    </div>
-					                    <div class="sub-text">
-					                        10,653
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Canada
-					                    </div>
-					                    <div class="sub-text">
-					                        7,215
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Australia
-					                    </div>
-					                    <div class="sub-text">
-					                        6,653
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Japan
-					                    </div>
-					                    <div class="sub-text">
-					                        3,945
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        China
-					                    </div>
-					                    <div class="sub-text">
-					                        2,945
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        United States
-					                    </div>
-					                    <div class="sub-text">
-					                        14,356
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Ireland
-					                    </div>
-					                    <div class="sub-text">
-					                        11,203
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        United Kingdom
-					                    </div>
-					                    <div class="sub-text">
-					                        10,653
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Canada
-					                    </div>
-					                    <div class="sub-text">
-					                        7,215
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Australia
-					                    </div>
-					                    <div class="sub-text">
-					                        6,653
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        Japan
-					                    </div>
-					                    <div class="sub-text">
-					                        3,945
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1 border-bottom border-0 border-dashed">
-					                    <div class="lead-text">
-					                        China
-					                    </div>
-					                    <div class="sub-text">
-					                        2,945
-					                    </div>
-					                </li>
-					                <li class="align-center justify-between py-1 gx-1">
-					                    <div class="lead-text">
-					                        France
-					                    </div>
-					                    <div class="sub-text">
-					                        954
-					                    </div>
-					                </li>
+                                    @endforeach
 					            </ul>
 					        </div>
 					    </div>
@@ -1234,21 +1002,24 @@
                 </h5>
             </div>
             <div class="modal-body">
-                <form action="#" class="form-validate">
+                <form id="form" action="/New_categorie" class="" method="post">
+                    @csrf
                     <div class="form-group">
                         <label class="form-label" for="full-name">
                             Catégorie
                         </label>
                         <div class="form-control-wrap">
-                            <input data-msg="Error message" class="form-control" id="full-name" required="" type="text" />
+                            <input name="categorie_new" class="form-control" id="full-name" required type="text" oninput="this.value = this.value.toUpperCase()" autocomplete="off"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
-                            Annulé
+                            <em class="icon ni ni-cross-circle"></em>
+                            <span>Fermer</span>
                         </button>
                         <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
-                            Terminé
+                            <span>Sauvgarder</span>
+                            <em class="icon ni ni-arrow-right-circle"></em>
                         </button>
                     </div>
                 </form>
@@ -1330,21 +1101,24 @@
                 </h5>
             </div>
             <div class="modal-body">
-                <form action="#" class="form-validate">
+                <form id="form" action="/New_ville" class="" method="post">
+                    @csrf
                     <div class="form-group">
                         <label class="form-label" for="full-name">
                             Ville
                         </label>
                         <div class="form-control-wrap">
-                            <input data-msg="Error message" class="form-control" id="full-name" required="" type="text" />
+                            <input name="ville_new" class="form-control" id="full-name" required type="text" oninput="this.value = this.value.toUpperCase()" autocomplete="off"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
-                            Annulé
+                            <em class="icon ni ni-cross-circle"></em>
+                            <span>Fermer</span>
                         </button>
                         <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
-                            Terminé
+                            <span>Sauvgarder</span>
+                            <em class="icon ni ni-arrow-right-circle"></em>
                         </button>
                     </div>
                 </form>

@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\TableauController;
 
 
+
 // Login & Registre-------------------------------------------------------------
 Route::get('/Connexion', [AuthController::class, 'index_login'])->name('index_login');
 Route::get('/Inscription', [AuthController::class, 'index_registre'])->name('index_registre');
@@ -20,7 +21,6 @@ Route::post('/auth_registre', [AuthController::class, 'auth_registre'])->name('a
 // Login-------------------------------------------------------------
 Route::post('/auth_login', [AuthController::class, 'auth_login'])->name('auth_login');
 // -------------------------------------------------------------
-
 
 // Accueil-------------------------------------------------------------
 Route::get('/', [Controller::class, 'index_accueil'])->name('index_accueil');
@@ -45,13 +45,22 @@ Route::middleware(['auth'])->group(function () {
 	Route::get('/Profil', [ProfilController::class, 'index'])->name('index_profil');
 	// -------------------------------------------------------------
 
+});
+
+Route::middleware(['role:admin'])->group(function () {
+	// Tableau de bord -------------------------------------------------------------
+	Route::get('/Tableau de bord', [TableauController::class, 'index'])->name('index_tableau');
+
+	Route::post('/New_categorie', [TableauController::class, 'new_categorie'])->name('new_categorie');
+	Route::post('/New_ville', [TableauController::class, 'new_ville'])->name('new_ville');
+	// -------------------------------------------------------------
+});
+
+Route::middleware(['role:user'])->group(function () {
+
 	// liste article profil-------------------------------------------------------------
+	Route::get('/Nouvelle annonces', [AnnonceController::class, 'index_new_annonce'])->name('index_new_annonce');
 	Route::get('/Mes annonces', [AnnonceController::class, 'index_liste_annonce'])->name('index_liste_annonce');
 	Route::get('/Détail annonce', [AnnonceController::class, 'index_liste_detail'])->name('index_liste_detail');
 	// -------------------------------------------------------------
-
-	// Tableau de bord -------------------------------------------------------------
-	Route::get('/Tableau de bord', [TableauController::class, 'index'])->name('index_tableau');
-	// -------------------------------------------------------------
-   
 });

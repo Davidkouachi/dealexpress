@@ -17,7 +17,9 @@ class AuthController extends Controller
 {
     public function index_login()
     {
-        return view('auth.login');
+
+        return view('accueil.index');
+
     }
 
     public function index_registre()

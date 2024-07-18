@@ -11,6 +11,11 @@ class AnnonceController extends Controller
       return view('annonce.index');
    }
 
+   public function index_new_annonce()
+   {
+      return view('annonce.new');
+   }
+
    public function index_detail()
    {
       return view('annonce.detail');
