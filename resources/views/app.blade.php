@@ -24,7 +24,9 @@
 <body class="nk-body ui-rounder has-sidebar ui-light ">
     <div class="nk-app-root">
         <div class="nk-main ">
+
             @yield('menu')
+            
             <div class="nk-wrap ">
                 <div class="nk-header is-light nk-header-fixed is-light">
                     <div class="container-xl wide-xl">
@@ -37,7 +39,7 @@
                             </div>                           
                             <div class="nk-header-tools">
                                 <ul class="nk-quick-nav">
-                                    @if(request()->routeIs('index_accueil', 'index_detail', 'index_profil','index_liste_detail','index_liste_annonce','index_tableau') )
+                                    @if(!request()->routeIs('index_annonce') )
                                     <li class="dropdown notification-dropdown">
                                         <a class="nk-quick-nav-icon" href="{{route('index_annonce')}}">
                                             <em class="icon ni ni-box-view-fill"></em>
@@ -53,9 +55,9 @@
                                         </a>
                                     </li>
                                     @endif
-                                    @if(request()->routeIs('index_liste_annonce') )
+                                    @if(request()->routeIs('index_liste_annonce', 'index_new_annonce_immobilier', 'index_new_annonce_vehicule', 'index_new_annonce_travail', 'index_new_annonce_autre') )
                                     <li class="dropdown notification-dropdown">
-                                        <a class="nk-quick-nav-icon" href="{{route('index_new_annonce')}}">
+                                        <a class="nk-quick-nav-icon" data-bs-toggle="modal" data-bs-target="#modalAnnonce">
                                             <em class="icon ni ni-plus-circle"></em>
                                             <span class="fs-15px"></span>
                                         </a>
@@ -98,10 +100,28 @@
                                                             </span>
                                                         </a>
                                                     </li>
+                                                    <li>
+                                                        <a href="{{route('index_accueil')}}">
+                                                            <em class="icon ni ni-home">
+                                                            </em>
+                                                            <span>
+                                                                Accueil
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{route('index_annonce')}}">
+                                                            <em class="icon ni ni-box-view-fill">
+                                                            </em>
+                                                            <span>
+                                                                Annonces
+                                                            </span>
+                                                        </a>
+                                                    </li>
                                                     @if(Auth::user()->role === 'admin' )
                                                     <li>
                                                         <a href="{{route('index_tableau')}}">
-                                                            <em class="icon ni ni-hard-drive">
+                                                            <em class="icon ni ni-setting">
                                                             </em>
                                                             <span>
                                                                 Configuration
@@ -194,29 +214,12 @@
     </div>
 
     @if(!request()->routeIs('index_tableau') )
-    <a class="pmo-st pmo-dark active" data-bs-toggle="modal" data-bs-target="#modalCommentaire" >
-        <div class="pmo-st-img">
-            <em class="icon ni ni-chat fs-20px" ></em>
-        </div>
-    </a>
-    @endif
-
-    <div class="modal fade" tabindex="-1" id="modalL" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-body modal-body-lg text-center">
-                    <div class="nk-modal">
-                        <h5 class="nk-modal-title text-warning ">Traitement en cours</h5>
-                        <div class="nk-modal-text">
-                            <div class="text-center">
-                                <div class="spinner-border text-warning" role="status"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <a class="pmo-st pmo-dark active" data-bs-toggle="modal" data-bs-target="#modalCommentaire" >
+            <div class="pmo-st-img">
+                <em class="icon ni ni-chat fs-20px" ></em>
             </div>
-        </div>
-    </div>
+        </a>
+    @endif
 
     <div class="modal fade" tabindex="-1" id="modalCommentaire">
         <div class="modal-dialog modal-lg" role="document">
@@ -244,7 +247,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-md btn-success">
+                            <button type="submit" class="btn btn-white btn-dim btn-md btn-outline-success">
                                 <span>Envoyer</span>
                                 <em class="icon ni ni-send" ></em>
                             </button>
@@ -270,9 +273,6 @@
                         </div>
                         <div class="nk-block-head-content">
                             <h4 class="nk-block-title">Création de compte</h4>
-                            <!-- <div class="nk-block-des">
-                                    <p>Create New Dashlite Account</p>
-                            </div> -->
                         </div>
                     </div>
                     <form id="registre_sinscrire" class="" action="/auth_registre" method="post">
@@ -374,14 +374,7 @@
                         <a href="{{route('index_login')}}">
                             <strong>Se connecter</strong>
                         </a>
-                    </div>
-                    <!-- <div class="text-center pt-4 pb-3">
-                            <h6 class="overline-title overline-title-sap"><span>OR</span></h6>
-                    </div>
-                    <ul class="nav justify-center gx-8">
-                        <li class="nav-item"><a class="nav-link" href="#">Facebook</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Google</a></li>
-                    </ul> -->   
+                    </div>  
                 </div>
             </div>
         </div>
@@ -444,148 +437,44 @@
                         Vous n'avez pas de compte ?
                         <a class="" href="{{route('index_registre')}}">Créer un compte</a>
                     </div>
-                    <!-- <div class="text-center pt-4 pb-3">
-                            <h6 class="overline-title overline-title-sap"><span>OR</span></h6>
-                    </div>
-                    <ul class="nav justify-center gx-8">
-                        <li class="nav-item"><a class="nav-link" href="#">Facebook</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Google</a></li>
-                    </ul> -->
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="modalNannonce" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-lg" role="document">
+    <div class="modal fade" id="modalAnnonce" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">
-                        Nouvelle Annonce
-                    </h5>
+                    <h5 class="modal-title">Nouvelle Annonce</h5>
+                    <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close"><em class="icon ni ni-cross"></em></a>
                 </div>
                 <div class="modal-body">
-                    <form action="#" class="form-validate">
+                    <form action="{{route('index_new_annonce')}}" method="post" class="">
+                        @csrf
                         <div class="row g-4">
-                            <div class="col-lg-6">
+                            <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label" for="full-name-1">
-                                        Full Name
-                                    </label>
+                                    <label class="form-label " for="cp1-team-size">Catégorie</label>
                                     <div class="form-control-wrap">
-                                        <input required data-msg="Error message " class="form-control" id="full-name-1" type="text" />
+                                        <select class="form-select js-select2" name="choix" required>
+                                            <option value=""></option>
+                                            <option value="immobilier">Immobilier</option>
+                                            <option value="vehicule">Véhicule</option>
+                                            <option value="autre">Autre</option>
+                                        </select>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label" for="email-address-1">
-                                        Email address
-                                    </label>
-                                    <div class="form-control-wrap">
-                                        <input class="form-control" id="email-address-1" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label" for="phone-no-1">
-                                        Phone No
-                                    </label>
-                                    <div class="form-control-wrap">
-                                        <input class="form-control" id="phone-no-1" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label" for="pay-amount-1">
-                                        Amount
-                                    </label>
-                                    <div class="form-control-wrap">
-                                        <input class="form-control" id="pay-amount-1" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label">
-                                        Communication
-                                    </label>
-                                    <ul class="custom-control-group g-3 align-center">
-                                        <li>
-                                            <div class="custom-control custom-control-sm custom-checkbox">
-                                                <input class="custom-control-input" id="com-email-1" type="checkbox">
-                                                <label class="custom-control-label" for="com-email-1">
-                                                    Email
-                                                </label>
-                                                </input>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-control-sm custom-checkbox">
-                                                <input class="custom-control-input" id="com-sms-1" type="checkbox">
-                                                <label class="custom-control-label" for="com-sms-1">
-                                                    SMS
-                                                </label>
-                                                </input>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-control-sm custom-checkbox">
-                                                <input class="custom-control-input" id="com-phone-1" type="checkbox">
-                                                <label class="custom-control-label" for="com-phone-1">
-                                                    Phone
-                                                </label>
-                                                </input>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label">
-                                        Payment Methods
-                                    </label>
-                                    <ul class="custom-control-group g-3 align-center">
-                                        <li>
-                                            <div class="custom-control custom-control-sm custom-checkbox">
-                                                <input class="custom-control-input" id="pay-card-1" type="checkbox">
-                                                <label class="custom-control-label" for="pay-card-1">
-                                                    Card
-                                                </label>
-                                                </input>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-control-sm custom-checkbox">
-                                                <input class="custom-control-input" id="pay-bitcoin-1" type="checkbox">
-                                                <label class="custom-control-label" for="pay-bitcoin-1">
-                                                    Bitcoin
-                                                </label>
-                                                </input>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-control-sm custom-checkbox">
-                                                <input class="custom-control-input" id="pay-cash-1" type="checkbox">
-                                                <label class="custom-control-label" for="pay-cash-1">
-                                                    Cash
-                                                </label>
-                                                </input>
-                                            </div>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
-                                        Annulé
+                                        <em class="icon ni ni-cross-circle"></em>
+                                        <span>Annulé</span>
                                     </button>
-                                    <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
-                                        Poster
+                                    <button class="btn btn-mw btn-dim btn-outline-success" type="submit" data-bs-dismiss="modal">
+                                        <span>Continuer</span>
+                                        <em class="icon ni ni-arrow-right-circle"></em>
                                     </button>
                                 </div>
                             </div>
@@ -601,200 +490,16 @@
         </div>
     </div>
 
-    <script>
-        document.getElementById("registre_sinscrire").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            document.getElementById('errorMessage').style.display = 'none';
-
-            var name_sinscrire = document.getElementById("nom_sinscrire").value;
-            var email_sinscrire = document.getElementById("email_sinscrire").value;
-            var tel_sinscrire = document.getElementById("tel_sinscrire").value;
-            var password1_sinscrire = document.getElementById("password_sinscrire").value;
-            var password2_sinscrire = document.getElementById("password2_sinscrire").value;
-
-            if (!name_sinscrire || !email_sinscrire || !tel_sinscrire || !password1_sinscrire || !password2_sinscrire ) {
-                NioApp.Toast("<h5>Alert</h5><p>Veuillez remplir tous les champs.</p>", "warning", {position: "top-right"});
-                return false;
-            }
-
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email_sinscrire)) {
-                NioApp.Toast("<h5>Information</h5><p>Veuillez saisir une adresse e-mail valide.</p>", "info", {position: "top-right"});
-                return false;
-            }
-
-            if (tel_sinscrire.length !== 10) {
-                NioApp.Toast("<h5>Information</h5><p>Veuillez saisir un numéro de téléphone valide.</p>", "info", {position: "top-right"});
-                return false;
-            }
-
-            var checkboxes = document.querySelectorAll('#checkboxGroup input[type="checkbox"]');
-            var isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
-            
-            if (!isChecked) {
-                document.getElementById('errorMessage').style.display = 'block';
-                NioApp.Toast("<h5>Alert</h5><p>Veuillez selectionner une case.</p>", "warning", {position: "top-right"});
-                return false;
-            }
-
-            if (password1_sinscrire !== password2_sinscrire) {
-                NioApp.Toast("<h5>Erreur</h5><p>Les mots de passe ne correspondent pas.</p>", "error", {position: "top-right"});
-                return false;
-            }
-            
-            if (password1_sinscrire === password2_sinscrire) {
-                // Vérification si le mot de passe satisfait les critères
-                if (!verifierMotDePasse(password1_sinscrire) || !verifierMotDePasse(password2_sinscrire) ) {
-                    NioApp.Toast("<h5>Information</h5><p>Le mot de passe doit comporter au moins 8 caractères, une lettre majuscule, une lettre minuscule et un chiffre.</p>", "error", {position: "top-right"});
-                    return false;
-                }
-            }
-
-            $('.modal').modal('hide');
-            $(`#modalL`).modal('hide');
-            $(`#modalL`).modal('show');
-
-            this.submit();
-
-            function verifierMotDePasse(motDePasse) {
-
-                if (motDePasse.length < 8) {
-                    return false;
-                }
-
-                if (!/[A-Z]/.test(motDePasse)) {
-                    return false;
-                }
-
-                if (!/[a-z]/.test(motDePasse)) {
-                    return false;
-                }
-
-                if (!/\d/.test(motDePasse)) {
-                    return false;
-                }
-
-                return true;
-            }
-
-        });
-    </script>
-
-    <script>
-        document.getElementById("registre_connexion").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            var email = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
-
-            if (!email || !password) {
-                NioApp.Toast("<h5>Alert</h5><p>Veuillez remplir tous les champs.</p>", "warning", {position: "top-right"});
-                return false;
-            }
-
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                NioApp.Toast("<h5>Information</h5><p>Veuillez saisir une adresse e-mail valide.</p>", "info", {position: "top-right"});
-                return false;
-            }
-            
-            if (!verifierMotDePasse(password)) {
-                NioApp.Toast("<h5>Information</h5><p>Le mot de passe doit comporter au moins 8 caractères, une lettre majuscule, une lettre minuscule et un chiffre.</p>", "error", {position: "top-right"});
-                return false;
-            }
-
-            $('.modal').modal('hide');
-            $(`#modalL`).modal('hide');
-            $(`#modalL`).modal('show');
-
-            this.submit();
-
-            function verifierMotDePasse(motDePasse) {
-
-                if (motDePasse.length < 8) {
-                    return false;
-                }
-
-                if (!/[A-Z]/.test(motDePasse)) {
-                    return false;
-                }
-
-                if (!/[a-z]/.test(motDePasse)) {
-                    return false;
-                }
-
-                if (!/\d/.test(motDePasse)) {
-                    return false;
-                }
-
-                return true;
-            }
-
-        });
-    </script>
-
-    <script>
-        // Fonction pour formater le prix avec des points
-        function formatPrice(input) {
-            // Supprimer tous les points existants
-            input = input.replace(/\./g, '');
-            
-            // Formater le prix avec des points
-            return input.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-        }
-
-        // Écouter l'événement d'entrée sur les champs de texte
-        document.getElementById('min-price').addEventListener('input', function() {
-            this.value = formatPrice(this.value);
-        });
-
-        document.getElementById('max-price').addEventListener('input', function() {
-            this.value = formatPrice(this.value);
-        });
-
-        // Événement pour permettre uniquement les chiffres
-        document.getElementById('min-price').addEventListener('keypress', function(event) {
-            const key = event.key;
-            if (isNaN(key)) {
-                event.preventDefault();
-            }
-        });
-
-        document.getElementById('max-price').addEventListener('keypress', function(event) {
-            const key = event.key;
-            if (isNaN(key)) {
-                event.preventDefault();
-            }
-        });
-    </script>
-
-    <script>
-        document.getElementById("form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Empêche la soumission par défaut du formulaire
-
-            $('.modal').modal('hide');
-            $(`#modalL`).modal('hide');
-            $(`#modalL`).modal('show');
-
-            // Si toutes les validations passent, soumettre le formulaire
-            this.submit();
-        });
-    </script>
-
-    <script>
-        document.getElementById("form_click").addEventListener("click", function() {
-            $('.modal').modal('hide');
-            $(`#modalL`).modal('hide');
-            $(`#modalL`).modal('show');
-        });
-    </script>
-
     <script src="{{asset('assets/js/bundle55a0.js')}}"></script>
     <script src="{{asset('assets/js/scripts55a0.js')}}"></script>
     <script src="{{asset('assets/js/demo-settings55a0.js')}}"></script>
     <script src="{{asset('assets/js/charts/gd-campaign55a0.js')}}"></script>
     <script src="{{asset('assets/js/example-toastr55a0.js') }}"></script>
+
+    <script src="{{asset('assets/js/app/js/form_load.js') }}"></script>
+    <script src="{{asset('assets/js/app/js/registre_connexion.js') }}"></script>
+    <script src="{{asset('assets/js/app/js/registre_sinscrire.js') }}"></script>
+    <script src="{{asset('assets/js/app/js/form_rech_para.js') }}"></script>
 
     @if (session('success'))
         <script>
@@ -820,7 +525,7 @@
         </script>
         {{ session()->forget('info') }}
     @endif
-</body>
 
+</body>
 
 </html>

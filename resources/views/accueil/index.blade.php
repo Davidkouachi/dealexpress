@@ -25,7 +25,7 @@
                                             Informations :
                                         </span>
                                         <span class="">
-                                            vwewev vewivwenvwe veuinvewnve -50%
+                                            Message
                                         </span>
                                     </label>
                                 </marquee>
@@ -37,68 +37,143 @@
                                     <form action="#" class="form-validate row g-gs">
                                         <div class="col-lg-3 col-md-6" >
                                             <div class="form-group">
-                                            <label class="form-label" for="fv-topics1">
-                                                Ville
-                                            </label>
-                                            <div class="form-control-wrap ">
-                                                <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topics1" name="fv-topics1" >
-                                                    <option label="empty" value="">
-                                                    </option>
-                                                    <option value="fv-gq">
-                                                        General Question
-                                                    </option>
-                                                    <option value="fv-tq">
-                                                        Tachnical Question
-                                                    </option>
-                                                    <option value="fv-ab">
-                                                        Account & Billing
-                                                    </option>
-                                                </select>
-                                            </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6" >
-                                            <div class="form-group">
-                                            <label class="form-label" for="fv-topics2">
-                                                Catégorie
-                                            </label>
-                                            <div class="form-control-wrap ">
-                                                <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topics2" name="fv-topics2" >
-                                                    <option label="empty" value="">
-                                                    </option>
-                                                    <option value="fv-gq">
-                                                        General Question
-                                                    </option>
-                                                    <option value="fv-tq">
-                                                        Tachnical Question
-                                                    </option>
-                                                    <option value="fv-ab">
-                                                        Account & Billing
-                                                    </option>
-                                                </select>
-                                            </div>
+                                                <label class="form-label" for="fv-topics1">
+                                                    Localisation
+                                                </label>
+                                                <div class="form-control-wrap ">
+                                                    <select class="form-select js-select2" data-placeholder="Select a option" >
+                                                        <option label="empty" value="">
+                                                        </option>
+                                                        <option value="fv-gq">
+                                                            General Question
+                                                        </option>
+                                                        <option value="fv-tq">
+                                                            Tachnical Question
+                                                        </option>
+                                                        <option value="fv-ab">
+                                                            Account & Billing
+                                                        </option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-md-6" >
                                             <div class="form-group">
-                                            <label class="form-label" for="fv-topic3">
-                                                Sous-catégorie
-                                            </label>
-                                            <div class="form-control-wrap ">
-                                                <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topic3" name="fv-topic3" >
-                                                    <option label="empty" value="">
-                                                    </option>
-                                                    <option value="fv-gq">
-                                                        General Question
-                                                    </option>
-                                                    <option value="fv-tq">
-                                                        Tachnical Question
-                                                    </option>
-                                                    <option value="fv-ab">
-                                                        Account & Billing
-                                                    </option>
-                                                </select>
+                                                <label class="form-label" for="fv-topics2">
+                                                    Catégorie
+                                                </label>
+                                                <div class="form-control-wrap ">
+                                                    <select class="form-select js-select2" id="rech_categorie" >
+                                                        <option value="">
+                                                        </option>
+                                                        <option value="immobilier">
+                                                            Immobilier
+                                                        </option>
+                                                        <option value="vehicule">
+                                                            Véhicule
+                                                        </option>
+                                                        <option value="autre">
+                                                            Autre
+                                                        </option>
+                                                    </select>
+                                                </div>
                                             </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6" >
+                                            <div class="form-group" id="rech_autre">
+                                                <label class="form-label" for="fv-topic3">
+                                                    Type
+                                                </label>
+                                                <div class="form-control-wrap ">
+                                                    <select class="form-select js-select2" data-placeholder="Select a option" >
+                                                        <option label="empty" value="">
+                                                        </option>
+                                                        <option value="fv-gq">
+                                                            General Question
+                                                        </option>
+                                                        <option value="fv-tq">
+                                                            Tachnical Question
+                                                        </option>
+                                                        <option value="fv-ab">
+                                                            Account & Billing
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" id="rech_immobilier" style="display:none;">
+                                                <label class="form-label" for="fv-topic3">
+                                                    Type d'immobilier
+                                                </label>
+                                                <div class="form-control-wrap ">
+                                                    <select class="form-select js-select2" data-placeholder="Select a option" >
+                                                        <option label="empty" value="">
+                                                        </option>
+                                                        <option value="fv-gq">
+                                                            General Question
+                                                        </option>
+                                                        <option value="fv-tq">
+                                                            Tachnical Question
+                                                        </option>
+                                                        <option value="fv-ab">
+                                                            Account & Billing
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" id="rech_vehicule" style="display:none;">
+                                                <label class="form-label" for="fv-topic3">
+                                                    Type de véhicule
+                                                </label>
+                                                <div class="form-control-wrap ">
+                                                    <select class="form-select js-select2" data-placeholder="Select a option" >
+                                                        <option label="empty" value="">
+                                                        </option>
+                                                        <option value="fv-gq">
+                                                            General Question
+                                                        </option>
+                                                        <option value="fv-tq">
+                                                            Tachnical Question
+                                                        </option>
+                                                        <option value="fv-ab">
+                                                            Account & Billing
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6" id="rech_marque" style="display:none;">
+                                            <div class="form-group">
+                                                <label class="form-label" for="fv-topics2">
+                                                    Marque
+                                                </label>
+                                                <div class="form-control-wrap ">
+                                                    <select class="form-select js-select2" data-placeholder="Select a option" >
+                                                        <option label="empty" value="">
+                                                        </option>
+                                                        <option value="fv-gq">
+                                                            General Question
+                                                        </option>
+                                                        <option value="fv-tq">
+                                                            Tachnical Question
+                                                        </option>
+                                                        <option value="fv-ab">
+                                                            Account & Billing
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6" id="rech_km" style="display:none;">
+                                            <div class="form-group">
+                                                <label class="form-label" for="fv-topic3">
+                                                    Kilométrage
+                                                </label>
+                                                <div class="form-control-wrap">    
+                                                    <div class="input-group">       
+                                                        <input id="min-price" placeholder="min" type="tel" class="form-control">
+                                                        <input id="max-price" placeholder="max" type="tel" class="form-control">
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-md-6" >
@@ -144,13 +219,13 @@
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
                                 <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: auto;width: auto;" class="" src="image/1.png" />
+                                    <img style="object-fit: cover;height: 200px;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
-                                        <span class="badge bg-light" >
-                                            <em class="icon ni ni-alarm"></em>
-                                            <span>il y a 5 jours</span>
+                                        <span class="badge bg-danger" >
+                                            <em class="icon ni ni-hot"></em>
+                                            <span>Pro</span>
                                         </span>
                                     </li>
                                 </ul>
@@ -163,12 +238,6 @@
                                             <span>Abidjan</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a>
-                                            <em class="icon ni ni-bag"></em>
-                                            <span>Cap Sud</span>
-                                        </a>
-                                    </li>
                                 </ul>
                                 <h6 class="product-title text-dark fs-15px">
                                     <a href="{{route('index_detail')}}">
@@ -176,10 +245,6 @@
                                     </a>
                                 </h6>
                                 <div class="product-price h6 fs-15px ">
-                                    <small class="text-muted del fs-13px">
-                                        55.000 fcfa
-                                    </small>
-                                    <br>
                                     10.000 fcfa
                                 </div>
                             </div>
@@ -189,7 +254,7 @@
                 <div class="nk-block-head mt-2">
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
-                            <a class="btn btn-outline-warning btn-wider btn-dim" href="{{route('index_annonce')}}">
+                            <a class="btn btn-outline-warning btn-wider btn-dim btn-sm" href="{{route('index_annonce')}}">
                                 <span>Voir plus</span>
                                 <em class="icon ni ni-arrow-right"></em>
                             </a>
@@ -213,7 +278,7 @@
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
                                 <a>
-                                    <img style="object-fit: cover;height: auto;width: auto;" class="" src="image/1.png" />
+                                    <img style="object-fit: cover;height: 200px;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
@@ -228,10 +293,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
+
 @endsection
 
 

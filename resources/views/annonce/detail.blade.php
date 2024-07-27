@@ -35,42 +35,42 @@
                                 <div class="slider-init row product-slider mb-3" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/2.jpeg"> 
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/2.jpeg"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/3.jpeg">
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/3.jpeg">
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/1.png"> 
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/1.png"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/2.png"> 
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/2.png"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/2.jpeg"> 
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/2.jpeg"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/3.jpeg">
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/3.jpeg">
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/1.png"> 
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/1.png"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/2.png"> 
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/2.png"> 
                                         </div>
                                     </div>
                                 </div>

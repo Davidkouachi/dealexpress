@@ -35,42 +35,42 @@
                                 <div class="slider-init row product-slider mb-3" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/2.jpeg"> 
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/2.jpeg"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/3.jpeg">
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/3.jpeg">
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/1.png"> 
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/1.png"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/2.png"> 
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/2.png"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/2.jpeg"> 
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/2.jpeg"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/3.jpeg">
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/3.jpeg">
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/1.png"> 
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/1.png"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img height="auto" width="auto" src="image/2.png"> 
+                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/2.png"> 
                                         </div>
                                     </div>
                                 </div>
@@ -188,149 +188,150 @@
 </div>
 
 <div class="modal fade" id="modalAnnoncerefresh" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">
-                        Renouveler l'annonce
-                    </h5>
-                </div>
-                <div class="modal-body">
-                    <form action="#" class="form-validate">
-                        <div class="row g-4">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label" for="full-name-1">
-                                        Full Name
-                                    </label>
-                                    <div class="form-control-wrap">
-                                        <input required data-msg="Error message" class="form-control" id="full-name-1" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label" for="email-address-1">
-                                        Email address
-                                    </label>
-                                    <div class="form-control-wrap">
-                                        <input class="form-control" id="email-address-1" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label" for="phone-no-1">
-                                        Phone No
-                                    </label>
-                                    <div class="form-control-wrap">
-                                        <input class="form-control" id="phone-no-1" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label" for="pay-amount-1">
-                                        Amount
-                                    </label>
-                                    <div class="form-control-wrap">
-                                        <input class="form-control" id="pay-amount-1" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label">
-                                        Communication
-                                    </label>
-                                    <ul class="custom-control-group g-3 align-center">
-                                        <li>
-                                            <div class="custom-control custom-control-sm custom-checkbox">
-                                                <input class="custom-control-input" id="com-email-1" type="checkbox">
-                                                <label class="custom-control-label" for="com-email-1">
-                                                    Email
-                                                </label>
-                                                </input>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-control-sm custom-checkbox">
-                                                <input class="custom-control-input" id="com-sms-1" type="checkbox">
-                                                <label class="custom-control-label" for="com-sms-1">
-                                                    SMS
-                                                </label>
-                                                </input>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-control-sm custom-checkbox">
-                                                <input class="custom-control-input" id="com-phone-1" type="checkbox">
-                                                <label class="custom-control-label" for="com-phone-1">
-                                                    Phone
-                                                </label>
-                                                </input>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label">
-                                        Payment Methods
-                                    </label>
-                                    <ul class="custom-control-group g-3 align-center">
-                                        <li>
-                                            <div class="custom-control custom-control-sm custom-checkbox">
-                                                <input class="custom-control-input" id="pay-card-1" type="checkbox">
-                                                <label class="custom-control-label" for="pay-card-1">
-                                                    Card
-                                                </label>
-                                                </input>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-control-sm custom-checkbox">
-                                                <input class="custom-control-input" id="pay-bitcoin-1" type="checkbox">
-                                                <label class="custom-control-label" for="pay-bitcoin-1">
-                                                    Bitcoin
-                                                </label>
-                                                </input>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-control-sm custom-checkbox">
-                                                <input class="custom-control-input" id="pay-cash-1" type="checkbox">
-                                                <label class="custom-control-label" for="pay-cash-1">
-                                                    Cash
-                                                </label>
-                                                </input>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
-                                        Annulée
-                                    </button>
-                                    <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
-                                        Poster
-                                    </button>
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    Renouveler l'annonce
+                </h5>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form-validate">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-label" for="full-name-1">
+                                    Full Name
+                                </label>
+                                <div class="form-control-wrap">
+                                    <input required data-msg="Error message" class="form-control" id="full-name-1" type="text" />
                                 </div>
                             </div>
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer bg-light">
-                    <span class="sub-text">
-                        Annonce
-                    </span>
-                </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-label" for="email-address-1">
+                                    Email address
+                                </label>
+                                <div class="form-control-wrap">
+                                    <input class="form-control" id="email-address-1" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-label" for="phone-no-1">
+                                    Phone No
+                                </label>
+                                <div class="form-control-wrap">
+                                    <input class="form-control" id="phone-no-1" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-label" for="pay-amount-1">
+                                    Amount
+                                </label>
+                                <div class="form-control-wrap">
+                                    <input class="form-control" id="pay-amount-1" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Communication
+                                </label>
+                                <ul class="custom-control-group g-3 align-center">
+                                    <li>
+                                        <div class="custom-control custom-control-sm custom-checkbox">
+                                            <input class="custom-control-input" id="com-email-1" type="checkbox">
+                                            <label class="custom-control-label" for="com-email-1">
+                                                Email
+                                            </label>
+                                            </input>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-control-sm custom-checkbox">
+                                            <input class="custom-control-input" id="com-sms-1" type="checkbox">
+                                            <label class="custom-control-label" for="com-sms-1">
+                                                SMS
+                                            </label>
+                                            </input>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-control-sm custom-checkbox">
+                                            <input class="custom-control-input" id="com-phone-1" type="checkbox">
+                                            <label class="custom-control-label" for="com-phone-1">
+                                                Phone
+                                            </label>
+                                            </input>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Payment Methods
+                                </label>
+                                <ul class="custom-control-group g-3 align-center">
+                                    <li>
+                                        <div class="custom-control custom-control-sm custom-checkbox">
+                                            <input class="custom-control-input" id="pay-card-1" type="checkbox">
+                                            <label class="custom-control-label" for="pay-card-1">
+                                                Card
+                                            </label>
+                                            </input>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-control-sm custom-checkbox">
+                                            <input class="custom-control-input" id="pay-bitcoin-1" type="checkbox">
+                                            <label class="custom-control-label" for="pay-bitcoin-1">
+                                                Bitcoin
+                                            </label>
+                                            </input>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-control-sm custom-checkbox">
+                                            <input class="custom-control-input" id="pay-cash-1" type="checkbox">
+                                            <label class="custom-control-label" for="pay-cash-1">
+                                                Cash
+                                            </label>
+                                            </input>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
+                                    Annulée
+                                </button>
+                                <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
+                                    Poster
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-light">
+                <span class="sub-text">
+                    Annonce
+                </span>
             </div>
         </div>
     </div>
+</div>
+
 
 <div class="modal fade" id="modalAnnoncemodif" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-lg" role="document">

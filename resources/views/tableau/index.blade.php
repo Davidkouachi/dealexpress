@@ -1004,23 +1004,35 @@
             <div class="modal-body">
                 <form id="form" action="/New_categorie" class="" method="post">
                     @csrf
-                    <div class="form-group">
-                        <label class="form-label" for="full-name">
-                            Catégorie
-                        </label>
-                        <div class="form-control-wrap">
-                            <input name="categorie_new" class="form-control" id="full-name" required type="text" oninput="this.value = this.value.toUpperCase()" autocomplete="off"/>
+                    <div class="mb-4" id="categorie_container" >
+                        <div class="form-group">
+                            <label class="form-label" for="full-name">
+                                Catégorie
+                            </label>
+                            <div class="form-control-wrap">
+                                <input name="categorie_new[]" class="form-control" id="full-name" required type="text" oninput="this.value = this.value.toUpperCase()" autocomplete="off" placeholder="Saisie obligatoire"/>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
-                            <em class="icon ni ni-cross-circle"></em>
-                            <span>Fermer</span>
-                        </button>
-                        <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
-                            <span>Sauvgarder</span>
-                            <em class="icon ni ni-arrow-right-circle"></em>
-                        </button>
+                    <div class="form-group row g-gs">
+                        <div class="col-lg-4">
+                            <button class="btn btn-mw btn-dim btn-outline-danger btn-block" type="reset" data-bs-dismiss="modal">
+                                <em class="icon ni ni-cross-circle"></em>
+                                <span>Fermer</span>
+                            </button>
+                        </div>
+                        <div class="col-lg-4">
+                            <a class="btn btn-mw btn-dim btn-outline-warning btn-block" id="ajouter_categorie">
+                                <em class="icon ni ni-plus-circle"></em>
+                                <span>Ajouter</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <button class="btn btn-mw btn-dim btn-outline-success btn-block" type="submit">
+                                <span>Sauvgarder</span>
+                                <em class="icon ni ni-arrow-right-circle"></em>
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -1043,24 +1055,16 @@
                 </h5>
             </div>
             <div class="modal-body">
-                <form action="#" class="form-validate">
+                <form id="form" action="/New_scategorie" class="" method="post">
+                    @csrf
                 	<div class="form-group">
-                        <label class="form-label" for="fv-topics1">
-                            Catégorie
-                        </label>
-                        <div class="form-control-wrap ">
-                            <select class="form-select js-select2" data-placeholder="Select a option" id="fv-topics1" name="fv-topics1" required="" data-msg="Error message">
-                                <option label="empty" value="">
-                                </option>
-                                <option value="fv-gq">
-                                    General Question
-                                </option>
-                                <option value="fv-tq">
-                                    Tachnical Question
-                                </option>
-                                <option value="fv-ab">
-                                    Account & Billing
-                                </option>
+                        <label class="form-label" for="cp1-team-size">Catégorie</label>
+                        <div class="form-control-wrap">
+                            <select required name="scategorie_id_new" class="form-select js-select2" data-search="on">
+                                <option value=""></option>
+                                @foreach($categories as $categorie)
+                                    <option value="{{ $categorie->id}}">{{ $categorie->nom}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -1069,15 +1073,17 @@
                             Sous-Catégorie
                         </label>
                         <div class="form-control-wrap">
-                            <input data-msg="Error message" class="form-control" id="full-name" required="" type="text" />
+                            <input required name="scategorie_new" class="form-control" id="full-name" required="" type="text" />
                         </div>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
-                            Annulé
+                            <em class="icon ni ni-cross-circle"></em>
+                            <span>Fermer</span>
                         </button>
                         <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
-                            Terminé
+                            <span>Sauvgarder</span>
+                            <em class="icon ni ni-arrow-right-circle"></em>
                         </button>
                     </div>
                 </form>
@@ -1103,23 +1109,35 @@
             <div class="modal-body">
                 <form id="form" action="/New_ville" class="" method="post">
                     @csrf
-                    <div class="form-group">
-                        <label class="form-label" for="full-name">
-                            Ville
-                        </label>
-                        <div class="form-control-wrap">
-                            <input name="ville_new" class="form-control" id="full-name" required type="text" oninput="this.value = this.value.toUpperCase()" autocomplete="off"/>
+                    <div class="mb-4" id="ville_container" >
+                        <div class="form-group">
+                            <label class="form-label" for="full-name">
+                                Ville
+                            </label>
+                            <div class="form-control-wrap">
+                                <input name="ville_new[]" class="form-control" id="full-name" required type="text" oninput="this.value = this.value.toUpperCase()" autocomplete="off" placeholder="Saisie obligatoire" autocomplete="off"/>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
-                            <em class="icon ni ni-cross-circle"></em>
-                            <span>Fermer</span>
-                        </button>
-                        <button class="btn btn-mw btn-dim btn-outline-success" type="submit">
-                            <span>Sauvgarder</span>
-                            <em class="icon ni ni-arrow-right-circle"></em>
-                        </button>
+                    <div class="form-group row g-gs">
+                        <div class="col-lg-4">
+                            <button class="btn btn-mw btn-dim btn-outline-danger btn-block" type="reset" data-bs-dismiss="modal">
+                                <em class="icon ni ni-cross-circle"></em>
+                                <span>Fermer</span>
+                            </button>
+                        </div>
+                        <div class="col-lg-4">
+                            <a class="btn btn-mw btn-dim btn-outline-warning btn-block" id="ajouter_ville">
+                                <em class="icon ni ni-plus-circle"></em>
+                                <span>Ajouter</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <button class="btn btn-mw btn-dim btn-outline-success btn-block" type="submit">
+                                <span>Sauvgarder</span>
+                                <em class="icon ni ni-arrow-right-circle"></em>
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -1189,5 +1207,69 @@
         </div>
     </div>
 </div>
+
+    <script>
+        document.getElementById('ajouter_categorie').addEventListener('click', function(event) {
+            event.preventDefault();
+            const container = document.getElementById('categorie_container');
+            const div = document.createElement('div');
+            div.classList.add('form-group');
+            div.innerHTML = `
+                <div class="row g-gs">
+                    <div class="col-lg-12">
+                        <div class="form-control-wrap">
+                            <input placeholder="Saisie obligatoire" autocomplete="off" required type="text" class="form-control objectif me-2" name="categorie_new[]" oninput="this.value = this.value.toUpperCase()">
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-control-wrap ">
+                            <button type="button" class="btn btn-danger btn-dim text-center btn-remove-objectif btn-block">
+                                <em class="ni ni-trash me-2"></em>
+                                <em>Supprimer</em>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.appendChild(div);
+
+            // Ajouter un écouteur d'événement pour supprimer l'objectif
+            div.querySelector('.btn-remove-objectif').addEventListener('click', function() {
+                container.removeChild(div);
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById('ajouter_ville').addEventListener('click', function(event) {
+            event.preventDefault();
+            const container = document.getElementById('ville_container');
+            const div = document.createElement('div');
+            div.classList.add('form-group');
+            div.innerHTML = `
+                <div class="row g-gs">
+                    <div class="col-lg-12">
+                        <div class="form-control-wrap">
+                            <input placeholder="Saisie obligatoire" autocomplete="off" required type="text" class="form-control objectif me-2" name="ville_new[]" oninput="this.value = this.value.toUpperCase()">
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-control-wrap ">
+                            <button type="button" class="btn btn-danger btn-dim text-center btn-remove-ville btn-block">
+                                <em class="ni ni-trash me-2"></em>
+                                <em>Supprimer</em>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.appendChild(div);
+
+            // Ajouter un écouteur d'événement pour supprimer l'objectif
+            div.querySelector('.btn-remove-ville').addEventListener('click', function() {
+                container.removeChild(div);
+            });
+        });
+    </script>
 
 @endsection

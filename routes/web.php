@@ -52,6 +52,7 @@ Route::middleware(['role:admin'])->group(function () {
 	Route::get('/Tableau de bord', [TableauController::class, 'index'])->name('index_tableau');
 
 	Route::post('/New_categorie', [TableauController::class, 'new_categorie'])->name('new_categorie');
+	Route::post('/New_scategorie', [TableauController::class, 'new_scategorie'])->name('new_scategorie');
 	Route::post('/New_ville', [TableauController::class, 'new_ville'])->name('new_ville');
 	// -------------------------------------------------------------
 });
@@ -59,7 +60,13 @@ Route::middleware(['role:admin'])->group(function () {
 Route::middleware(['role:user'])->group(function () {
 
 	// liste article profil-------------------------------------------------------------
-	Route::get('/Nouvelle annonces', [AnnonceController::class, 'index_new_annonce'])->name('index_new_annonce');
+	Route::post('/Nouvelle annonces', [AnnonceController::class, 'index_new_annonce'])->name('index_new_annonce');
+
+	Route::get('/Nouvelle annonces immobilier', [AnnonceController::class, 'index_new_annonce_immobilier'])->name('index_new_annonce_immobilier');
+	Route::get('/Nouvelle annonces vehicule', [AnnonceController::class, 'index_new_annonce_vehicule'])->name('index_new_annonce_vehicule');
+	Route::get('/Nouvelle annonces travail', [AnnonceController::class, 'index_new_annonce_travail'])->name('index_new_annonce_travail');
+	Route::get('/Nouvelle annonces autre', [AnnonceController::class, 'index_new_annonce_autre'])->name('index_new_annonce_autre');
+	
 	Route::get('/Mes annonces', [AnnonceController::class, 'index_liste_annonce'])->name('index_liste_annonce');
 	Route::get('/Détail annonce', [AnnonceController::class, 'index_liste_detail'])->name('index_liste_detail');
 	// -------------------------------------------------------------

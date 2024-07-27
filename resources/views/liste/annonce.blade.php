@@ -26,22 +26,22 @@
                         </button>
                     </li>
                     <li>
-                        <button class="filter-button" data-filter=".categorie-1" type="button">
-                            categorie-1
+                        <button class="filter-button" data-filter=".vendu" type="button">
+                            Vendu
                         </button>
                     </li>
                     <li>
-                        <button class="filter-button" data-filter=".categorie-2" type="button">
-                            categorie-2
+                        <button class="filter-button" data-filter=".en_ligne" type="button">
+                            En ligne
                         </button>
                     </li>
                 </ul>
                 <div class="row g-gs filter-container" data-animation="true">
-                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 filter-item categorie-1" data-category="categorie-1">
+                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 filter-item vendu" data-category="vendu">
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
                                 <a href="{{route('index_liste_detail')}} " >
-                                    <img style="object-fit: cover;height: auto;width: auto;" class="" src="image/1.png" />
+                                    <img style="object-fit: cover;height: 200px;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
@@ -57,10 +57,8 @@
                                     <li>
                                         <a>
                                             <em class="icon ni ni-map-pin-fill"></em>
-                                            <span>Abidjan</span>
+                                            <span>Abidjan, </span>
                                         </a>
-                                    </li>
-                                    <li>
                                         <a>
                                             <em class="icon ni ni-eye"></em>
                                             <span>15 vue(s)</span>
@@ -78,11 +76,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 filter-item categorie-2" data-category="categorie-2">
+                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 filter-item en_ligne" data-category="en_ligne">
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
                                 <a href="{{route('index_liste_detail')}} " >
-                                    <img style="object-fit: cover;height: auto;width: auto;" class="" src="image/1.png" />
+                                    <img style="object-fit: cover;height: 200px;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
@@ -102,11 +100,7 @@
                                         </a>
                                         <a>
                                             <em class="icon ni ni-eye"></em>
-                                            <span>0 vue(s), </span>
-                                        </a>
-                                        <a>
-                                            <em class="icon ni ni-bag"></em>
-                                            <span>Cap Sud</span>
+                                            <span>0 vue(s)</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -116,10 +110,6 @@
                                     </a>
                                 </h6>
                                 <div class="product-price h6 fs-15px ">
-                                    <small class="text-muted del fs-13px">
-                                        59.000 fcfa
-                                    </small>
-                                    <br>
                                     19.000 fcfa
                                 </div>
                             </div>

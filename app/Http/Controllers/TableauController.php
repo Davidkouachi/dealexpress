@@ -11,6 +11,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Session;
 
 use App\Models\Categorie;
+use App\Models\Sous_categorie;
 use App\Models\Ville;
 
 class TableauController extends Controller
@@ -25,18 +26,51 @@ class TableauController extends Controller
 
     public function new_categorie(Request $request)
     {
-        $categorie = $request->input('categorie_new');
+        $categories = $request->input('categorie_new');
 
-        $vrf = Categorie::where('nom', $categorie)->first();
+        foreach ($categories as $categorie) {
+            $vrf = Categorie::where('nom', $categorie)->first();
 
-        if ($vrf) {
+            if ($vrf) {
+                return back()->with('error', 'Cette catégorie existe déjà.');
+            }
+        }
 
-            return back()->with('error', 'Cette catégorie existe déjà.');
+        foreach ($categories as $categorie) {
+            $cat = new Categorie();
+            $cat->nom = $categorie;
+            $cat->save();
+        }
+
+        if ($cat) {
+
+            return back()->with('success', 'Enregistrement éffectuée.');
 
         }else{
 
-            $cat = new Categorie();
-            $cat->nom = $categorie;
+            return back()->with('error', 'Echec de l\'enregistrement.');
+
+        }
+    }
+
+    public function new_scategorie(Request $request)
+    {
+        dd();
+
+        $scategorie = $request->input('scategorie_new');
+        $scategorie_id = $request->input('scategorie_id_new');
+
+        $vrf = Sous_categorie::where('nom', $scategorie)->first();
+
+        if ($vrf) {
+
+            return back()->with('error', 'Cette sous-catégorie existe déjà.');
+
+        }else{
+
+            $cat = new Sous_categorie();
+            $cat->nom = $scategorie;
+            $cat->categorie_id = $scategorie_id;
             $cat->save();
 
             if ($cat) {
@@ -49,37 +83,37 @@ class TableauController extends Controller
 
             }
 
-        }
-        
+        }    
     }
 
     public function new_ville(Request $request)
     {
-        $ville = $request->input('ville_new');
+        $villes = $request->input('ville_new');
 
-        $vrf = Ville::where('nom', $ville)->first();
+        foreach ($villes as $ville) {
+            $vrf = Ville::where('nom', $ville)->first();
 
-        if ($vrf) {
+            if ($vrf) {
+                return back()->with('error', 'Cette Ville existe déjà.');
+            }
+        }
 
-            return back()->with('error', 'Cette catégorie existe déjà.');
-
-        }else{
-
+        foreach ($villes as $ville) {
             $vil = new Ville();
             $vil->nom = $ville;
             $vil->save();
+        }
 
-            if ($vil) {
+        if ($vil) {
 
-                return back()->with('success', 'Enregistrement éffectuée.');
+            return back()->with('success', 'Enregistrement éffectuée.');
 
-            }else{
+        }else{
 
-                return back()->with('error', 'Echec de l\'enregistrement.');
-
-            }
+            return back()->with('error', 'Echec de l\'enregistrement.');
 
         }
-        
+
     }
+        
 }

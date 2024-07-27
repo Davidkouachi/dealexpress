@@ -50,7 +50,7 @@ class AuthController extends Controller
         $users = new User();
         $users->name = $name;
         $users->email = $email;
-        $users->password = $password;
+        $users->password = bcrypt($request->password);
         $users->role = 'user';
         $users->save();
 

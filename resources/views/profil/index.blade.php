@@ -14,18 +14,18 @@
                                 <div class="nk-block-between">
                                     <div class="nk-block-head-content">
                                         <h4 class="nk-block-title">
-                                            Personal Information
+                                            Informations Personnelles
                                         </h4>
                                         <div class="nk-block-des">
                                             <p>
-                                                Basic info, like your name and address, that you use on Nio Platform.
+                                                Informations de base, telles que votre nom et votre adresse ..., que vous utilisez sur la plateforme
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="nk-block-head-content align-self-start d-lg-none">
-                                        <a class="toggle btn btn-icon btn-trigger mt-n1" data-target="userAside" href="#">
-                                            <em class="icon ni ni-menu-alt-r">
-                                            </em>
+                                    <div class="nk-block-head-content align-self-start">
+                                        <a class="btn btn-white btn-outline-warning btn-dim btn-sm mt-n1" data-bs-target="#profile-edit" data-bs-toggle="modal">
+                                            <span>Mise à jour</span>
+                                            <em class="icon ni ni-edit"></em>
                                         </a>
                                     </div>
                                 </div>
@@ -37,34 +37,34 @@
                                             Informations personnelles
                                         </h6>
                                     </div>
-                                    <div class="data-item" data-bs-target="#profile-edit" data-bs-toggle="modal">
+                                    <div class="data-item">
                                         <div class="data-col">
                                             <span class="data-label">
-                                                Full Name
+                                                Nom
                                             </span>
                                             <span class="data-value">
                                                 Abu Bin Ishtiyak
                                             </span>
                                         </div>
                                         <div class="data-col data-col-end">
-                                            <span class="data-more">
-                                                <em class="icon ni ni-forward-ios">
+                                            <span class="data-more disable">
+                                                <em class="icon ni ni-lock-alt">
                                                 </em>
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="data-item" data-bs-target="#profile-edit" data-bs-toggle="modal">
+                                    <div class="data-item">
                                         <div class="data-col">
                                             <span class="data-label">
-                                                Display Name
+                                                Prénoms
                                             </span>
                                             <span class="data-value">
                                                 Ishtiyak
                                             </span>
                                         </div>
                                         <div class="data-col data-col-end">
-                                            <span class="data-more">
-                                                <em class="icon ni ni-forward-ios">
+                                            <span class="data-more disable">
+                                                <em class="icon ni ni-lock-alt">
                                                 </em>
                                             </span>
                                         </div>
@@ -85,34 +85,34 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="data-item" data-bs-target="#profile-edit" data-bs-toggle="modal">
+                                    <div class="data-item">
                                         <div class="data-col">
                                             <span class="data-label">
-                                                Phone Number
+                                                Contact
                                             </span>
                                             <span class="data-value text-soft">
-                                                Not add yet
+                                                0585782723
                                             </span>
                                         </div>
                                         <div class="data-col data-col-end">
-                                            <span class="data-more">
-                                                <em class="icon ni ni-forward-ios">
+                                            <span class="data-more disable">
+                                                <em class="icon ni ni-lock-alt">
                                                 </em>
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="data-item" data-bs-target="#profile-edit" data-bs-toggle="modal">
+                                    <div class="data-item">
                                         <div class="data-col">
                                             <span class="data-label">
-                                                Date of Birth
+                                                Date de naissance
                                             </span>
                                             <span class="data-value">
                                                 29 Feb, 1986
                                             </span>
                                         </div>
                                         <div class="data-col data-col-end">
-                                            <span class="data-more">
-                                                <em class="icon ni ni-forward-ios">
+                                            <span class="data-more disable">
+                                                <em class="icon ni ni-lock-alt">
                                                 </em>
                                             </span>
                                         </div>
@@ -120,7 +120,7 @@
                                     <div class="data-item" data-bs-target="#profile-edit" data-bs-toggle="modal" data-tab-target="#address">
                                         <div class="data-col">
                                             <span class="data-label">
-                                                Address
+                                                Adresse
                                             </span>
                                             <span class="data-value">
                                                 2337 Kildeer Drive,
@@ -130,14 +130,14 @@
                                             </span>
                                         </div>
                                         <div class="data-col data-col-end">
-                                            <span class="data-more">
-                                                <em class="icon ni ni-forward-ios">
+                                            <span class="data-more disable">
+                                                <em class="icon ni ni-lock-alt">
                                                 </em>
                                             </span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="nk-data data-list">
+                                {{-- <div class="nk-data data-list">
                                     <div class="data-head">
                                         <h6 class="overline-title">
                                             Préférences
@@ -188,7 +188,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="nk-data data-list">
                                     <div class="data-head">
                                         <h6 class="overline-title">
@@ -199,34 +199,27 @@
                                         <div class="data-col">
                                             <div class="nk-block-text data-label">
                                                 <h6>
-                                                    Change Password
+                                                    Changer le mot de passe
                                                 </h6>
                                                 <p>
-                                                    Set a unique password to protect your account.
+                                                    Définissez un mot de passe unique pour protéger votre compte.
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="nk-block-actions data-col data-col-end">
-                                            <ul class="align-center gx-3">
-                                                <li class="order-md-last">
-                                                    <div class="custom-control custom-switch me-n2">
-                                                        <input checked="" class="custom-control-input" id="activity-log" type="checkbox">
-                                                        <label class="custom-control-label" for="activity-log">
-                                                        </label>
-                                                        </input>
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                            <a class="btn btn-primary" href="#">
+                                                Changer
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="data-item">
                                         <div class="data-col">
                                             <div class="nk-block-text data-label">
                                                 <h6>
-                                                    Save my Activity Logs
+                                                    Sauvegarder mes journaux d'activité
                                                 </h6>
                                                 <p>
-                                                    You can save your all activity logs including unusual activity detected.
+                                                    Vous pouvez sauvegarder tous vos journaux d'activité, y compris les activités inhabituelles détectées.
                                                 </p>
                                             </div>
                                         </div>
@@ -247,19 +240,19 @@
                                         <div class="data-col">
                                             <div class="nk-block-text data-label">
                                                 <h6>
-                                                    2 Factor Auth
+                                                    Authentification à deux facteurs
                                                     <span class="badge badge-success ms-0">
-                                                        Enabled
+                                                        Activé
                                                     </span>
                                                 </h6>
                                                 <p>
-                                                    Secure your account with 2FA security. When it is activated you will need to enter not only your password, but also a special code using app. You can receive this code by in mobile app.
+                                                    Sécurisez votre compte avec la sécurité 2FA. Lorsque celle-ci est activée, vous devrez entrer non seulement votre mot de passe, mais également un code spécial via une application. Vous pouvez recevoir ce code via une application mobile.
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="nk-block-actions data-col data-col-end">
-                                            <a class="btn btn-primary" href="#">
-                                                Disable
+                                            <a class="btn btn-danger" href="#">
+                                                <span>Désactivé</span>
                                             </a>
                                         </div>
                                     </div>
@@ -282,17 +275,17 @@
             </a>
             <div class="modal-body modal-body-lg">
                 <h5 class="title">
-                    Update Profile
+                    Mise à jour du Profil
                 </h5>
                 <ul class="nk-nav nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-bs-toggle="tab" href="#personal">
-                            Personal
+                            Personnelle
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="tab" href="#address">
-                            Address
+                            Adresse
                         </a>
                     </li>
                 </ul>
@@ -302,7 +295,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="form-label" for="full-name">
-                                        Full Name
+                                        Nom
                                     </label>
                                     <input class="form-control form-control-lg" id="full-name" placeholder="Enter Full name" type="text" value="Abu Bin Ishtiyak" />
                                 </div>
@@ -310,7 +303,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="form-label" for="display-name">
-                                        Display Name
+                                        Prénoms
                                     </label>
                                     <input class="form-control form-control-lg" id="display-name" placeholder="Enter display name" type="text" value="Ishtiyak" />
                                 </div>
@@ -318,7 +311,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="form-label" for="phone-no">
-                                        Phone Number
+                                        Contact
                                     </label>
                                     <input class="form-control form-control-lg" id="phone-no" placeholder="Phone Number" type="text" value="+880" />
                                 </div>
@@ -326,7 +319,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="form-label" for="birth-day">
-                                        Date of Birth
+                                        Date de naissance
                                     </label>
                                     <input class="form-control form-control-lg date-picker" id="birth-day" placeholder="Enter your birth date" type="text" />
                                 </div>
@@ -339,20 +332,6 @@
                                     </label>
                                     </input>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
-                                    <li>
-                                        <a class="btn btn-lg btn-primary" data-bs-dismiss="modal" href="#">
-                                            Update Profile
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="link link-light" data-bs-dismiss="modal" href="#">
-                                            Cancel
-                                        </a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -409,21 +388,15 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
-                                    <li>
-                                        <a class="btn btn-lg btn-primary" data-bs-dismiss="modal" href="#">
-                                            Update Address
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="link link-light" data-bs-dismiss="modal" href="#">
-                                            Cancel
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="row g-gs align-items-center justify-content-center mt-3">
+                    <div class="col-lg-12">
+                        <button type="submit" class="btn btn-white btn-lg btn-dim btn-outline-success btn-block">
+                            <span>Enregistrer</span>
+                            <em class="icon ni ni-arrow-right-circle"></em>
+                        </button>
                     </div>
                 </div>
             </div>
