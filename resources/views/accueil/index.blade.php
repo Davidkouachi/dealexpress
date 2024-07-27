@@ -41,7 +41,7 @@
                                                     Localisation
                                                 </label>
                                                 <div class="form-control-wrap ">
-                                                    <select class="form-select js-select2" data-placeholder="Select a option" >
+                                                    <select class="form-select js-select2" data-search="on" data-placeholder="Selectionner" >
                                                         <option label="empty" value="">
                                                         </option>
                                                         <option value="fv-gq">
@@ -63,7 +63,7 @@
                                                     Catégorie
                                                 </label>
                                                 <div class="form-control-wrap ">
-                                                    <select class="form-select js-select2" id="rech_categorie" >
+                                                    <select class="form-select js-select2" id="rech_categorie" data-placeholder="Selectionner">
                                                         <option value="">
                                                         </option>
                                                         <option value="immobilier">
@@ -85,7 +85,7 @@
                                                     Type
                                                 </label>
                                                 <div class="form-control-wrap ">
-                                                    <select class="form-select js-select2" data-placeholder="Select a option" >
+                                                    <select class="form-select js-select2" data-placeholder="Selectionner" >
                                                         <option label="empty" value="">
                                                         </option>
                                                         <option value="fv-gq">
@@ -105,7 +105,7 @@
                                                     Type d'immobilier
                                                 </label>
                                                 <div class="form-control-wrap ">
-                                                    <select class="form-select js-select2" data-placeholder="Select a option" >
+                                                    <select class="form-select js-select2" data-search="on" data-placeholder="Selectionner" >
                                                         <option label="empty" value="">
                                                         </option>
                                                         <option value="fv-gq">
@@ -125,7 +125,7 @@
                                                     Type de véhicule
                                                 </label>
                                                 <div class="form-control-wrap ">
-                                                    <select class="form-select js-select2" data-placeholder="Select a option" >
+                                                    <select class="form-select js-select2" data-placeholder="Selectionner" >
                                                         <option label="empty" value="">
                                                         </option>
                                                         <option value="fv-gq">
@@ -147,7 +147,7 @@
                                                     Marque
                                                 </label>
                                                 <div class="form-control-wrap ">
-                                                    <select class="form-select js-select2" data-placeholder="Select a option" >
+                                                    <select class="form-select js-select2" data-search="on" data-placeholder="Selectionner" >
                                                         <option label="empty" value="">
                                                         </option>
                                                         <option value="fv-gq">
@@ -159,6 +159,16 @@
                                                         <option value="fv-ab">
                                                             Account & Billing
                                                         </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6" id="rech_annee" style="display:none;">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Année</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-search="on" id="vehiculeSelect" data-placeholder="selectionner">
+                                                        <option value=""></option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -191,7 +201,7 @@
                                         </div>
                                         <div class="col-lg-12 text-center" >
                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-lg btn-dim btn-outline-success ">
+                                                <button type="submit" class="btn btn-white btn-lg btn-dim btn-outline-success ">
                                                     <em class="ni ni-search" ></em>
                                                 </button>
                                             </div>
@@ -254,7 +264,7 @@
                 <div class="nk-block-head mt-2">
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
-                            <a class="btn btn-outline-warning btn-wider btn-dim btn-sm" href="{{route('index_annonce')}}">
+                            <a class="btn btn-outline-warning btn-white btn-wider btn-dim btn-sm" href="{{route('index_annonce')}}">
                                 <span>Voir plus</span>
                                 <em class="icon ni ni-arrow-right"></em>
                             </a>

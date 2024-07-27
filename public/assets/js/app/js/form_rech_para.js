@@ -1,5 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    var vehiculeSelect = document.getElementById('vehiculeSelect');
+    var currentYear = new Date().getFullYear();
+    var startYear = 2000; // Commencer à partir de 2021
+
+    for (var year = currentYear; year >= startYear; year--) {
+        var option = document.createElement('option');
+        option.value = year;
+        option.textContent = year;
+        if (year === currentYear) {
+            option.selected = true; // Sélectionner automatiquement l'année en cours
+        }
+        vehiculeSelect.appendChild(option);
+    }
+
     $(document).ready(function() {
         $('#rech_categorie').on('change', function() {
             sum();
@@ -16,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('rech_vehicule').style.display = 'none';
         document.getElementById('rech_marque').style.display = 'none';
         document.getElementById('rech_km').style.display = 'none';
+        document.getElementById('rech_annee').style.display = 'none';
 
         // Show the appropriate section based on the selected value
         if (rech === 'immobilier') {
@@ -24,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('rech_vehicule').style.display = 'block';
             document.getElementById('rech_marque').style.display = 'block';
             document.getElementById('rech_km').style.display = 'block';
+            document.getElementById('rech_annee').style.display = 'block';
         } else {
             document.getElementById('rech_autre').style.display = 'block';
         }
@@ -50,14 +66,6 @@ document.getElementById('max-price').addEventListener('input', function() {
     this.value = formatPrice(this.value);
 });
 
-document.getElementById('surface').addEventListener('input', function() {
-    this.value = formatPrice(this.value);
-});
-
-document.getElementById('prix').addEventListener('input', function() {
-    this.value = formatPrice(this.value);
-});
-
 // Événement pour permettre uniquement les chiffres
 document.getElementById('min-price').addEventListener('keypress', function(event) {
     const key = event.key;
@@ -67,20 +75,6 @@ document.getElementById('min-price').addEventListener('keypress', function(event
 });
 
 document.getElementById('max-price').addEventListener('keypress', function(event) {
-    const key = event.key;
-    if (isNaN(key)) {
-        event.preventDefault();
-    }
-});
-
-document.getElementById('surface').addEventListener('keypress', function(event) {
-    const key = event.key;
-    if (isNaN(key)) {
-        event.preventDefault();
-    }
-});
-
-document.getElementById('prix').addEventListener('keypress', function(event) {
     const key = event.key;
     if (isNaN(key)) {
         event.preventDefault();

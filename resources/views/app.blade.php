@@ -356,13 +356,13 @@
                         </div>
                         <div class="form-group row g-gs">
                             <div class="col-lg-6">
-                                <a data-bs-dismiss="modal" aria-label="Close" class="btn btn-md btn-outline-danger btn-block btn-dim ">
+                                <a data-bs-dismiss="modal" aria-label="Close" class="btn btn-md btn-white btn-outline-danger btn-block btn-dim ">
                                     <em class="icon ni ni-cross-circle"></em>
                                     <span>Fermer</span>
                                 </a>
                             </div>
                             <div class="col-lg-6">
-                                <button type="submit" class="btn btn-md btn-outline-success btn-block btn-dim ">
+                                <button type="submit" class="btn btn-md btn-white btn-outline-success btn-block btn-dim ">
                                     <span>Création de compte</span>
                                     <em class="icon ni ni-arrow-right-circle"></em>
                                 </button>
@@ -420,13 +420,13 @@
                         </div>
                         <div class="form-group row g-gs">
                             <div class="col-lg-6">
-                                <a data-bs-dismiss="modal" aria-label="Close" class="btn btn-lg btn-dim btn-outline-danger btn-block">
+                                <a data-bs-dismiss="modal" aria-label="Close" class="btn btn-md btn-white btn-dim btn-outline-danger btn-block">
                                     <em class="icon ni ni-cross-circle"></em>
                                     <span>Fermer</span>
                                 </a>
                             </div>
                             <div class="col-lg-6">
-                                <button type="submit" class="btn btn-lg btn-dim btn-outline-success btn-block">
+                                <button type="submit" class="btn btn-md btn-white btn-dim btn-outline-success btn-block">
                                     <span>Connexion</span>
                                     <em class="icon ni ni-arrow-right-circle"></em>
                                 </button>
@@ -468,11 +468,11 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <button class="btn btn-mw btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
+                                    <button class="btn btn-md btn-white btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
                                         <em class="icon ni ni-cross-circle"></em>
                                         <span>Annulé</span>
                                     </button>
-                                    <button class="btn btn-mw btn-dim btn-outline-success" type="submit" data-bs-dismiss="modal">
+                                    <button class="btn btn-md btn-white btn-dim btn-outline-success" type="submit" data-bs-dismiss="modal">
                                         <span>Continuer</span>
                                         <em class="icon ni ni-arrow-right-circle"></em>
                                     </button>

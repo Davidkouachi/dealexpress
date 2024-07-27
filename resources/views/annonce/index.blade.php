@@ -36,11 +36,12 @@
                     </li>
                 </ul>
                 <div class="row g-gs filter-container" data-animation="true">
+
                     <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 filter-item categorie-1" data-category="categorie-1">
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
                                 <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: 200px;" class="" src="image/1.png" />
+                                    <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
@@ -75,7 +76,7 @@
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
                                 <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: 200px;" class="" src="image/1.png" />
+                                    <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/mtn/1.png" />
                                 </a>
                             </div>
                             <div class="card-inner text-center pt-2 pb-2">
@@ -98,6 +99,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -119,7 +121,7 @@
                                 Localisation
                             </label>
                             <div class="form-control-wrap ">
-                                <select class="form-select js-select2" data-placeholder="Selectionner">
+                                <select class="form-select js-select2" data-search="on" data-placeholder="Selectionner">
                                     <option label="empty" value="">
                                     </option>
                                     <option value="fv-gq">
@@ -163,7 +165,7 @@
                                 Type
                             </label>
                             <div class="form-control-wrap ">
-                                <select class="form-select js-select2" data-placeholder="Selectionner">
+                                <select class="form-select js-select2" data-search="on" data-placeholder="Selectionner">
                                     <option label="empty" value="">
                                     </option>
                                     <option value="fv-gq">
@@ -183,7 +185,7 @@
                                 Type d'immobilier
                             </label>
                             <div class="form-control-wrap ">
-                                <select class="form-select js-select2" data-placeholder="Selectionner">
+                                <select class="form-select js-select2" data-search="on" data-placeholder="Selectionner">
                                     <option label="empty" value="">
                                     </option>
                                     <option value="fv-gq">
@@ -225,7 +227,7 @@
                                 Marque
                             </label>
                             <div class="form-control-wrap ">
-                                <select class="form-select js-select2" data-placeholder="Selectionner">
+                                <select class="form-select js-select2" data-search="on" data-placeholder="Selectionner">
                                     <option label="empty" value="">
                                     </option>
                                     <option value="fv-gq">
@@ -237,6 +239,16 @@
                                     <option value="fv-ab">
                                         Account & Billing
                                     </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12" id="rech_annee" style="display:none;">
+                        <div class="form-group">
+                            <label class="form-label" for="cp1-team-size">Année</label>
+                            <div class="form-control-wrap">
+                                <select class="form-select js-select2" data-search="on" id="vehiculeSelect" data-placeholder="selectionner">
+                                    <option value=""></option>
                                 </select>
                             </div>
                         </div>
