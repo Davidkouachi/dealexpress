@@ -10,6 +10,7 @@ use App\Models\Commune;
 use App\Models\User;
 use App\Models\Marque_ordinateur;
 use App\Models\Marque_vehicule;
+use App\Models\Marque_telephone;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -19,7 +20,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Categorie::create(['nom' => 'TELEPHONE & TABLETTE']);
+        Categorie::create(['nom' => 'TELEPHONES & TABLETTES']);
         $telephones = ['Téléphne portable', 'Tablettes', 'Accessoires Téléphone', 'Montres connectées','autre'];
         foreach ($telephones as $telephone) {
             Sous_categorie::create([
@@ -28,7 +29,7 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        Categorie::create(['nom' => 'INFORMATIQUE']);
+        Categorie::create(['nom' => 'INFORMATIQUES']);
         $informatiques = ['Ordinateurs', 'Imprimantes & Scanners', 'Péripherique & Accessoires Informatiques', 'Stockage de données', 'Logiciels', 'autre'];
         foreach ($informatiques as $informatique) {
             Sous_categorie::create([
@@ -37,7 +38,7 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        Categorie::create(['nom' => 'VOITURE']);
+        Categorie::create(['nom' => 'VEHICULES']);
         $voitures = ['Camions & Bus', 'Accessoires & pièces détachées', 'Location Véhicules', 'voitures', 'Moto & vélos', 'autre'];
         foreach ($voitures as $voiture) {
             Sous_categorie::create([
@@ -46,7 +47,7 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        Categorie::create(['nom' => 'ELECTRONIQUE']);
+        Categorie::create(['nom' => 'ELECTRONIQUES']);
         $electroniques = ['Télévision', 'Accessoires TV, Box & Vidéos projecteurs', 'Audio, Hifi & Casques', 'Appareils Photo & Caméra', 'Jeux Vidéos & Consoles', 'autre'];
         foreach ($electroniques as $electronique) {
             Sous_categorie::create([
@@ -55,7 +56,7 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        Categorie::create(['nom' => 'IMMOBILIER']);
+        Categorie::create(['nom' => 'IMMOBILIERS']);
         $immobiliers = ['Villas', 'Terrains', 'Appartements', 'Immeubles', 'Bureaux & Commerces', 'Appartements meublés' , 'autre'];
         foreach ($immobiliers as $immobilier) {
             Sous_categorie::create([
@@ -70,7 +71,10 @@ class DatabaseSeeder extends Seeder
             ],
             'marques_vehicules' => [
                 'Acura', 'Alfa Romeo', 'Aston Martin', 'Audi', 'Bentley', 'BMW', 'Bugatti', 'Cadillac', 'Chrysler', 'Dodge', 'Ferrari', 'Fiat', 'Ford', 'GMC', 'Honda', 'Hyundai', 'Infiniti', 'Jaguar', 'Jeep', 'Kia', 'Land Rover', 'Lexus', 'Lincoln', 'Maserati', 'Mazda', 'McLaren', 'Mercedes-Benz', 'Mini', 'Mitsubishi', 'Nissan', 'Porsche', 'Rolls-Royce', 'Subaru', 'Tesla', 'Toyota', 'Volkswagen', 'Volvo',
-            ]
+            ],
+            'marques_telephones' => [
+                'Alcatel', 'Apple', 'Asus', 'Blackberry', 'Coolpad', 'Gionee', 'Google', 'Honor', 'HTC', 'Huawei', 'Infinix', 'Itel', 'Lava', 'Lenovo', 'LG', 'Meizu', 'Microsoft', 'Micromax', 'Motorola', 'Nokia', 'OnePlus', 'Oppo', 'Panasonic', 'Realme', 'Samsung', 'Sony', 'Sony Ericsson', 'Tecno', 'Vivo', 'Xiaomi', 'ZTE'
+            ],
         ];
 
 
@@ -82,6 +86,12 @@ class DatabaseSeeder extends Seeder
 
         foreach ($data['marques_vehicules'] as $marque) {
             Marque_vehicule::create([
+                'nom' => $marque,
+            ]);
+        }
+
+        foreach ($data['marques_telephones'] as $marque) {
+            Marque_telephone::create([
                 'nom' => $marque,
             ]);
         }

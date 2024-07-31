@@ -9,6 +9,7 @@ use App\Models\Ville;
 use App\Models\Commune;
 use App\Models\Marque_ordinateur;
 use App\Models\Marque_vehicule;
+use App\Models\Marque_telephone;
 
 class AnnonceController extends Controller
 {
@@ -23,8 +24,9 @@ class AnnonceController extends Controller
       $villes = Ville::all();
       $marque_cars = Marque_vehicule::all();
       $marque_computers = Marque_ordinateur::all();
+      $marque_tels = Marque_telephone::all();
 
-      return view('annonce.new.autre',['categories' => $categories,'villes' => $villes,'marque_cars' => $marque_cars,'marque_computers' => $marque_computers,]);
+      return view('annonce.new.autre',['categories' => $categories,'villes' => $villes,'marque_cars' => $marque_cars,'marque_computers' => $marque_computers,'marque_tels' => $marque_tels,]);
    }
 
    public function getSubcategories($categorieId)

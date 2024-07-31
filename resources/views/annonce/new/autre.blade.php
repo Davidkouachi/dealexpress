@@ -202,7 +202,7 @@
                                             <textarea class="form-control no-resize" id="default-textarea"></textarea>
                                         </div>
                                     </div> 
-                                    <div class="form-group">
+                                    <div class="form-group" style="display: none;" id="div_photo">
                                         <label class="form-label d-flex" for="default-textarea">
                                             <span class="me-1" >Photo(s)</span> 
                                             <div id="fileCount"></div>
