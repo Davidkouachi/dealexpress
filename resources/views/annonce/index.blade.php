@@ -39,7 +39,7 @@
 
                     <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 filter-item categorie-1" data-category="categorie-1">
                         <div class="card ">
-                            <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
+                            <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
                                 <a href="{{route('index_detail')}} " >
                                     <img style="object-fit: cover;height: 160px; width:160px;" class="" src="image/1.png" />
                                 </a>
@@ -74,7 +74,7 @@
                     </div>
                     <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 filter-item categorie-2" data-category="categorie-2">
                         <div class="card ">
-                            <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
+                            <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
                                 <a href="{{route('index_detail')}} " >
                                     <img style="object-fit: cover;height: 160px; width:160px;" class="" src="image/mtn/1.png" />
                                 </a>

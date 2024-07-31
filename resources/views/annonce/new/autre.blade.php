@@ -171,6 +171,30 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-lg-4 col-md-6" id="div_livraison">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Livraison Possible</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="oui">Oui</option>
+                                                        <option value="non">Non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_troc">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Troc Possible</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="oui">Oui</option>
+                                                        <option value="non">Non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label" for="default-textarea">Description</label>

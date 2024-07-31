@@ -18,14 +18,14 @@
                             </div>
                         </div>
                         <div class="col-lg-12" >
-                            <div class="form-group bg-light rounded " style="padding: 15px 10px 0px 10px;">
+                            <div class="form-group bg-danger rounded " style="padding: 15px 10px 0px 10px;">
                                 <marquee behavior="" direction="">
                                     <label class="form-label">
-                                        <span class="text-danger">
-                                            Informations :
+                                        <span class="text-white">
+                                            Conseils de sécurité :
                                         </span>
-                                        <span class="">
-                                            Message
+                                        <span class="text-white">
+                                            1- N'envoyer pas de paiement sans avoir vérifié la produit ou l'identité du vendeur, 2- N'utilisez pas de myens de transfert d'argent, de virement bancaire ou tout autre moyen pour envoyer de l'argent au vendeur, 3- Rencontrer de préference le vendeur dans un lieu public fréquenté.
                                         </span>
                                     </label>
                                 </marquee>
@@ -117,8 +117,8 @@
                 </div>
                 <div class="slider-init row product-slider" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
                     <div class="col">
-                        <div class="card ">
-                            <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
+                        <div class="card">
+                            <div class="card h-50" style="display:flex;justify-content:center;align-items:center;border:none;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
                                 <a href="{{route('index_detail')}} " >
                                     <img style="object-fit: cover;height: 160px; width:160px;" class="" src="image/1.png" />
                                 </a>

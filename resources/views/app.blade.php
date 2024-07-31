@@ -93,6 +93,20 @@
                                                 </span>
                                             </a>
                                         </li>
+                                        <li class="nk-menu-item">
+                                            <a class="nk-menu-link" href="#">
+                                                <span class="nk-menu-text">
+                                                    Marque de voitures
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a class="nk-menu-link" href="#">
+                                                <span class="nk-menu-text">
+                                                    Marque de téléphones
+                                                </span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -281,14 +295,16 @@
                                     document.write(new Date().getFullYear())
                                     </script>.DealExpress
                                 </span>
+                                @if(!request()->routeIs('index_accueil') )
                                 <marquee  behavior="" direction="">
                                     <span class="text-danger" >
-                                        Attention :
+                                        Conseils de sécurité :
                                     </span>
                                     <span class="" >
-                                        vwewev vewivwenvwe veuinvewnve
+                                        1- N'envoyer pas de paiement sans avoir vérifié la produit ou l'identité du vendeur, 2- N'utilisez pas de myens de transfert d'argent, de virement bancaire ou tout autre moyen pour envoyer de l'argent au vendeur, 3- Rencontrer de préference le vendeur dans un lieu public fréquenté.
                                     </span>
                                 </marquee>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -296,6 +312,18 @@
             </div>
         </div>
     </div>
+
+    @if (Auth::check() && Auth::user()->role === 'user' )
+        @if(!request()->routeIs('index_new_annonce') )
+        <ul class="nk-sticky-toolbar">
+            <li class="demo-thumb">
+                <a class="tipinfo" href="{{route('index_new_annonce')}}" title="Nouvelle Annonce">
+                    <em class="icon ni ni-plus-circle"></em>
+                </a>
+            </li>
+        </ul>
+        @endif
+    @endif
 
     @if(!request()->routeIs('index_tableau') )
         <a class="pmo-st pmo-dark active" data-bs-toggle="modal" data-bs-target="#modalCommentaire" >
