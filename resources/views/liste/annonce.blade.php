@@ -37,11 +37,11 @@
                     </li>
                 </ul>
                 <div class="row g-gs filter-container" data-animation="true">
-                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 filter-item vendu" data-category="vendu">
+                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 filter-item vendu" data-category="vendu">
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
                                 <a href="{{route('index_liste_detail')}} " >
-                                    <img style="object-fit: cover;height: 200px;" class="" src="image/1.png" />
+                                    <img style="object-fit: cover;height: 160px; width:160px;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
@@ -76,11 +76,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 filter-item en_ligne" data-category="en_ligne">
+                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 filter-item en_ligne" data-category="en_ligne">
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
                                 <a href="{{route('index_liste_detail')}} " >
-                                    <img style="object-fit: cover;height: 200px;" class="" src="image/1.png" />
+                                    <img style="object-fit: cover;height: 160px; width:160px;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>

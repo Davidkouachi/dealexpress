@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Categorie;
+use App\Models\Sous_categorie;
+use App\Models\Ville;
+use App\Models\Commune;
+use App\Models\Marque_ordinateur;
+use App\Models\Marque_vehicule;
 
 class AnnonceController extends Controller
 {
@@ -11,40 +17,26 @@ class AnnonceController extends Controller
       return view('annonce.index');
    }
 
-   public function index_new_annonce_immobilier()
+   public function index_new_annonce()
    {
-      return view('annonce.new.immobilier');
+      $categories = Categorie::all();
+      $villes = Ville::all();
+      $marque_cars = Marque_vehicule::all();
+      $marque_computers = Marque_ordinateur::all();
+
+      return view('annonce.new.autre',['categories' => $categories,'villes' => $villes,'marque_cars' => $marque_cars,'marque_computers' => $marque_computers,]);
    }
 
-   public function index_new_annonce_vehicule()
+   public function getSubcategories($categorieId)
    {
-      return view('annonce.new.vehicule');
+       $sousCategories = Sous_categorie::where('categorie_id', $categorieId)->get();
+       return response()->json($sousCategories);
    }
 
-   public function index_new_annonce_travail()
+   public function getCommune($villeId)
    {
-      return view('annonce.new.travail');
-   }
-
-   public function index_new_annonce_autre()
-   {
-      return view('annonce.new.autre');
-   }
-
-   public function index_new_annonce(Request $request)
-   {
-      $choix = $request->input('choix');
-
-      if ($choix === 'immobilier') {
-         return redirect()->route('index_new_annonce_immobilier');
-      }elseif ($choix === 'vehicule') {
-         return redirect()->route('index_new_annonce_vehicule');
-      }elseif ($choix === 'travail') {
-         return redirect()->route('index_new_annonce_travail');
-      }elseif ($choix === 'autre') {
-         return redirect()->route('index_new_annonce_autre');
-      }
-      
+      $communes = Commune::where('ville_id', $villeId)->get();
+      return response()->json($communes);
    }
 
    public function index_detail()

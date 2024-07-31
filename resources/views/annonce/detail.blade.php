@@ -14,13 +14,13 @@
                         </h3>
                     </div>
                     <div class="nk-block-head-content">
-                        <a class="btn btn-danger btn-dim d-none d-sm-inline-flex" href="javascript:void(0);" onclick="history.back()">
+                        <a class="btn btn-white btn-outline-danger btn-dim d-none d-sm-inline-flex" href="javascript:void(0);" onclick="history.back()">
                             <em class="icon ni ni-arrow-left"></em>
                             <span>
                                 Retour
                             </span>
                         </a>
-                        <a class="btn btn-danger btn-dim d-inline-flex d-sm-none" href="javascript:void(0);" onclick="history.back()">
+                        <a class="btn btn-white btn-outline-danger btn-dim d-inline-flex d-sm-none" href="javascript:void(0);" onclick="history.back()">
                             <em class="icon ni ni-arrow-left">
                             </em>
                         </a>
@@ -35,42 +35,42 @@
                                 <div class="slider-init row product-slider mb-3" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/2.jpeg"> 
+                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/2.jpeg"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/3.jpeg">
+                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/3.jpeg">
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/1.png"> 
+                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/1.png"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/2.png"> 
+                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/2.png"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/2.jpeg"> 
+                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/2.jpeg"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/3.jpeg">
+                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/3.jpeg">
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/1.png"> 
+                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/1.png"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height:200px; width:auto;object-fit: cover;" src="image/2.png"> 
+                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/2.png"> 
                                         </div>
                                     </div>
                                 </div>
@@ -118,18 +118,26 @@
                                     <p>
                                         I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
                                     </p>
-                                    <div class="alert alert-icon alert-warning" role="alert">    
+                                    <div class="alert alert-icon alert-danger" role="alert">    
                                         <em class="icon ni ni-alert-fill"></em>     
-                                        <strong>ATTENTION !!! </strong>
+                                        <strong> Conseils de sécurité !!! </strong>
                                         <br> 
-                                        Your will be redirect for make your payment. 
+                                        <ul>
+                                            <li>1- N'envoyer pas de paiement sans avoir vérifié la produit ou l'identité du vendeur</li>
+                                            <li>2- N'utilisez pas de myens de transfert d'argent, de virement bancaire ou tout autre moyen pour envoyer de l'argent au vendeur</li>
+                                            <li>3- Rencontrer de préference le vendeur dans un lieu public fréquenté</li>
+                                        </ul>
                                     </div>
 
-                                    <a class="btn btn-outline-primary btn-dim mt-2" data-bs-toggle="modal" data-bs-target="#modalContact">
+                                    <a class="btn btn-white btn-outline-danger btn-dim mt-2" data-bs-toggle="modal" data-bs-target="#modalContact">
+                                        <em class="icon ni ni-thumbs-down"></em>
+                                        <span>Signaler le vendeur</span>
+                                    </a>
+                                    <a class="btn btn-white btn-outline-primary btn-dim mt-2" data-bs-toggle="modal" data-bs-target="#modalContact">
                                         <span>Voir contact</span>
                                         <em class="icon ni ni-user"></em>
                                     </a>
-                                    <a class="btn btn-outline-warning btn-dim mt-2" data-bs-toggle="modal" data-bs-target="#modalPartager">
+                                    <a class="btn btn-white btn-outline-warning btn-dim mt-2" data-bs-toggle="modal" data-bs-target="#modalPartager">
                                         <span>Partager l'annonce</span>
                                         <em class="icon ni ni-share"></em>
                                     </a>

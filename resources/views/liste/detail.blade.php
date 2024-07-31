@@ -14,13 +14,13 @@
                         </h3>
                     </div>
                     <div class="nk-block-head-content">
-                        <a class="btn btn-danger btn-dim d-none d-sm-inline-flex" href="javascript:void(0);" onclick="history.back()">
+                        <a class="btn btn-white btn-outline-danger btn-dim d-none d-sm-inline-flex" href="javascript:void(0);" onclick="history.back()">
                             <em class="icon ni ni-arrow-left"></em>
                             <span>
                                 Retour
                             </span>
                         </a>
-                        <a class="btn btn-danger btn-dim d-inline-flex d-sm-none" href="javascript:void(0);" onclick="history.back()">
+                        <a class="btn btn-white btn-outline-danger btn-dim d-inline-flex d-sm-none" href="javascript:void(0);" onclick="history.back()">
                             <em class="icon ni ni-arrow-left">
                             </em>
                         </a>

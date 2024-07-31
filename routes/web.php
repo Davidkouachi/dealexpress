@@ -51,23 +51,31 @@ Route::middleware(['role:admin'])->group(function () {
 	// Tableau de bord -------------------------------------------------------------
 	Route::get('/Tableau de bord', [TableauController::class, 'index'])->name('index_tableau');
 
+	Route::get('/Liste_categorie', [TableauController::class, 'liste_categorie'])->name('liste_categorie');
 	Route::post('/New_categorie', [TableauController::class, 'new_categorie'])->name('new_categorie');
+
+	Route::get('/Liste_scategorie', [TableauController::class, 'liste_scategorie'])->name('liste_scategorie');
 	Route::post('/New_scategorie', [TableauController::class, 'new_scategorie'])->name('new_scategorie');
+
+	Route::get('/Liste_ville', [TableauController::class, 'liste_ville'])->name('liste_ville');
 	Route::post('/New_ville', [TableauController::class, 'new_ville'])->name('new_ville');
+
+	Route::get('/Liste_commune', [TableauController::class, 'liste_commune'])->name('liste_commune');
+	Route::post('/New_commune', [TableauController::class, 'new_commune'])->name('new_commune');
+
 	// -------------------------------------------------------------
 });
 
 Route::middleware(['role:user'])->group(function () {
 
 	// liste article profil-------------------------------------------------------------
-	Route::post('/Nouvelle annonces', [AnnonceController::class, 'index_new_annonce'])->name('index_new_annonce');
-
-	Route::get('/Nouvelle annonces immobilier', [AnnonceController::class, 'index_new_annonce_immobilier'])->name('index_new_annonce_immobilier');
-	Route::get('/Nouvelle annonces vehicule', [AnnonceController::class, 'index_new_annonce_vehicule'])->name('index_new_annonce_vehicule');
-	Route::get('/Nouvelle annonces travail', [AnnonceController::class, 'index_new_annonce_travail'])->name('index_new_annonce_travail');
-	Route::get('/Nouvelle annonces autre', [AnnonceController::class, 'index_new_annonce_autre'])->name('index_new_annonce_autre');
+	Route::post('/traitementsannonces', [AnnonceController::class, 'traitement_annonce'])->name('traitement_annonce');
+	Route::get('/Nouvelle annonces', [AnnonceController::class, 'index_new_annonce'])->name('index_new_annonce');
 	
 	Route::get('/Mes annonces', [AnnonceController::class, 'index_liste_annonce'])->name('index_liste_annonce');
 	Route::get('/Détail annonce', [AnnonceController::class, 'index_liste_detail'])->name('index_liste_detail');
 	// -------------------------------------------------------------
 });
+
+Route::get('/get-subcategories/{categorieId}', [AnnonceController::class, 'getSubcategories']);
+Route::get('/get-commune/{villeId}', [AnnonceController::class, 'getCommune']);

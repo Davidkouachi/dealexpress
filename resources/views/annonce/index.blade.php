@@ -37,11 +37,11 @@
                 </ul>
                 <div class="row g-gs filter-container" data-animation="true">
 
-                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 filter-item categorie-1" data-category="categorie-1">
+                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 filter-item categorie-1" data-category="categorie-1">
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
                                 <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/1.png" />
+                                    <img style="object-fit: cover;height: 160px; width:160px;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
@@ -72,11 +72,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 filter-item categorie-2" data-category="categorie-2">
+                    <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 filter-item categorie-2" data-category="categorie-2">
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
                                 <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/mtn/1.png" />
+                                    <img style="object-fit: cover;height: 160px; width:160px;" class="" src="image/mtn/1.png" />
                                 </a>
                             </div>
                             <div class="card-inner text-center pt-2 pb-2">

@@ -1,6 +1,5 @@
 function handleFormSubmit(event) {
     event.preventDefault(); // Prevent default form submission
-
     // Preload modal HTML
     var modalHtml = `
                 <div class="modal fade" tabindex="-1" id="modalL" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">

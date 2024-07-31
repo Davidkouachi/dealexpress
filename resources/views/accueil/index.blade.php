@@ -41,18 +41,11 @@
                                                     Localisation
                                                 </label>
                                                 <div class="form-control-wrap ">
-                                                    <select class="form-select js-select2" data-search="on" data-placeholder="Selectionner" >
-                                                        <option label="empty" value="">
-                                                        </option>
-                                                        <option value="fv-gq">
-                                                            General Question
-                                                        </option>
-                                                        <option value="fv-tq">
-                                                            Tachnical Question
-                                                        </option>
-                                                        <option value="fv-ab">
-                                                            Account & Billing
-                                                        </option>
+                                                    <select class="form-select js-select2" data-placeholder="Selectionner" >
+                                                        <option value=""></option>
+                                                        @foreach($villes as $ville)
+                                                        <option value="{{$ville->id}}">{{$ville->nom}}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
@@ -63,126 +56,24 @@
                                                     Catégorie
                                                 </label>
                                                 <div class="form-control-wrap ">
-                                                    <select class="form-select js-select2" id="rech_categorie" data-placeholder="Selectionner">
-                                                        <option value="">
-                                                        </option>
-                                                        <option value="immobilier">
-                                                            Immobilier
-                                                        </option>
-                                                        <option value="vehicule">
-                                                            Véhicule
-                                                        </option>
-                                                        <option value="autre">
-                                                            Autre
-                                                        </option>
+                                                    <select class="form-select js-select2" id="categorieSelect" data-placeholder="Selectionner">
+                                                        <option value=""></option>
+                                                        @foreach($categories as $categorie)
+                                                        <option value="{{$categorie->id}}">{{$categorie->nom}}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-md-6" >
-                                            <div class="form-group" id="rech_autre">
-                                                <label class="form-label" for="fv-topic3">
-                                                    Type
-                                                </label>
-                                                <div class="form-control-wrap ">
-                                                    <select class="form-select js-select2" data-placeholder="Selectionner" >
-                                                        <option label="empty" value="">
-                                                        </option>
-                                                        <option value="fv-gq">
-                                                            General Question
-                                                        </option>
-                                                        <option value="fv-tq">
-                                                            Tachnical Question
-                                                        </option>
-                                                        <option value="fv-ab">
-                                                            Account & Billing
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group" id="rech_immobilier" style="display:none;">
-                                                <label class="form-label" for="fv-topic3">
-                                                    Type d'immobilier
-                                                </label>
-                                                <div class="form-control-wrap ">
-                                                    <select class="form-select js-select2" data-search="on" data-placeholder="Selectionner" >
-                                                        <option label="empty" value="">
-                                                        </option>
-                                                        <option value="fv-gq">
-                                                            General Question
-                                                        </option>
-                                                        <option value="fv-tq">
-                                                            Tachnical Question
-                                                        </option>
-                                                        <option value="fv-ab">
-                                                            Account & Billing
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group" id="rech_vehicule" style="display:none;">
-                                                <label class="form-label" for="fv-topic3">
-                                                    Type de véhicule
-                                                </label>
-                                                <div class="form-control-wrap ">
-                                                    <select class="form-select js-select2" data-placeholder="Selectionner" >
-                                                        <option label="empty" value="">
-                                                        </option>
-                                                        <option value="fv-gq">
-                                                            General Question
-                                                        </option>
-                                                        <option value="fv-tq">
-                                                            Tachnical Question
-                                                        </option>
-                                                        <option value="fv-ab">
-                                                            Account & Billing
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6" id="rech_marque" style="display:none;">
                                             <div class="form-group">
-                                                <label class="form-label" for="fv-topics2">
-                                                    Marque
+                                                <label class="form-label" for="fv-topic3">
+                                                    Sous-Catégorie
                                                 </label>
                                                 <div class="form-control-wrap ">
-                                                    <select class="form-select js-select2" data-search="on" data-placeholder="Selectionner" >
-                                                        <option label="empty" value="">
-                                                        </option>
-                                                        <option value="fv-gq">
-                                                            General Question
-                                                        </option>
-                                                        <option value="fv-tq">
-                                                            Tachnical Question
-                                                        </option>
-                                                        <option value="fv-ab">
-                                                            Account & Billing
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6" id="rech_annee" style="display:none;">
-                                            <div class="form-group">
-                                                <label class="form-label" for="cp1-team-size">Année</label>
-                                                <div class="form-control-wrap">
-                                                    <select class="form-select js-select2" data-search="on" id="vehiculeSelect" data-placeholder="selectionner">
+                                                    <select class="form-select js-select2" data-placeholder="Selectionner" id="sousCategorieSelect" >
                                                         <option value=""></option>
                                                     </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6" id="rech_km" style="display:none;">
-                                            <div class="form-group">
-                                                <label class="form-label" for="fv-topic3">
-                                                    Kilométrage
-                                                </label>
-                                                <div class="form-control-wrap">    
-                                                    <div class="input-group">       
-                                                        <input id="min-price" placeholder="min" type="tel" class="form-control">
-                                                        <input id="max-price" placeholder="max" type="tel" class="form-control">
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -229,7 +120,7 @@
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
                                 <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: 200px;" class="" src="image/1.png" />
+                                    <img style="object-fit: cover;height: 160px; width:160px;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
@@ -288,7 +179,7 @@
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
                                 <a>
-                                    <img style="object-fit: cover;height: 200px;" class="" src="image/1.png" />
+                                    <img style="object-fit: cover;height: 160px; width:160px;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
@@ -303,9 +194,40 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </div>
+
+<script src="{{asset('assets/js/app/js/form_rech_para.js') }}"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        $('#categorieSelect').on('change', function() {
+            var categorieId = $(this).val();
+            if (categorieId) {
+                $.ajax({
+                    url: '/get-subcategories/' + categorieId, // Assurez-vous que cette route existe et renvoie les sous-catégories
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#sousCategorieSelect').empty().append('<option value=""></option>');
+                        $.each(data, function(key, value) {
+                            $('#sousCategorieSelect').append(
+                                '<option value="' + value.id + '">' + value.nom + '</option>'
+                            );
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Erreur :", error);
+                    }
+                });
+            } else {
+                $('#sousCategorieSelect').empty().append('<option value=""></option>');
+            }
+        });
+    });
+</script>
 
 @endsection
 

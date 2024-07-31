@@ -25,13 +25,97 @@
     <div class="nk-app-root">
         <div class="nk-main ">
 
-            @yield('menu')
+            @if(request()->routeIs('index_tableau','liste_categorie', 'liste_scategorie', 'liste_ville', 'liste_commune') )
+            <div class="nk-sidebar is-light nk-sidebar-fixed " data-content="sidebarMenu">
+                <div class="nk-sidebar-element nk-sidebar-head">
+                    <div class="nk-sidebar-brand">
+                        <a class="logo-link nk-sidebar-logo" href="{{route('index_accueil')}}">
+                            <img height="50" width="50" src="{{asset('image/1.png')}}" /></img>
+                        </a>
+                    </div>
+                    <div class="nk-menu-trigger me-n2">
+                        <a class="nk-nav-toggle nk-quick-nav-icon d-xl-none" data-target="sidebarMenu">
+                            <em class="icon ni ni-arrow-left"></em>
+                        </a>
+                    </div>
+                </div>
+                <div class="nk-sidebar-element">
+                    <div class="nk-sidebar-content">
+                        <div class="nk-sidebar-menu" data-simplebar="">
+                            <ul class="nk-menu">
+                                <li class="nk-menu-item">
+                                    <a class="nk-menu-link" href="{{route('index_tableau')}}">
+                                        <span class="nk-menu-icon">
+                                            <em class="icon ni ni-trend-up">
+                                            </em>
+                                        </span>
+                                        <span class="nk-menu-text">
+                                            Tableau de bord
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a class="nk-menu-link nk-menu-toggle" href="#">
+                                        <span class="nk-menu-icon">
+                                            <em class="icon ni ni-list">
+                                            </em>
+                                        </span>
+                                        <span class="nk-menu-text">
+                                            Listes
+                                        </span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a class="nk-menu-link" href="{{route('liste_categorie')}}">
+                                                <span class="nk-menu-text">
+                                                    Catégories
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a class="nk-menu-link" href="{{route('liste_scategorie')}}">
+                                                <span class="nk-menu-text">
+                                                    Sous-catégories
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a class="nk-menu-link" href="{{route('liste_ville')}}">
+                                                <span class="nk-menu-text">
+                                                    Villes
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a class="nk-menu-link" href="{{route('liste_commune')}}">
+                                                <span class="nk-menu-text">
+                                                    Communes
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endif
             
             <div class="nk-wrap ">
                 <div class="nk-header is-light nk-header-fixed is-light">
                     <div class="container-xl wide-xl">
                         <div class="nk-header-wrap">
-                            @yield('btn_menu')
+
+                            @if(request()->routeIs('index_tableau','liste_categorie', 'liste_scategorie', 'liste_ville', 'liste_commune') )
+                            <div class="nk-menu-trigger d-xl-none ms-n1 me-3">
+                                <a class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu" href="#">
+                                    <em class="icon ni ni-menu">
+                                    </em>
+                                </a>
+                            </div>
+                            @endif
+
                             <div class="nk-header-brand ">
                                 <a class="logo-link" href="{{route('index_accueil')}}">
                                     <img height="50" width="50" src="{{asset('image/1.png')}}" /></img>
@@ -57,7 +141,7 @@
                                     @endif
                                     @if(request()->routeIs('index_liste_annonce', 'index_new_annonce_immobilier', 'index_new_annonce_vehicule', 'index_new_annonce_travail', 'index_new_annonce_autre') )
                                     <li class="dropdown notification-dropdown">
-                                        <a class="nk-quick-nav-icon" data-bs-toggle="modal" data-bs-target="#modalAnnonce">
+                                        <a class="nk-quick-nav-icon" href="{{route('index_new_annonce')}}">
                                             <em class="icon ni ni-plus-circle"></em>
                                             <span class="fs-15px"></span>
                                         </a>
@@ -426,7 +510,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-6">
-                                <button type="submit" class="btn btn-md btn-white btn-dim btn-outline-success btn-block">
+                                <button type="submit" class="btn btn-md btn-white btn-dim btn-outline-success btn-block" >
                                     <span>Connexion</span>
                                     <em class="icon ni ni-arrow-right-circle"></em>
                                 </button>
@@ -442,54 +526,6 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modalAnnonce" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Nouvelle Annonce</h5>
-                    <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close"><em class="icon ni ni-cross"></em></a>
-                </div>
-                <div class="modal-body">
-                    <form action="{{route('index_new_annonce')}}" method="post" class="">
-                        @csrf
-                        <div class="row g-4">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label " for="cp1-team-size">Catégorie</label>
-                                    <div class="form-control-wrap">
-                                        <select class="form-select js-select2" name="choix" required>
-                                            <option value=""></option>
-                                            <option value="immobilier">Immobilier</option>
-                                            <option value="vehicule">Véhicule</option>
-                                            <option value="autre">Autre</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <button class="btn btn-md btn-white btn-dim btn-outline-danger" type="reset" data-bs-dismiss="modal">
-                                        <em class="icon ni ni-cross-circle"></em>
-                                        <span>Annulé</span>
-                                    </button>
-                                    <button class="btn btn-md btn-white btn-dim btn-outline-success" type="submit" data-bs-dismiss="modal">
-                                        <span>Continuer</span>
-                                        <em class="icon ni ni-arrow-right-circle"></em>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer bg-light">
-                    <span class="sub-text">
-                        Annonce
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="{{asset('assets/js/bundle55a0.js')}}"></script>
     <script src="{{asset('assets/js/scripts55a0.js')}}"></script>
     <script src="{{asset('assets/js/demo-settings55a0.js')}}"></script>
@@ -499,7 +535,6 @@
     <script src="{{asset('assets/js/app/js/form_load.js') }}"></script>
     <script src="{{asset('assets/js/app/js/registre_connexion.js') }}"></script>
     <script src="{{asset('assets/js/app/js/registre_sinscrire.js') }}"></script>
-    <script src="{{asset('assets/js/app/js/form_rech_para.js') }}"></script>
 
     @if (session('success'))
         <script>
