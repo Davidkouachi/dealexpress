@@ -24,7 +24,8 @@
                                         </div>
                                     </div>
                                     <div class="row g-gs mb-4" >
-                                        <div class="col-md-6">
+
+                                        <div class="col-md-6" id="div_categorie">
                                             <div class="form-group">
                                                 <label class="form-label" for="cp1-team-size">Catégorie</label>
                                                 <div class="form-control-wrap">
@@ -37,7 +38,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-6" id="div_sous_categorie">
                                             <div class="form-group">
                                                 <label class="form-label" for="cp1-team-size">Sous-catégorie</label>
                                                 <div class="form-control-wrap">
@@ -89,77 +90,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-6" id="div_surface" style="display: block;">
-                                            <div class="form-group">
-                                                <label class="form-label" for="default-05">Surface</label>
-                                                <div class="form-control-wrap">
-                                                    <div class="form-text-hint">
-                                                        <span class="overline-title">m²</span>
-                                                    </div>
-                                                    <input type="tel" class="form-control" id="surfacea" placeholder="Entrer la dimension" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6" id="div_annee" style="display: block;">
-                                            <div class="form-group">
-                                                <label class="form-label" for="cp1-team-size">Année</label>
-                                                <div class="form-control-wrap">
-                                                    <select class="form-select js-select2" id="vehiculeSelecta" data-placeholder="selectionner">
-                                                        <option value=""></option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6" id="div_marque_vehicule" style="display: block;">
-                                            <div class="form-group">
-                                                <label class="form-label" for="cp1-team-size">Marque de Véhicules</label>
-                                                <div class="form-control-wrap">
-                                                    <select class="form-select js-select2" data-search="on" data-placeholder="selectionner">
-                                                        <option value=""></option>
-                                                        @foreach($marque_cars as $marque_car)
-                                                        <option value="{{$marque_car->id}}">{{$marque_car->nom}}</option>
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6" id="div_marque_ordinateur" style="display: block;">
-                                            <div class="form-group">
-                                                <label class="form-label" for="cp1-team-size">Marque d'ordinateurs</label>
-                                                <div class="form-control-wrap">
-                                                    <select class="form-select js-select2" data-search="on" data-placeholder="selectionner">
-                                                        <option value=""></option>
-                                                        @foreach($marque_computers as $marque_computer)
-                                                        <option value="{{$marque_computer->id}}">{{$marque_computer->nom}}</option>
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6" id="div_kilometre" style="display: block;">
-                                           <div class="form-group">
-                                                <label class="form-label" for="default-05">Kilométrage</label>
-                                                <div class="form-control-wrap">
-                                                    <div class="form-text-hint">
-                                                        <span class="overline-title">Km</span>
-                                                    </div>
-                                                    <input type="text" class="form-control" id="kma" placeholder="Entrer le nombre de kilométre" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6" id="div_hors_taxe" style="display: block;">
-                                            <div class="form-group">
-                                                <label class="form-label" for="cp1-team-size">Hors taxe</label>
-                                                <div class="form-control-wrap">
-                                                    <select class="form-select js-select2" data-placeholder="selectionner">
-                                                        <option value=""></option>
-                                                        <option value="oui">Oui</option>
-                                                        <option value="non">Non</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6" id="div_neuf" style="display: block;">
+                                        <div class="col-lg-4 col-md-6" id="div_neuf">
                                             <div class="form-group">
                                                 <label class="form-label" for="cp1-team-size">Neuf</label>
                                                 <div class="form-control-wrap">
@@ -195,6 +126,461 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div class="col-lg-4 col-md-6" id="div_surface" >
+                                            <div class="form-group">
+                                                <label class="form-label" for="default-05">Surface</label>
+                                                <div class="form-control-wrap">
+                                                    <div class="form-text-hint">
+                                                        <span class="overline-title">m²</span>
+                                                    </div>
+                                                    <input type="tel" class="form-control" id="surfacea" placeholder="Entrer la dimension" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_nbre_piece">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Nombre de piéces</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="1">1 piéce</option>
+                                                        <option value="2">2 piéces</option>
+                                                        <option value="3">3 piéces</option>
+                                                        <option value="4">4 piéces</option>
+                                                        <option value="plus">Plus</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_type_offre">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Type d'offre</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="vente">Vente</option>
+                                                        <option value="location">Location</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_meuble">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Meublé</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="oui">Oui</option>
+                                                        <option value="non">Non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6" id="div_marque_ordinateur">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Marque d'ordinateur</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        @foreach($marque_computers as $marque_computer)
+                                                        <option value="{{$marque_computer->id}}">{{$marque_computer->nom}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_modele_ordinateur">
+                                           <div class="form-group">
+                                                <label class="form-label">Model</label>
+                                                <div class="form-control-wrap">
+                                                    <input autocomplete="off" name="email" type="text" class="form-control form-control-md" placeholder="Entrer le titre de l'annonce">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_processeur">
+                                           <div class="form-group">
+                                                <label class="form-label">Processeur</label>
+                                                <div class="form-control-wrap">
+                                                    <input autocomplete="off" name="email" type="text" class="form-control form-control-md" placeholder="Entrer le titre de l'annonce">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_carte_graphique">
+                                           <div class="form-group">
+                                                <label class="form-label">Carte graphique</label>
+                                                <div class="form-control-wrap">
+                                                    <input autocomplete="off" name="email" type="text" class="form-control form-control-md" placeholder="Entrer le titre de l'annonce">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_ram_ordinateur" >
+                                            <div class="form-group">
+                                                <label class="form-label" for="default-05">Ram</label>
+                                                <div class="form-control-wrap">
+                                                    <div class="form-text-hint">
+                                                        <span class="overline-title">Gb</span>
+                                                    </div>
+                                                    <input type="tel" class="form-control" id="surfacea" placeholder="Entrer la dimension" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_rom_ordinateur" >
+                                            <div class="form-group">
+                                                <label class="form-label" for="default-05">Capacité</label>
+                                                <div class="form-control-wrap">
+                                                    <div class="form-text-hint">
+                                                        <span class="overline-title">Gb</span>
+                                                    </div>
+                                                    <input type="tel" class="form-control" id="surfacea" placeholder="Entrer la dimension" >
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6" id="div_marque_telephone">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Marque du téléphone</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        @foreach($marque_tels as $marque_tel)
+                                                        <option value="{{$marque_tel->id}}">{{$marque_tel->nom}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_modele_telephone">
+                                           <div class="form-group">
+                                                <label class="form-label">Model</label>
+                                                <div class="form-control-wrap">
+                                                    <input autocomplete="off" name="email" type="text" class="form-control form-control-md" placeholder="Entrer le titre de l'annonce">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_ram_telephone" >
+                                            <div class="form-group">
+                                                <label class="form-label" for="default-05">Ram</label>
+                                                <div class="form-control-wrap">
+                                                    <div class="form-text-hint">
+                                                        <span class="overline-title">Gb</span>
+                                                    </div>
+                                                    <input type="tel" class="form-control" id="surfacea" placeholder="Entrer la dimension" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_rom_telephone" >
+                                            <div class="form-group">
+                                                <label class="form-label" for="default-05">Capacité</label>
+                                                <div class="form-control-wrap">
+                                                    <div class="form-text-hint">
+                                                        <span class="overline-title">Gb</span>
+                                                    </div>
+                                                    <input type="tel" class="form-control" id="surfacea" placeholder="Entrer la dimension" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_couleur_telephone" >
+                                            <div class="form-group">
+                                                <label class="form-label" for="default-05">Couleur</label>
+                                                <div class="form-control-wrap">
+                                                    <input type="tel" class="form-control" id="surfacea" placeholder="Entrer la dimension" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_empreinte_telephone">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Empreinte</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="oui">Oui</option>
+                                                        <option value="non">Non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_faceid_telephone">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Face ID</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="oui">Oui</option>
+                                                        <option value="non">Non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6" id="div_type_offre_vehicule">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Type d'offre</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="vente">Vente</option>
+                                                        <option value="location">Location</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_marque_vehicule" >
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Marque de Véhicules</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-search="on" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        @foreach($marque_cars as $marque_car)
+                                                        <option value="{{$marque_car->id}}">{{$marque_car->nom}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_model_vehicule" >
+                                            <div class="form-group">
+                                                <label class="form-label" for="default-05">Model</label>
+                                                <div class="form-control-wrap">
+                                                    <input type="tel" class="form-control" id="surfacea" placeholder="Entrer la dimension" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_annee" >
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Année</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" id="vehiculeSelecta" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_transmission" >
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Transmission</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-search="on" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="manuelle">Manuelle</option>
+                                                        <option value="auto">Automatique</option>
+                                                        <option value="sequentielle">Séquentielle</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_chauffeur">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Avec chauffeur</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="oui">Oui</option>
+                                                        <option value="non">Non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_nbre_location_vehicule">
+                                           <div class="form-group">
+                                                <label class="form-label" for="default-05">Nombre de jours</label>
+                                                <div class="form-control-wrap">
+                                                    <input type="text" class="form-control" id="prixa" placeholder="Prix de l'annonce">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_kilometre" >
+                                           <div class="form-group">
+                                                <label class="form-label" for="default-05">Kilométrage</label>
+                                                <div class="form-control-wrap">
+                                                    <div class="form-text-hint">
+                                                        <span class="overline-title">Km</span>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="kma" placeholder="Entrer le nombre de kilométre" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_hors_taxe" >
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Hors taxe</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="oui">Oui</option>
+                                                        <option value="non">Non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_moteur" >
+                                            <div class="form-group">
+                                                <label class="form-label" for="default-05">Moteur</label>
+                                                <div class="form-control-wrap">
+                                                    <input type="tel" class="form-control" id="surfacea" placeholder="Entrer la dimension" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_energie">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Energie</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="essence">Essence</option>
+                                                        <option value="diesel">Diesel</option>
+                                                        <option value="hybride">Hybride</option>
+                                                        <option value="electrique">Eléctrique</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_place">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Place assises</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="2">2 Places</option>
+                                                        <option value="3">3 Places</option>
+                                                        <option value="4">4 Places</option>
+                                                        <option value="5">5 Places</option>
+                                                        <option value="7">7 Places</option>
+                                                        <option value="8">8 Places</option>
+                                                        <option value="plus">Plus</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_visite_technique">
+                                            <div class="form-group">
+                                                <label class="form-label">Fin visite technique</label>
+                                                <div class="form-control-wrap">
+                                                    <input autocomplete="off" required type="text" placeholder="Saisir votre date de naissance" class="form-control date-picker" name="date_nais" data-date-format="yyyy-mm-dd">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_immatriculation" >
+                                            <div class="form-group">
+                                                <label class="form-label" for="default-05">Moteur</label>
+                                                <div class="form-control-wrap">
+                                                    <input type="tel" class="form-control" id="surfacea" placeholder="Entrer la dimension" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_interieur">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Intérieur</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="cuire">Cuire</option>
+                                                        <option value="semi_cuire">Semi-cuire</option>
+                                                        <option value="autre">Autre</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_clim">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Clim d'origine</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="oui">Oui</option>
+                                                        <option value="non">Non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_camera">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Caméra de recule</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="oui">Oui</option>
+                                                        <option value="non">Non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_ecran">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Ecran a bord</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="oui">Oui</option>
+                                                        <option value="non">Non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_capteur">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Capteur</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="avant">Avant</option>
+                                                        <option value="arriere">Arriére</option>
+                                                        <option value="les_deux">Avant/Arriére</option>
+                                                        <option value="non">Non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_volant">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Volant multi-fonction</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="oui">Oui</option>
+                                                        <option value="non">Non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_palette">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Palettes au volant</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="oui">Oui</option>
+                                                        <option value="non">Non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_demarage">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Démarrage Start</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="oui">Oui</option>
+                                                        <option value="non">Non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6" id="div_demarage">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cp1-team-size">Démarrage Start</label>
+                                                <div class="form-control-wrap">
+                                                    <select class="form-select js-select2" data-placeholder="selectionner">
+                                                        <option value=""></option>
+                                                        <option value="standard">Standard</option>
+                                                        <option value="f_option">Full options</option>
+                                                        <option value="sport">Sport</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label" for="default-textarea">Description</label>
@@ -202,7 +588,7 @@
                                             <textarea class="form-control no-resize" id="default-textarea"></textarea>
                                         </div>
                                     </div> 
-                                    <div class="form-group" style="display: none;" id="div_photo">
+                                    <div class="form-group"  id="div_photo">
                                         <label class="form-label d-flex" for="default-textarea">
                                             <span class="me-1" >Photo(s)</span> 
                                             <div id="fileCount"></div>

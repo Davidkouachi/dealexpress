@@ -332,7 +332,6 @@
     </div>
 </div>
 
-
 <div class="modal fade" id="modalAnnoncemodif" aria-modal="true" style="position: fixed;" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -477,7 +476,6 @@
             </div>
         </div>
 </div>
-
 
 <script>
     document.getElementById('suppr_ann').addEventListener('click', function(event) {

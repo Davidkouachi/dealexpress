@@ -17,7 +17,8 @@
                     </div>
                 </div>
             </div>
-            <div class="nk-block">
+
+            {{-- <div class="nk-block">
                 <ul class="filter-button-group mb-4 pb-1">
                     <li>
                         <button class="filter-button active" data-filter="*" type="button">
@@ -26,12 +27,27 @@
                     </li>
                     <li>
                         <button class="filter-button" data-filter=".categorie-1" type="button">
-                            categorie-1
+                            TELEPHONES & TABLETTES
                         </button>
                     </li>
                     <li>
                         <button class="filter-button" data-filter=".categorie-2" type="button">
-                            categorie-2
+                            INFORMATIQUES
+                        </button>
+                    </li>
+                    <li>
+                        <button class="filter-button" data-filter=".categorie-3" type="button">
+                            VEHICULES
+                        </button>
+                    </li>
+                    <li>
+                        <button class="filter-button" data-filter=".categorie-4" type="button">
+                            ELECTRONIQUES
+                        </button>
+                    </li>
+                    <li>
+                        <button class="filter-button" data-filter=".categorie-5" type="button">
+                            IMMOBILIERS
                         </button>
                     </li>
                 </ul>
@@ -41,7 +57,7 @@
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
                                 <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: 160px; width:160px;" class="" src="image/1.png" />
+                                    <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
                                     <li>
@@ -76,7 +92,7 @@
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
                                 <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: 160px; width:160px;" class="" src="image/mtn/1.png" />
+                                    <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/mtn/1.png" />
                                 </a>
                             </div>
                             <div class="card-inner text-center pt-2 pb-2">
@@ -101,7 +117,70 @@
                     </div>
 
                 </div>
+            </div> --}}
+
+            <div class="nk-block">
+                <div class="card card-preview">
+                    <div class="card-inner">
+                        <table class="datatable-init nk-tb-list nk-tb-ulist" data-auto-responsive="false">
+                            <thead>
+                                <tr class="nk-tb-item nk-tb-head">
+                                    <th class="nk-tb-col ">
+                                        N°
+                                    </th>
+                                    <th class="nk-tb-col"><span class="sub-text">User</span></th>
+                                    <th class="nk-tb-col tb-col-mb"><span class="sub-text">Prix</span></th>
+                                    <th class="nk-tb-col tb-col-md"><span class="sub-text">Phone</span></th>
+                                    <th class="nk-tb-col tb-col-lg"><span class="sub-text">Verified</span></th>
+                                    <th class="nk-tb-col tb-col-lg"><span class="sub-text">Last Login</span></th>
+                                    <th class="nk-tb-col tb-col-md"><span class="sub-text">Status</span></th>
+                                    <th class="nk-tb-col nk-tb-col-tools text-end"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="nk-tb-item">
+                                    <td class="nk-tb-col ">
+                                        1
+                                    </td>
+                                    <td class="nk-tb-col">
+                                        <div class="user-card">
+                                            <div class="user-avatar bg-dim-primary d-sm-flex">
+                                                <img src="images/product/a.png" alt="" class="thumb">
+                                            </div>
+                                            <div class="user-info"><span class="tb-lead">Abu Bin Ishtiyak <span class="dot dot-success d-md-none ms-1"></span></span><span>info@softnio.com</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="nk-tb-col tb-col-mb">
+                                        <span class="tb-amount">
+                                            1.000.000
+                                            <span class="me-1 currency">Fcfa</span>
+                                        </span>
+                                    </td>
+                                    <td class="nk-tb-col tb-col-md"><span>+811 847-4958</span></td>
+                                    <td class="nk-tb-col tb-col-lg" data-order="Email Verified - Kyc Unverified">
+                                        <ul class="list-status">
+                                            <li><em class="icon text-success ni ni-check-circle"></em> <span>Email</span></li>
+                                            <li><em class="icon ni ni-alert-circle"></em> <span>KYC</span></li>
+                                        </ul>
+                                    </td>
+                                    <td class="nk-tb-col tb-col-lg"><span>05 Oct 2019</span></td>
+                                    <td class="nk-tb-col tb-col-md"><span class="tb-status text-success">Active</span></td>
+                                    <td class="nk-tb-col ">
+                                        <a href="" class="btn btn-white btn-dim btn-outline-warning d-none d-md-inline-flex">
+                                            <em class="icon ni ni-eye"></em>
+                                            <span>Détail</span>
+                                        </a>
+                                        <a href="" class="btn btn-icon btn-white btn-dim btn-outline-warning d-inline-flex d-md-none">
+                                            <em class="icon ni ni-eye"></em>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
 </div>

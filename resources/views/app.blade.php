@@ -107,7 +107,36 @@
                                                 </span>
                                             </a>
                                         </li>
+                                        <li class="nk-menu-item">
+                                            <a class="nk-menu-link" href="#">
+                                                <span class="nk-menu-text">
+                                                    Marque d'ordinateurs
+                                                </span>
+                                            </a>
+                                        </li>
                                     </ul>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a class="nk-menu-link" href="#">
+                                        <span class="nk-menu-icon">
+                                            <em class="icon ni ni-user-list">
+                                            </em>
+                                        </span>
+                                        <span class="nk-menu-text">
+                                            Utilisateurs
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a class="nk-menu-link" href="#">
+                                        <span class="nk-menu-icon">
+                                            <em class="icon ni ni-building">
+                                            </em>
+                                        </span>
+                                        <span class="nk-menu-text">
+                                            Entreprise / Magasin
+                                        </span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>

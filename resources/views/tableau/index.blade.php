@@ -15,6 +15,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="nk-block">
                 <div class="row g-gs">
                     <div class="col-sm-6 col-md-6 col-lg-3">
@@ -87,6 +88,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="nk-block">
                 <div class="row g-gs">
                 	<div class="col-lg-12">
@@ -791,6 +793,7 @@
 					</div>
                 </div>
             </div>
+            
         </div>
     </div>
 </div>

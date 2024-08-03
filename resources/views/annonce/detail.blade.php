@@ -35,42 +35,42 @@
                                 <div class="slider-init row product-slider mb-3" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/2.jpeg"> 
+                                            <img style="height: 150px; width:auto; object-fit: cover;" src="image/2.jpeg"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/3.jpeg">
+                                            <img style="height: 150px; width:auto; object-fit: cover;" src="image/3.jpeg">
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/1.png"> 
+                                            <img style="height: 150px; width:auto; object-fit: cover;" src="image/1.png"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/2.png"> 
+                                            <img style="height: 150px; width:auto; object-fit: cover;" src="image/2.png"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/2.jpeg"> 
+                                            <img style="height: 150px; width:auto; object-fit: cover;" src="image/2.jpeg"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/3.jpeg">
+                                            <img style="height: 150px; width:auto; object-fit: cover;" src="image/3.jpeg">
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/1.png"> 
+                                            <img style="height: 150px; width:auto; object-fit: cover;" src="image/1.png"> 
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="card h-100" style="display: flex;justify-content: center;align-items: center;">
-                                            <img style="height: 150px; width:150px; object-fit: cover;" src="image/2.png"> 
+                                            <img style="height: 150px; width:auto; object-fit: cover;" src="image/2.png"> 
                                         </div>
                                     </div>
                                 </div>
@@ -118,7 +118,7 @@
                                     <p>
                                         I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
                                     </p>
-                                    <div class="alert alert-icon alert-danger" role="alert">    
+                                    <div class="alert alert-fill alert-danger alert-icon" role="alert">    
                                         <em class="icon ni ni-alert-fill"></em>     
                                         <strong> Conseils de sécurité !!! </strong>
                                         <br> 
@@ -129,7 +129,7 @@
                                         </ul>
                                     </div>
 
-                                    <a class="btn btn-white btn-outline-danger btn-dim mt-2" data-bs-toggle="modal" data-bs-target="#modalContact">
+                                    <a class="btn btn-white btn-outline-light btn-dim mt-2" data-bs-toggle="modal" data-bs-target="#modalSignal">
                                         <em class="icon ni ni-thumbs-down"></em>
                                         <span>Signaler le vendeur</span>
                                     </a>
@@ -281,6 +281,65 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" tabindex="-1" id="modalAlert">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            {{-- <a href="#" class="close" data-bs-dismiss="modal">
+                <em class="icon ni ni-cross"></em>
+            </a> --}}
+            <div class="modal-body modal-body-lg text-center">
+                <div class="nk-modal">
+                    <em class="nk-modal-icon icon icon-circle icon-circle-xxl ni ni-check bg-success"></em>
+                    <h4 class="nk-modal-title">Vendeur signalé!</h4>
+                    <div class="nk-modal-action"><a href="#" class="btn btn-white btn-lg btn-mw btn-outline-success btn-dim" data-bs-dismiss="modal">OK</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="modalSignal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Motif(s)</h5>
+                <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close"><em class="icon ni ni-cross"></em></a>
+            </div>
+            <div class="modal-body">
+                <form id="form" method="POST" action="#" class="form-validate">
+                    @csrf
+                    <div class="form-group">
+                        <label class="form-label" for="default-textarea">Motif</label>
+                        <div class="form-control-wrap">
+                            <textarea name="text" class="form-control no-resize" id="default-textarea" required data-msg="Error message re"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="customFileLabel">Fichier (facultatif)</label>
+                        <div class="form-control-wrap">
+                            <div class="form-file">
+                                <input type="file" class="form-file-input" id="customFile">
+                                <label class="form-file-label" for="customFile">Choisir un fichier</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-white btn-dim btn-md btn-outline-success">
+                            <span>Envoyer</span>
+                            <em class="icon ni ni-send"></em>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-light">
+                <span class="sub-text">Signaler le vendeur</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 @endsection
 
