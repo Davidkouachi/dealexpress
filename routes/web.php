@@ -6,7 +6,7 @@ use App\Http\Controllers\AnnonceController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\TableauController;
-
+use App\Http\Controllers\CategorieController;
 
 
 // Login & Registre-------------------------------------------------------------
@@ -27,11 +27,17 @@ Route::get('/', [Controller::class, 'index_accueil'])->name('index_accueil');
 // -------------------------------------------------------------
 
 // article-------------------------------------------------------------
-Route::get('/Annonces', [AnnonceController::class, 'index'])->name('index_annonce');
+Route::get('/Annonces Téléphones&tablettes', [CategorieController::class, 'index_telephone'])->name('index_annonce_telephone');
+Route::get('/Annonces Véhicules', [CategorieController::class, 'index_vehicule'])->name('index_annonce_vehicule');
+Route::get('/Annonces Electroniques', [CategorieController::class, 'index_electronique'])->name('index_annonce_electronique');
+Route::get('/Annonces Immobiliers', [CategorieController::class, 'index_immobilier'])->name('index_annonce_immobilier');
 // -------------------------------------------------------------
 
 // Detail article-------------------------------------------------------------
-Route::get('/Detail Annonce', [AnnonceController::class, 'index_detail'])->name('index_detail');
+Route::get('/Détail Annonces Téléphones & tablettes', [CategorieController::class, 'index_detail_telephone'])->name('index_detail_telephone');
+Route::get('/Détail Annonces Véhicules', [CategorieController::class, 'index_detail_vehicule'])->name('index_detail_vehicule');
+Route::get('/Détail Annonces Electroniques', [CategorieController::class, 'index_detail_electronique'])->name('index_detail_electronique');
+Route::get('/Détail Annonces Immobiliers', [CategorieController::class, 'index_detail_immobilier'])->name('index_detail_immobilier');
 // -------------------------------------------------------------
 
 
@@ -69,8 +75,10 @@ Route::middleware(['role:admin'])->group(function () {
 Route::middleware(['role:user'])->group(function () {
 
 	// liste article profil-------------------------------------------------------------
-	Route::post('/traitementsannonces', [AnnonceController::class, 'traitement_annonce'])->name('traitement_annonce');
 	Route::get('/Nouvelle annonces', [AnnonceController::class, 'index_new_annonce'])->name('index_new_annonce');
+	Route::get('/Nouvelle annonces éléctroniques', [AnnonceController::class, 'index_new_annonce_electronique'])->name('index_new_annonce_electronique');
+
+	Route::post('/traitementsannonces', [AnnonceController::class, 'traitement_annonce'])->name('traitement_annonce');
 	
 	Route::get('/Mes annonces', [AnnonceController::class, 'index_liste_annonce'])->name('index_liste_annonce');
 	Route::get('/Détail annonce', [AnnonceController::class, 'index_liste_detail'])->name('index_liste_detail');

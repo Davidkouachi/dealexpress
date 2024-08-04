@@ -105,12 +105,13 @@
                 </div>
             </div>
 
-            <div class="nk-block nk-block-lg">
+            <div class="nk-block nk-block-lg bg-light rounded p-4 mt-5">
                 <div class="nk-block-head">
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
                             <h5 class="nk-block-title">
-                                Téléphones & Tablettes
+                                <em class="icon icon-circle bg-primary-dim ni ni-microsoft"></em>
+                                <span>Electroniques</span>
                             </h5>
                         </div>
                     </div>
@@ -118,8 +119,8 @@
                 <div class="slider-init row product-slider" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
                     <div class="col">
                         <div class="card">
-                            <div class="card h-50" style="display:flex;justify-content:center;align-items:center;border:none;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
-                                <a href="{{route('index_detail')}} " >
+                            <div class="card h-50" style="display:flex;justify-content:center;align-items:center;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
+                                <a href="{{route('index_detail_electronique')}} " >
                                     <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
@@ -140,13 +141,118 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <h6 class="product-title text-dark fs-15px">
-                                    <a href="{{route('index_detail')}}">
+                                <h6 class="product-title text-dark fs-13px">
+                                    <a href="{{route('index_detail_electronique')}}">
                                         Classy Modern Smart watch
                                     </a>
                                 </h6>
-                                <div class="product-price h6 fs-15px ">
+                                <div class="product-price h6 fs-13px text-warning ">
                                     10.000 fcfa
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card h-50" style="display:flex;justify-content:center;align-items:center;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
+                                <a href="{{route('index_detail_electronique')}} " >
+                                    <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/orange/3.png" />
+                                </a>
+                                <ul class="product-badges">
+                                    <li>
+                                        <span class="badge bg-danger" >
+                                            <em class="icon ni ni-hot"></em>
+                                            <span>Pro</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-inner text-center pt-2 pb-2">
+                                <ul class="product-tags">
+                                    <li>
+                                        <a>
+                                            <em class="icon ni ni-map-pin-fill"></em>
+                                            <span>Abidjan</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h6 class="product-title text-dark fs-13px">
+                                    <a href="{{route('index_detail_electronique')}}">
+                                        Classy Modern Smart watch
+                                    </a>
+                                </h6>
+                                <div class="product-price h6 fs-13px text-warning ">
+                                    10.000 fcfa
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card h-50" style="display:flex;justify-content:center;align-items:center;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
+                                <a href="{{route('index_detail_electronique')}} " >
+                                    <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/orange/3.png" />
+                                </a>
+                                <ul class="product-badges">
+                                    <li>
+                                        <span class="badge bg-danger" >
+                                            <em class="icon ni ni-hot"></em>
+                                            <span>Pro</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-inner text-center pt-2 pb-2">
+                                <ul class="product-tags">
+                                    <li>
+                                        <a>
+                                            <em class="icon ni ni-map-pin-fill"></em>
+                                            <span>Abidjan</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h6 class="product-title text-dark fs-13px">
+                                    <a href="{{route('index_detail_electronique')}}">
+                                        Classy Modern Smart watch
+                                    </a>
+                                </h6>
+                                <div class="product-price h6 fs-13px text-warning ">
+                                    10.000 fcfa
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card h-50" style="display:flex;justify-content:center;align-items:center;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
+                                <a href="{{route('index_detail_electronique')}} " >
+                                    <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/orange/3.png" />
+                                </a>
+                                <ul class="product-badges">
+                                    <li>
+                                        <span class="badge bg-danger" >
+                                            <em class="icon ni ni-hot"></em>
+                                            <span>Pro</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-inner text-center pt-2 pb-2">
+                                <ul class="product-tags">
+                                    <li>
+                                        <a>
+                                            <em class="icon ni ni-map-pin-fill"></em>
+                                            <span>Abidjan</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h6 class="product-title text-dark fs-13px">
+                                    <a href="{{route('index_detail_electronique')}}">
+                                        Classy Modern Smart watch
+                                    </a>
+                                </h6>
+                                <div class="product-price h6 fs-13px text-warning ">
+                                    90.000.000 fcfa
                                 </div>
                             </div>
                         </div>
@@ -155,7 +261,7 @@
                 <div class="nk-block-head mt-2">
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
-                            <a class="btn btn-outline-warning btn-white btn-wider btn-dim btn-sm" href="{{route('index_annonce')}}">
+                            <a class="btn btn-outline-primary btn-white btn-wider btn-dim btn-sm" href="{{route('index_annonce_electronique')}}">
                                 <span>Voir plus</span>
                                 <em class="icon ni ni-arrow-right"></em>
                             </a>
@@ -164,12 +270,13 @@
                 </div>
             </div>
 
-            <div class="nk-block nk-block-lg">
+            <div class="nk-block nk-block-lg bg-light rounded p-4 mt-5">
                 <div class="nk-block-head">
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
                             <h5 class="nk-block-title">
-                                Informatiques
+                                <em class="icon icon-circle bg-primary-dim ni ni-building"></em>
+                                <span>Immobiliers</span>
                             </h5>
                         </div>
                     </div>
@@ -177,8 +284,8 @@
                 <div class="slider-init row product-slider" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
                     <div class="col">
                         <div class="card">
-                            <div class="card h-50" style="display:flex;justify-content:center;align-items:center;border:none;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
-                                <a href="{{route('index_detail')}} " >
+                            <div class="card h-50" style="display:flex;justify-content:center;align-items:center;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
+                                <a href="{{route('index_detail_immobilier')}} " >
                                     <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
@@ -199,12 +306,12 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <h6 class="product-title text-dark fs-15px">
-                                    <a href="{{route('index_detail')}}">
+                                <h6 class="product-title text-dark fs-13px">
+                                    <a href="{{route('index_detail_immobilier')}}">
                                         Classy Modern Smart watch
                                     </a>
                                 </h6>
-                                <div class="product-price h6 fs-15px ">
+                                <div class="product-price h6 fs-13px text-warning ">
                                     10.000 fcfa
                                 </div>
                             </div>
@@ -214,7 +321,7 @@
                 <div class="nk-block-head mt-2">
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
-                            <a class="btn btn-outline-warning btn-white btn-wider btn-dim btn-sm" href="{{route('index_annonce')}}">
+                            <a class="btn btn-outline-primary btn-white btn-wider btn-dim btn-sm" href="{{route('index_annonce_immobilier')}}">
                                 <span>Voir plus</span>
                                 <em class="icon ni ni-arrow-right"></em>
                             </a>
@@ -223,12 +330,13 @@
                 </div>
             </div>
 
-            <div class="nk-block nk-block-lg">
+            <div class="nk-block nk-block-lg bg-light rounded p-4 mt-5">
                 <div class="nk-block-head">
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
                             <h5 class="nk-block-title">
-                                Véhicules
+                                <em class="icon icon-circle bg-primary-dim ni ni-mobile"></em>
+                                <span>Téléphones & Tablettes</span>
                             </h5>
                         </div>
                     </div>
@@ -236,8 +344,68 @@
                 <div class="slider-init row product-slider" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
                     <div class="col">
                         <div class="card">
-                            <div class="card h-50" style="display:flex;justify-content:center;align-items:center;border:none;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
-                                <a href="{{route('index_detail')}} " >
+                            <div class="card h-50" style="display:flex;justify-content:center;align-items:center;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
+                                <a href="{{route('index_detail_telephone')}} " >
+                                    <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/2.jpeg" />
+                                </a>
+                                <ul class="product-badges">
+                                    <li>
+                                        <span class="badge bg-danger" >
+                                            <em class="icon ni ni-hot"></em>
+                                            <span>Pro</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-inner text-center pt-2 pb-2">
+                                <ul class="product-tags">
+                                    <li>
+                                        <a>
+                                            <em class="icon ni ni-map-pin-fill"></em>
+                                            <span>Abidjan</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h6 class="product-title text-dark fs-13px">
+                                    <a href="{{route('index_detail_telephone')}}">
+                                        Classy Modern Smart watch
+                                    </a>
+                                </h6>
+                                <div class="product-price text-warning h6 fs-13px ">
+                                    90.000.000 fcfa
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nk-block-head mt-2">
+                    <div class="nk-block-between g-3">
+                        <div class="nk-block-head-content">
+                            <a class="btn btn-outline-primary btn-white btn-wider btn-dim btn-sm" href="{{route('index_annonce_telephone')}}">
+                                <span>Voir plus</span>
+                                <em class="icon ni ni-arrow-right"></em>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nk-block nk-block-lg bg-light rounded p-4 mt-5">
+                <div class="nk-block-head">
+                    <div class="nk-block-between g-3">
+                        <div class="nk-block-head-content">
+                            <h5 class="nk-block-title">
+                                <em class="icon icon-circle bg-primary-dim ni ni-truck"></em>
+                                <span>Véhicules</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-init row product-slider" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card h-50" style="display:flex;justify-content:center;align-items:center;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
+                                <a href="{{route('index_detail_vehicule')}} " >
                                     <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
@@ -258,12 +426,12 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <h6 class="product-title text-dark fs-15px">
-                                    <a href="{{route('index_detail')}}">
+                                <h6 class="product-title text-dark fs-13px">
+                                    <a href="{{route('index_detail_vehicule')}}">
                                         Classy Modern Smart watch
                                     </a>
                                 </h6>
-                                <div class="product-price h6 fs-15px ">
+                                <div class="product-price h6 fs-13px text-warning ">
                                     10.000 fcfa
                                 </div>
                             </div>
@@ -273,7 +441,7 @@
                 <div class="nk-block-head mt-2">
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
-                            <a class="btn btn-outline-warning btn-white btn-wider btn-dim btn-sm" href="{{route('index_annonce')}}">
+                            <a class="btn btn-outline-primary btn-white btn-wider btn-dim btn-sm" href="{{route('index_annonce_vehicule')}}">
                                 <span>Voir plus</span>
                                 <em class="icon ni ni-arrow-right"></em>
                             </a>
@@ -282,125 +450,7 @@
                 </div>
             </div>
 
-            <div class="nk-block nk-block-lg">
-                <div class="nk-block-head">
-                    <div class="nk-block-between g-3">
-                        <div class="nk-block-head-content">
-                            <h5 class="nk-block-title">
-                                Electroniques
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-init row product-slider" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
-                    <div class="col">
-                        <div class="card">
-                            <div class="card h-50" style="display:flex;justify-content:center;align-items:center;border:none;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
-                                <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/1.png" />
-                                </a>
-                                <ul class="product-badges">
-                                    <li>
-                                        <span class="badge bg-danger" >
-                                            <em class="icon ni ni-hot"></em>
-                                            <span>Pro</span>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="card-inner text-center pt-2 pb-2">
-                                <ul class="product-tags">
-                                    <li>
-                                        <a>
-                                            <em class="icon ni ni-map-pin-fill"></em>
-                                            <span>Abidjan</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h6 class="product-title text-dark fs-15px">
-                                    <a href="{{route('index_detail')}}">
-                                        Classy Modern Smart watch
-                                    </a>
-                                </h6>
-                                <div class="product-price h6 fs-15px ">
-                                    10.000 fcfa
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="nk-block-head mt-2">
-                    <div class="nk-block-between g-3">
-                        <div class="nk-block-head-content">
-                            <a class="btn btn-outline-warning btn-white btn-wider btn-dim btn-sm" href="{{route('index_annonce')}}">
-                                <span>Voir plus</span>
-                                <em class="icon ni ni-arrow-right"></em>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="nk-block nk-block-lg">
-                <div class="nk-block-head">
-                    <div class="nk-block-between g-3">
-                        <div class="nk-block-head-content">
-                            <h5 class="nk-block-title">
-                                Immobiliers
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-init row product-slider" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
-                    <div class="col">
-                        <div class="card">
-                            <div class="card h-50" style="display:flex;justify-content:center;align-items:center;border:none;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
-                                <a href="{{route('index_detail')}} " >
-                                    <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/1.png" />
-                                </a>
-                                <ul class="product-badges">
-                                    <li>
-                                        <span class="badge bg-danger" >
-                                            <em class="icon ni ni-hot"></em>
-                                            <span>Pro</span>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="card-inner text-center pt-2 pb-2">
-                                <ul class="product-tags">
-                                    <li>
-                                        <a>
-                                            <em class="icon ni ni-map-pin-fill"></em>
-                                            <span>Abidjan</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h6 class="product-title text-dark fs-15px">
-                                    <a href="{{route('index_detail')}}">
-                                        Classy Modern Smart watch
-                                    </a>
-                                </h6>
-                                <div class="product-price h6 fs-15px ">
-                                    10.000 fcfa
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="nk-block-head mt-2">
-                    <div class="nk-block-between g-3">
-                        <div class="nk-block-head-content">
-                            <a class="btn btn-outline-warning btn-white btn-wider btn-dim btn-sm" href="{{route('index_annonce')}}">
-                                <span>Voir plus</span>
-                                <em class="icon ni ni-arrow-right"></em>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="nk-block nk-block-lg">
+            <div class="nk-block nk-block-lg bg-light rounded p-4 mt-5">
                 <div class="nk-block-head">
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
@@ -413,7 +463,7 @@
                 <div class="slider-init row product-slider" data-slick='{"slidesToShow": 5, "centerMode": false, "slidesToScroll": 2, "infinite":false, "adaptiveHeight":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 5}},{"breakpoint": 1240,"settings":{"slidesToShow": 4}}, {"breakpoint": 999,"settings":{"slidesToShow": 3}},{"breakpoint": 650,"settings":{"slidesToShow": 2}} ]}'>
                     <div class="col">
                         <div class="card ">
-                            <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;">
+                            <div class="card h-50" style="display: flex;justify-content: center;align-items: center;">
                                 <a>
                                     <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/1.png" />
                                 </a>

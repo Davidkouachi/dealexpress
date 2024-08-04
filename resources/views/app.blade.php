@@ -166,22 +166,6 @@
                             </div>                           
                             <div class="nk-header-tools">
                                 <ul class="nk-quick-nav">
-                                    @if(!request()->routeIs('index_annonce') )
-                                    <li class="dropdown notification-dropdown">
-                                        <a class="nk-quick-nav-icon" href="{{route('index_annonce')}}">
-                                            <em class="icon ni ni-box-view-fill"></em>
-                                            <span class="fs-15px"></span>
-                                        </a>
-                                    </li>
-                                    @endif
-                                    @if(request()->routeIs('index_tableau') )
-                                    <li class="dropdown notification-dropdown">
-                                        <a class="nk-quick-nav-icon" href="{{route('index_tableau')}}">
-                                            <em class="icon ni ni-redo"></em>
-                                            <span class="fs-15px"></span>
-                                        </a>
-                                    </li>
-                                    @endif
                                     @if(request()->routeIs('index_liste_annonce', 'index_new_annonce_immobilier', 'index_new_annonce_vehicule', 'index_new_annonce_travail', 'index_new_annonce_autre') )
                                     <li class="dropdown notification-dropdown">
                                         <a class="nk-quick-nav-icon" href="{{route('index_new_annonce')}}">
@@ -205,6 +189,120 @@
                                         </a>
                                     </li>
                                     @endif
+                                    @if(Auth::user()->role === 'user' )
+                                    <li class="dropdown notification-dropdown">
+                                        <a href="#" class="dropdown-toggle nk-quick-nav-icon" data-bs-toggle="dropdown">
+                                            <div class="icon-status icon-status-info">
+                                                <em class="icon ni ni-plus-circle"></em>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-xl dropdown-menu-end">
+                                            <div class="dropdown-head">
+                                                <span class="sub-title nk-dropdown-title">Nouvelle Annonce</span>
+                                            </div>
+                                            <div class="dropdown-body">
+                                                <div class="nk-notification">
+                                                    <a class="nk-notification-item dropdown-inner" href="{{route('index_new_annonce_electronique')}}">
+                                                        <div class="nk-notification-icon">
+                                                            <em class="icon icon-circle bg-primary-dim ni ni-microsoft"></em>
+                                                        </div>
+                                                        <div class="nk-notification-content">
+                                                            <div class="nk-notification-text">
+                                                                Electroniques
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a class="nk-notification-item dropdown-inner" href="{{route('index_annonce_immobilier')}}">
+                                                        <div class="nk-notification-icon">
+                                                            <em class="icon icon-circle bg-primary-dim ni ni-building"></em>
+                                                        </div>
+                                                        <div class="nk-notification-content">
+                                                            <div class="nk-notification-text">
+                                                                Immobiliers
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a class="nk-notification-item dropdown-inner" href="{{route('index_annonce_telephone')}}">
+                                                        <div class="nk-notification-icon">
+                                                            <em class="icon icon-circle bg-primary-dim ni ni-mobile"></em>
+                                                        </div>
+                                                        <div class="nk-notification-content">
+                                                            <div class="nk-notification-text">
+                                                                Téléphones & Tablettes
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a class="nk-notification-item dropdown-inner" href="{{route('index_annonce_vehicule')}}">
+                                                        <div class="nk-notification-icon">
+                                                            <em class="icon icon-circle bg-primary-dim ni ni-truck"></em>
+                                                        </div>
+                                                        <div class="nk-notification-content">
+                                                            <div class="nk-notification-text">
+                                                                Véhicules
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    @endif
+                                    <li class="dropdown notification-dropdown">
+                                        <a href="#" class="dropdown-toggle nk-quick-nav-icon" data-bs-toggle="dropdown">
+                                            <div class="icon-status icon-status-info">
+                                                <em class="icon ni ni-box-view-fill"></em>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-xl dropdown-menu-end">
+                                            <div class="dropdown-head">
+                                                <span class="sub-title nk-dropdown-title">Catégories</span>
+                                            </div>
+                                            <div class="dropdown-body">
+                                                <div class="nk-notification">
+                                                    <a class="nk-notification-item dropdown-inner" href="{{route('index_annonce_electronique')}}">
+                                                        <div class="nk-notification-icon">
+                                                            <em class="icon icon-circle bg-primary-dim ni ni-microsoft"></em>
+                                                        </div>
+                                                        <div class="nk-notification-content">
+                                                            <div class="nk-notification-text">
+                                                                Electroniques
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a class="nk-notification-item dropdown-inner" href="{{route('index_annonce_immobilier')}}">
+                                                        <div class="nk-notification-icon">
+                                                            <em class="icon icon-circle bg-primary-dim ni ni-building"></em>
+                                                        </div>
+                                                        <div class="nk-notification-content">
+                                                            <div class="nk-notification-text">
+                                                                Immobiliers
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a class="nk-notification-item dropdown-inner" href="{{route('index_annonce_telephone')}}">
+                                                        <div class="nk-notification-icon">
+                                                            <em class="icon icon-circle bg-primary-dim ni ni-mobile"></em>
+                                                        </div>
+                                                        <div class="nk-notification-content">
+                                                            <div class="nk-notification-text">
+                                                                Téléphones & Tablettes
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a class="nk-notification-item dropdown-inner" href="{{route('index_annonce_vehicule')}}">
+                                                        <div class="nk-notification-icon">
+                                                            <em class="icon icon-circle bg-primary-dim ni ni-truck"></em>
+                                                        </div>
+                                                        <div class="nk-notification-content">
+                                                            <div class="nk-notification-text">
+                                                                Véhicules
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li class="dropdown user-dropdown">
                                         <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#">
                                             <div class="user-toggle">
@@ -235,16 +333,7 @@
                                                                 Accueil
                                                             </span>
                                                         </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{route('index_annonce')}}">
-                                                            <em class="icon ni ni-box-view-fill">
-                                                            </em>
-                                                            <span>
-                                                                Annonces
-                                                            </span>
-                                                        </a>
-                                                    </li>
+                                                    </li>                                                    
                                                     @if(Auth::user()->role === 'admin' )
                                                     <li>
                                                         <a href="{{route('index_tableau')}}">
@@ -342,17 +431,24 @@
         </div>
     </div>
 
-    @if (Auth::check() && Auth::user()->role === 'user' )
-        @if(!request()->routeIs('index_new_annonce') )
+    
         <ul class="nk-sticky-toolbar">
-            <li class="demo-thumb">
-                <a class="tipinfo" href="{{route('index_new_annonce')}}" title="Nouvelle Annonce">
-                    <em class="icon ni ni-plus-circle"></em>
+            @if (Auth::check() && Auth::user()->role === 'user' )
+                @if(!request()->routeIs('index_new_annonce') )
+                    <li class="demo-thumb">
+                        <a class="tipinfo" href="{{route('index_new_annonce')}}" title="Nouvelle Annonce">
+                            <em class="icon ni ni-plus-circle"></em>
+                        </a>
+                    </li>
+                @endif
+            @endif
+            <li class="demo-purchase">
+                <a class="tipinfo" href="" title="Actualiser" onclick="window.location.reload();">
+                    <em class="icon ni ni-redo"></em>
                 </a>
             </li>
         </ul>
-        @endif
-    @endif
+        
 
     @if(!request()->routeIs('index_tableau') )
         <a class="pmo-st pmo-dark active" data-bs-toggle="modal" data-bs-target="#modalCommentaire" >

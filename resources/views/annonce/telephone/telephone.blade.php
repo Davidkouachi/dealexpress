@@ -11,7 +11,7 @@
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
                             <h5 class="nk-block-title">
-                                Annonces
+                                Téléphones & Tablettes
                             </h5>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                     <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 filter-item categorie-1" data-category="categorie-1">
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
-                                <a href="{{route('index_detail')}} " >
+                                <a href="{{route('index_detail_telephone')}} " >
                                     <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/1.png" />
                                 </a>
                                 <ul class="product-badges">
@@ -78,7 +78,7 @@
                                     </li>
                                 </ul>
                                 <h6 class="product-title text-dark fs-15px">
-                                    <a href="{{route('index_detail')}}">
+                                    <a href="{{route('index_detail_telephone')}}">
                                         Classy Modern Smart watch
                                     </a>
                                 </h6>
@@ -91,7 +91,7 @@
                     <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 filter-item categorie-2" data-category="categorie-2">
                         <div class="card ">
                             <div class="card h-50" style="display: flex;justify-content: center;align-items: center;border:none;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;">
-                                <a href="{{route('index_detail')}} " >
+                                <a href="{{route('index_detail_telephone')}} " >
                                     <img style="object-fit: cover;height: 160px; width:auto;" class="" src="image/mtn/1.png" />
                                 </a>
                             </div>
@@ -105,7 +105,7 @@
                                     </li>
                                 </ul>
                                 <h6 class="product-title text-dark fs-15px">
-                                    <a href="{{route('index_detail')}}">
+                                    <a href="{{route('index_detail_telephone')}}">
                                         Classy Modern Smart watch
                                     </a>
                                 </h6>

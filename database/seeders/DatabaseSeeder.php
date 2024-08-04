@@ -20,50 +20,42 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Categorie::create(['nom' => 'TELEPHONES & TABLETTES']);
-        $telephones = ['Téléphne portable', 'Tablettes', 'Accessoires Téléphone', 'Montres connectées','autre'];
-        foreach ($telephones as $telephone) {
-            Sous_categorie::create([
-                'nom' => $telephone,
-                'categorie_id' => '1',
-            ]);
-        }
-
-        Categorie::create(['nom' => 'INFORMATIQUES']);
-        $informatiques = ['Ordinateurs', 'Imprimantes & Scanners', 'Péripherique & Accessoires Informatiques', 'Stockage de données', 'Logiciels', 'autre'];
-        foreach ($informatiques as $informatique) {
-            Sous_categorie::create([
-                'nom' => $informatique,
-                'categorie_id' => '2',
-            ]);
-        }
-
-        Categorie::create(['nom' => 'VEHICULES']);
-        $voitures = ['Camions & Bus', 'Accessoires & pièces détachées', 'Location Véhicules', 'voitures', 'Moto & vélos', 'autre'];
-        foreach ($voitures as $voiture) {
-            Sous_categorie::create([
-                'nom' => $voiture,
-                'categorie_id' => '3',
-            ]);
-        }
-
-        Categorie::create(['nom' => 'ELECTRONIQUES']);
-        $electroniques = ['Télévision', 'Accessoires TV, Box & Vidéos projecteurs', 'Audio, Hifi & Casques', 'Appareils Photo & Caméra', 'Jeux Vidéos & Consoles', 'autre'];
+        $categorie1 = Categorie::create(['nom' => 'ELECTRONIQUES']);
+        $electroniques = ['Appareils Photo & Caméra','Audio, Hifi & Casques','Autre','Imprimantes & Scanners','Jeux Vidéos & Consoles','Logiciels','Ordinateurs Bureaux','Ordinateurs Portable','Péripherique & Accessoires Informatiques','Stockage de données','Télévision','Unité centrale','Accessoires TV, Box & Vidéos projecteurs'];
         foreach ($electroniques as $electronique) {
             Sous_categorie::create([
                 'nom' => $electronique,
-                'categorie_id' => '4',
+                'categorie_id' => $categorie1->id,
             ]);
         }
 
-        Categorie::create(['nom' => 'IMMOBILIERS']);
+        $categorie2 = Categorie::create(['nom' => 'IMMOBILIERS']);
         $immobiliers = ['Villas', 'Terrains', 'Appartements', 'Immeubles', 'Bureaux & Commerces', 'Appartements meublés' , 'autre'];
         foreach ($immobiliers as $immobilier) {
             Sous_categorie::create([
                 'nom' => $immobilier,
-                'categorie_id' => '5',
+                'categorie_id' => $categorie2->id,
             ]);
         }
+
+        $categorie3 = Categorie::create(['nom' => 'TELEPHONES & TABLETTES']);
+        $telephones = ['Téléphne portable', 'Tablettes', 'Accessoires Téléphone', 'Montres connectées','autre'];
+        foreach ($telephones as $telephone) {
+            Sous_categorie::create([
+                'nom' => $telephone,
+                'categorie_id' => $categorie3->id,
+            ]);
+        }
+
+        $categorie4 = Categorie::create(['nom' => 'VEHICULES']);
+        $voitures = ['Camions & Bus', 'Accessoires & pièces détachées', 'Location Véhicules', 'voitures', 'Moto & vélos', 'autre'];
+        foreach ($voitures as $voiture) {
+            Sous_categorie::create([
+                'nom' => $voiture,
+                'categorie_id' => $categorie4->id,
+            ]);
+        }
+
 
         $data = [
             'marques_ordinateurs' => [

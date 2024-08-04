@@ -13,11 +13,6 @@ use App\Models\Marque_telephone;
 
 class AnnonceController extends Controller
 {
-   public function index()
-   {
-      return view('annonce.index');
-   }
-
    public function index_new_annonce()
    {
       $categories = Categorie::all();
@@ -27,6 +22,16 @@ class AnnonceController extends Controller
       $marque_tels = Marque_telephone::all();
 
       return view('annonce.new.autre',['categories' => $categories,'villes' => $villes,'marque_cars' => $marque_cars,'marque_computers' => $marque_computers,'marque_tels' => $marque_tels,]);
+   }
+
+   public function index_new_annonce_electronique()
+   {
+      $categorie = Categorie::where('nom', '=', 'ELECTRONIQUES')->first();
+      $scategories = Sous_categorie::where('categorie_id', '=', $categorie->id)->get();
+      $villes = Ville::all();
+      $marque_computers = Marque_ordinateur::all();
+
+      return view('annonce.new.electronique',['scategories'=>$scategories,'villes'=>$villes,'marque_computers'=>$marque_computers,]);
    }
 
    public function getSubcategories($categorieId)
@@ -39,11 +44,6 @@ class AnnonceController extends Controller
    {
       $communes = Commune::where('ville_id', $villeId)->get();
       return response()->json($communes);
-   }
-
-   public function index_detail()
-   {
-      return view('annonce.detail');
    }
 
    public function index_liste_annonce()
